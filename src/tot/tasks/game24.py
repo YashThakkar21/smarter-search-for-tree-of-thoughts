@@ -3,11 +3,13 @@ import os
 import sympy
 import pandas as pd
 from tot.tasks.base import Task, DATA_PATH
-from tot.prompts.game24 import * 
+from tot.prompts.game24 import *
 
 
 def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
+    if 'left: ' not in last_line:
+        return last_line  # y is just the raw input numbers
     return last_line.split('left: ')[-1].split(')')[0]
 
 
@@ -37,7 +39,7 @@ class Game24Task(Task):
 
     def __len__(self) -> int:
         return len(self.data)
-    
+
     def get_input(self, idx: int) -> str:
         return self.data[idx]
 
@@ -53,25 +55,24 @@ class Game24Task(Task):
         except Exception as e:
             # print(e)
             return {'r': 0}
-            
-    @staticmethod
-    def standard_prompt_wrap(x: str, y:str='') -> str:
-        return standard_prompt.format(input=x) + y
 
     @staticmethod
-    def cot_prompt_wrap(x: str, y:str='') -> str:
-        return cot_prompt.format(input=x) + y
-    
+    def standard_prompt_wrap(x: str, y: str='') -> str:
+        raise NotImplementedError("standard_prompt not used in this configuration")
+
+    @staticmethod
+    def cot_prompt_wrap(x: str, y: str='') -> str:
+        raise NotImplementedError("cot_prompt not used in this configuration")
+
     @staticmethod
     def propose_prompt_wrap(x: str, y: str='') -> str:
         current_numbers = get_current_numbers(y if y else x)
         if current_numbers == '24':
-            prompt = cot_prompt.format(input=x) + 'Steps:' + y
-            # print([prompt])
-        else:
-            prompt = propose_prompt.format(input=current_numbers)
-        return prompt
-    
+            # Return a valid prompt - the propose shortcut will call _propose_steps('24')
+            # which returns empty steps (no combinations from a single number)
+            return propose_prompt.format(input='24')
+        return propose_prompt.format(input=current_numbers)
+
     @staticmethod
     def value_prompt_wrap(x: str, y: str) -> str:
         last_line = y.strip().split('\n')[-1]
@@ -81,7 +82,7 @@ class Game24Task(Task):
             return value_last_step_prompt.format(input=x, answer=ans)
         current_numbers = get_current_numbers(y)
         return value_prompt.format(input=current_numbers)
-    
+
     @staticmethod
     def value_outputs_unwrap(x: str, y: str, value_outputs: list) -> float:
         if len(y.strip().split('\n')) == 4 and 'answer' not in y.lower():
