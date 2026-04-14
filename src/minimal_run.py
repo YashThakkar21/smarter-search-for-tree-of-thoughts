@@ -15,8 +15,8 @@ args = argparse.Namespace(
     prompt_sample=None,
     method_generate="propose",
     method_evaluate="value",
-    task_start_index=900,
-    task_end_index=901,
+    task_start_index=0,
+    task_end_index=1362,
     
     # Modify the Search Algorithm
     search_method="bfs",
@@ -36,6 +36,13 @@ task = Game24Task()
 solve = bfs_solve if args.search_method == "bfs" else mcts_solve
 
 # For debugging purposes (set to_print to True print all of ys): 
-res, info = solve(args, task, 900, to_print=False)
-solution = res[0] if res else ""
-print(solution)
+debug = False
+for i in range(args.task_start_index, args.task_end_index):
+    res, info = solve(args, task, i, to_print=debug)
+    if debug:
+        print(res)
+        print('\n')
+    else:
+        solution = res[0] if res else ""
+        print(solution)
+        print('\n')

@@ -8,7 +8,7 @@ from tot.models import gpt_usage
 
 def run(args):
     task = get_task(args.task)
-    logs, cnt_avg, cnt_any = [], 0, 0
+    logs = []
     if args.naive_run:
         file = f'./logs/{args.task}/{args.backend}_{args.temperature}_naive_{args.prompt_sample}_sample_{args.n_generate_sample}_start{args.task_start_index}_end{args.task_end_index}.json'
     else:
@@ -18,9 +18,12 @@ def run(args):
     for i in range(args.task_start_index, args.task_end_index):
         # solve
         if args.naive_run:
-            ys, info = naive_solve(args, task, i) 
+            ys, info = naive_solve(args, task, i, to_print=False)
         else:
-            ys, info = solve(args, task, i)
+            ys, info = solve(args, task, i, to_print=False)
+
+        solution = ys[0] if ys else ""
+        print(solution)
 
         # log
         infos = [task.test_output(i, y) for y in ys]
@@ -29,15 +32,7 @@ def run(args):
         with open(file, 'w') as f:
             json.dump(logs, f, indent=4)
         
-        # log main metric
-        accs = [info['r'] for info in infos]
-        cnt_avg += sum(accs) / len(accs)
-        cnt_any += any(accs)
-        print(i, 'sum(accs)', sum(accs), 'cnt_avg', cnt_avg, 'cnt_any', cnt_any, '\n')
-    
-    n = args.task_end_index - args.task_start_index
-    print(cnt_avg / n, cnt_any / n)
-    print('usage_so_far', gpt_usage(args.backend))
+
 
 
 def parse_args():
@@ -65,5 +60,4 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
-    print(args)
     run(args)
