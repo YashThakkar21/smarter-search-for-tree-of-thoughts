@@ -158,9 +158,8 @@ class Game24Task(Task):
         if any(line.lower().startswith('answer:') for line in lines):
             return y
 
-        num_token = r'-?\d+(?:/\d+|\.\d+)?'
         step_pattern = re.compile(
-            rf'^\s*({num_token})\s*([+\-*/])\s*({num_token})\s*=\s*({num_token})\s*\(left:[^)]*\)\s*$'
+            r'^\s*(-?\d+(?:\.\d+)?)\s*([+\-*/])\s*(-?\d+(?:\.\d+)?)\s*=\s*(-?\d+(?:\.\d+)?)\s*\(left:[^)]*\)\s*$'
         )
 
         try:

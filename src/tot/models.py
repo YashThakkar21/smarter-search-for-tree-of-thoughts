@@ -159,12 +159,15 @@ def _value_score(numbers_str: str) -> str:
     except Exception:
         return "impossible"
 
+<<<<<<< HEAD
     if len(nums) == 1:
         return "sure" if nums[0] == 24 else "impossible"
 
     return "sure" if _can_reach_24_state(_sorted_state(nums)) else "impossible"
 
 
+=======
+>>>>>>> c9a4fb8 (Modified the game24.py file and the minimal_run file, added the tinker to requirements)
 def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=128, n=1, stop=None) -> list:
     messages = [{"role": "user", "content": prompt}]
     return chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)

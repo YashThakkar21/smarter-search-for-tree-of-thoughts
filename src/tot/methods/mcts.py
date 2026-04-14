@@ -1,7 +1,9 @@
 import math
 from functools import partial
+
 import tot.methods.bfs as bfs
 from tot.models import gpt as base_gpt
+
 
 class Node:
     def __init__(self, y, parent=None):
@@ -25,10 +27,6 @@ class Node:
         return self.value_sum / self.visits if self.visits > 0 else 0.0
 
 
-def _tail_line(y: str) -> str:
-    lines = [line.strip() for line in y.strip().split("\n") if line.strip()]
-    return lines[-1] if lines else "<root>"
-
 def _is_valid_solution(task, idx, y) -> bool:
     try:
         result = task.test_output(idx, y)
@@ -40,10 +38,12 @@ def _is_valid_solution(task, idx, y) -> bool:
 def _is_terminal(node: Node, max_steps: int) -> bool:
     return node.is_solved or node.is_dead_end or node.depth >= max_steps
 
+
 def _normalize_reward(raw_value: float) -> float:
     if raw_value <= 0:
         return 0.0
     return raw_value / (raw_value + 1.0)
+
 
 def _ucb_score(parent_visits: int, child: Node, c: float) -> float:
     if child.visits == 0:
@@ -51,6 +51,7 @@ def _ucb_score(parent_visits: int, child: Node, c: float) -> float:
     exploit = child.mean_value
     explore = c * math.sqrt(math.log(max(parent_visits, 1)) / child.visits)
     return exploit + explore
+
 
 def _select(node: Node, c: float, max_steps: int) -> Node:
     cur = node
@@ -63,6 +64,7 @@ def _select(node: Node, c: float, max_steps: int) -> Node:
             return cur
         cur = max(cur.children, key=lambda child: _ucb_score(cur.visits, child, c))
     return cur
+
 
 def _expand(node: Node, task, idx, x) -> Node:
     if node.is_solved:
@@ -93,52 +95,17 @@ def _expand(node: Node, task, idx, x) -> Node:
     node.children.append(child)
     return child
 
-# def _evaluate(node: Node, args, task, x, idx) -> float:
-#     if node.is_solved:
-#         return 1.0
-#     if node.is_dead_end and node.depth >= task.steps:
-#         return 0.0
-
-#     raw_value = bfs.get_value(task, x, node.y, args.n_evaluate_sample)
-#     normalized = _normalize_reward(raw_value)
-#     # Weight by depth so deeper promising nodes score higher
-#     depth_weight = node.depth / task.steps
-#     return normalized * (0.5 + 0.5 * depth_weight)
-
-def _get_ensemble_value(task, x, y) -> float:
-    """Queries the LLM with multiple prompts and averages the 1-10 scores."""
-    prompts = task.get_ensemble_prompts(x, y)
-    total_score = 0.0
-
-    for prompt in prompts:
-        # If the state is already solved/dead, the prompt formatting caught it
-        if prompt.startswith("Score:"):
-            score = task.extract_numerical_score(prompt)
-        else:
-            # Call the LLM (assuming base_gpt is configured in your global scope)
-            outputs = bfs.gpt(prompt, n=1, stop=None)
-            score = task.extract_numerical_score(outputs[0])
-
-        total_score += score
-
-    # Calculate average (e.g., 21 / 3 = 7.0)
-    avg_score = total_score / len(prompts)
-
-    # Normalize from 1-10 scale down to 0.1-1.0 scale for UCB math
-    return avg_score / 10.0
-
 
 def _evaluate(node: Node, args, task, x, idx) -> float:
     if node.is_solved:
         return 1.0
+
     if node.is_dead_end and node.depth >= task.steps:
         return 0.0
 
-    normalized_score = _get_ensemble_value(task, x, node.y)
+    raw_value = bfs.get_value(task, x, node.y, args.n_evaluate_sample)
+    return _normalize_reward(raw_value)
 
-    # Weight by depth so deeper promising nodes score higher
-    depth_weight = node.depth / task.steps
-    return normalized_score * (0.5 + 0.5 * depth_weight)
 
 def _backpropagate(node: Node, reward: float):
     cur = node
@@ -147,38 +114,28 @@ def _backpropagate(node: Node, reward: float):
         cur.value_sum += reward
         cur = cur.parent
 
+
 def _best_node(root: Node) -> Node:
     solved_nodes = []
-    all_nodes = []
+    other_nodes = []
 
     stack = [root]
     while stack:
         node = stack.pop()
         if node.is_solved:
             solved_nodes.append(node)
-        if node is not root:
-            all_nodes.append(node)
+        elif node is not root:
+            other_nodes.append(node)
         stack.extend(node.children)
 
     if solved_nodes:
         return max(solved_nodes, key=lambda n: (n.mean_value, n.visits))
 
-    if all_nodes:
-        # Prefer deeper nodes first, then by value
-        return max(all_nodes, key=lambda n: (n.depth, n.mean_value, n.visits))
+    if other_nodes:
+        return max(other_nodes, key=lambda n: (n.mean_value, n.visits))
 
     return root
 
-
-def _collect_non_root_nodes(root: Node):
-    nodes = []
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        if node is not root:
-            nodes.append(node)
-        stack.extend(node.children)
-    return nodes
 
 def solve(args, task, idx, to_print=True):
     # Important: bfs.get_proposals/get_value use bfs.gpt internally.
@@ -209,38 +166,9 @@ def solve(args, task, idx, to_print=True):
                 "is_solved": child.is_solved,
                 "is_dead_end": child.is_dead_end,
             })
-            print(
-                f"[sim {sim + 1}/{n_simulations}] "
-                f"select={_tail_line(leaf.y)} | "
-                f"expand={_tail_line(child.y)} | "
-                f"reward={reward:.3f} | "
-                f"visits={child.visits} mean={child.mean_value:.3f} | "
-                f"solved={child.is_solved} dead_end={child.is_dead_end}"
-            )
 
     best = _best_node(root)
     ys = [best.y]
-
-    if to_print:
-        candidates = _collect_non_root_nodes(root)
-        ranked = sorted(
-            candidates,
-            key=lambda n: (n.is_solved, n.depth, n.mean_value, n.visits),
-            reverse=True,
-        )
-        top_k = ranked[: min(10, len(ranked))]
-        print("-- mcts top candidates --")
-        for rank, node in enumerate(top_k, start=1):
-            print(
-                f"{rank:02d}. step={node.depth} visits={node.visits} "
-                f"mean={node.mean_value:.3f} solved={node.is_solved} "
-                f"dead_end={node.is_dead_end} | {_tail_line(node.y)}"
-            )
-        print("-- mcts selected best --")
-        print(
-            f"step={best.depth} visits={best.visits} mean={best.mean_value:.3f} "
-            f"solved={best.is_solved} | {_tail_line(best.y)}"
-        )
 
     if hasattr(task, "finalize_output"):
         ys = [task.finalize_output(x, y) for y in ys]
