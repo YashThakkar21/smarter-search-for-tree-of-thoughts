@@ -20,6 +20,11 @@ args = argparse.Namespace(
     prompt_sample=None,
     method_generate="propose",
     method_evaluate="value",
+    task_start_index=900,
+    task_end_index=901,
+    
+    # Modify the Search Algorithm
+    search_method="bfs",
 
     # ranges from 0 - 1362
     task_start_index=40,
