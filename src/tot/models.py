@@ -154,7 +154,7 @@ def _value_score(numbers_str: str) -> str:
         return "sure" if abs(nums[0] - 24) < 1e-6 else "impossible"
     return "sure" if _can_reach_24(nums) else "impossible"
 
-def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=64, n=1, stop=None) -> list:
+def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=128, n=1, stop=None) -> list:
     messages = [{"role": "user", "content": prompt}]
     return chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)
 

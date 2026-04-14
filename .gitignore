@@ -5,3 +5,5 @@ src/tree_of_thoughts_llm.egg-info/
 *.pyc
 *.DS_Store
 venv311/
+nlp331/
+nlp311
