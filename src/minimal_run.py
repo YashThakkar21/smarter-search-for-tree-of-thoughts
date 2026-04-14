@@ -25,11 +25,11 @@ args = argparse.Namespace(
     task_end_index=901,
 
     # MCTS knobs
-    n_mcts_simulations=100,
+    n_mcts_simulations=500,
     mcts_exploration=1.4,
 )
 
 task = Game24Task()
-ys, info = solve(args, task, 900, to_print=True)
-# solution = ys[0] if ys else ""
-print(ys)
+ys, info = solve(args, task, 900, to_print=False)
+for i in range(len(ys)):
+    print(ys[i] + "\n")

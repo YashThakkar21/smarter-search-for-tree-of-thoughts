@@ -99,12 +99,14 @@ def _expand(node: Node, task, idx, x) -> Node:
 def _evaluate(node: Node, args, task, x, idx) -> float:
     if node.is_solved:
         return 1.0
-
     if node.is_dead_end and node.depth >= task.steps:
         return 0.0
 
     raw_value = bfs.get_value(task, x, node.y, args.n_evaluate_sample)
-    return _normalize_reward(raw_value)
+    normalized = _normalize_reward(raw_value)
+    # Weight by depth so deeper promising nodes score higher
+    depth_weight = node.depth / task.steps
+    return normalized * (0.5 + 0.5 * depth_weight)
 
 
 def _backpropagate(node: Node, reward: float):
@@ -117,22 +119,23 @@ def _backpropagate(node: Node, reward: float):
 
 def _best_node(root: Node) -> Node:
     solved_nodes = []
-    other_nodes = []
+    all_nodes = []
 
     stack = [root]
     while stack:
         node = stack.pop()
         if node.is_solved:
             solved_nodes.append(node)
-        elif node is not root:
-            other_nodes.append(node)
+        if node is not root:
+            all_nodes.append(node)
         stack.extend(node.children)
 
     if solved_nodes:
         return max(solved_nodes, key=lambda n: (n.mean_value, n.visits))
 
-    if other_nodes:
-        return max(other_nodes, key=lambda n: (n.mean_value, n.visits))
+    if all_nodes:
+        # Prefer deeper nodes first, then by value
+        return max(all_nodes, key=lambda n: (n.depth, n.mean_value, n.visits))
 
     return root
 
