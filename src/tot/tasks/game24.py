@@ -1,20 +1,16 @@
 import re
 import os
-from fractions import Fraction
-
 import sympy
 import pandas as pd
-
+from fractions import Fraction
 from tot.tasks.base import Task, DATA_PATH
 from tot.prompts.game24 import *
-
 
 def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
     if 'left: ' not in last_line:
         return last_line
     return last_line.split('left: ')[-1].split(')')[0]
-
 
 class Game24Task(Task):
     def __init__(self, file='24.csv'):
@@ -86,8 +82,9 @@ class Game24Task(Task):
         if any(line.lower().startswith('answer:') for line in lines):
             return y
 
+        num_token = r'-?\d+(?:/\d+|\.\d+)?'
         step_pattern = re.compile(
-            r'^\s*(-?\d+(?:\.\d+)?)\s*([+\-*/])\s*(-?\d+(?:\.\d+)?)\s*=\s*(-?\d+(?:\.\d+)?)\s*\(left:[^)]*\)\s*$'
+            rf'^\s*({num_token})\s*([+\-*/])\s*({num_token})\s*=\s*({num_token})\s*\(left:[^)]*\)\s*$'
         )
 
         try:
