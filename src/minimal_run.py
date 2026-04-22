@@ -1,6 +1,9 @@
 import argparse
 from dotenv import load_dotenv
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 from debug_utils import (
     explain_evaluation,
     print_plain_solution,
@@ -20,15 +23,22 @@ args = argparse.Namespace(
     temperature=0.7,
     task="game24",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> c9a4fb8 (Modified the game24.py file and the minimal_run file, added the tinker to requirements)
+=======
+
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     naive_run=False,
     prompt_sample=None,
     method_generate="propose",
     method_evaluate="value",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     # ranges from 0 - 1362
     task_start_index=40,
     task_end_index=41,
@@ -37,9 +47,12 @@ args = argparse.Namespace(
     search_method="mcts",
 
     # BFS knobs
+<<<<<<< HEAD
 =======
     # BFS-only knobs; harmless if left in, but not used by MCTS
 >>>>>>> c9a4fb8 (Modified the game24.py file and the minimal_run file, added the tinker to requirements)
+=======
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     method_select="greedy",
     n_generate_sample=1,
     n_evaluate_sample=3,
@@ -66,6 +79,7 @@ for i in range(args.task_start_index, args.task_end_index):
         explain_evaluation(task, i, solution)
         print()
     else:
+<<<<<<< HEAD
         print_plain_solution(results)
 =======
     # your index range
@@ -82,3 +96,6 @@ ys, info = solve(args, task, 900, to_print=True)
 # solution = ys[0] if ys else ""
 print(ys)
 >>>>>>> c9a4fb8 (Modified the game24.py file and the minimal_run file, added the tinker to requirements)
+=======
+        print_plain_solution(results)
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)

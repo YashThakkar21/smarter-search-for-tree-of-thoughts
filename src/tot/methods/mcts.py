@@ -1,39 +1,61 @@
+from __future__ import annotations
 import math
+from dataclasses import dataclass, field
 from functools import partial
+<<<<<<< HEAD
 
 import tot.methods.bfs as bfs
 from tot.models import gpt as base_gpt
 
 
+=======
+from typing import List, Optional
+import tot.methods.bfs as bfs
+from tot.models import gpt as base_gpt
+
+@dataclass
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 class Node:
-    def __init__(self, y, parent=None):
-        self.y = y
-        self.parent = parent
-        self.children = []
-        self.untried = None
-        self.visits = 0
-        self.value_sum = 0.0
-        self.is_solved = False
-        self.is_dead_end = False
+    y: str
+    parent: Optional["Node"] = None
+    children: List["Node"] = field(default_factory=list)
+    untried: Optional[List[str]] = None
+    visits: int = 0
+    value_sum: float = 0.0
+    is_solved: bool = False
+    is_dead_end: bool = False
 
     @property
-    def depth(self):
+    def depth(self) -> int:
         if not self.y.strip():
             return 0
         return len([line for line in self.y.strip().split("\n") if line.strip()])
 
     @property
-    def mean_value(self):
+    def mean_value(self) -> float:
         return self.value_sum / self.visits if self.visits > 0 else 0.0
 
+<<<<<<< HEAD
 
 def _is_valid_solution(task, idx, y) -> bool:
+=======
+def _tail_line(y: str) -> str:
+    lines = [line.strip() for line in y.strip().split("\n") if line.strip()]
+    return lines[-1] if lines else "<root>"
+
+def _finalize_candidate(task, x: str, y: str) -> str:
+    if hasattr(task, "finalize_output"):
+        return task.finalize_output(x, y)
+    return y
+
+def _is_valid_solution(task, idx: int, x: str, y: str) -> bool:
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     try:
-        result = task.test_output(idx, y)
+        candidate = _finalize_candidate(task, x, y)
+        result = task.test_output(idx, candidate)
         return result.get("r", 0) == 1
     except Exception:
         return False
-
 
 def _is_terminal(node: Node, max_steps: int) -> bool:
     return node.is_solved or node.is_dead_end or node.depth >= max_steps
@@ -65,20 +87,27 @@ def _select(node: Node, c: float, max_steps: int) -> Node:
         cur = max(cur.children, key=lambda child: _ucb_score(cur.visits, child, c))
     return cur
 
+<<<<<<< HEAD
 
 def _expand(node: Node, task, idx, x) -> Node:
+=======
+def _expand(node: Node, task, idx: int, x: str) -> Node:
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     if node.is_solved:
         return node
 
     if node.depth >= task.steps:
-        node.is_dead_end = not _is_valid_solution(task, idx, node.y)
+        if _is_valid_solution(task, idx, x, node.y):
+            node.is_solved = True
+        else:
+            node.is_dead_end = True
         return node
 
     if node.untried is None:
         proposals = bfs.get_proposals(task, x, node.y)
         deduped = list(dict.fromkeys(proposals))
         existing = {child.y for child in node.children}
-        node.untried = [p for p in deduped if p not in existing]
+        node.untried = [proposal for proposal in deduped if proposal not in existing]
 
     if not node.untried:
         node.is_dead_end = True
@@ -87,7 +116,7 @@ def _expand(node: Node, task, idx, x) -> Node:
     child_y = node.untried.pop(0)
     child = Node(child_y, parent=node)
 
-    if _is_valid_solution(task, idx, child_y):
+    if _is_valid_solution(task, idx, x, child_y):
         child.is_solved = True
     elif child.depth >= task.steps:
         child.is_dead_end = True
@@ -96,6 +125,7 @@ def _expand(node: Node, task, idx, x) -> Node:
     return child
 
 
+<<<<<<< HEAD
 def _evaluate(node: Node, args, task, x, idx) -> float:
     if node.is_solved:
         return 1.0
@@ -106,14 +136,27 @@ def _evaluate(node: Node, args, task, x, idx) -> float:
     raw_value = bfs.get_value(task, x, node.y, args.n_evaluate_sample)
     return _normalize_reward(raw_value)
 
+=======
+def _evaluate(node: Node, args, task, x: str, idx: int) -> float:
+    if node.is_solved:
+        return 1.0
+    if node.is_dead_end:
+        return 0.0
 
-def _backpropagate(node: Node, reward: float):
+    n_eval = getattr(args, "n_mcts_evaluate_sample", 1)
+    raw_value = bfs.get_value(task, x, node.y, n_eval)
+    return _normalize_reward(raw_value)
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
+
+
+def _backpropagate(node: Node, reward: float) -> None:
     cur = node
     while cur is not None:
         cur.visits += 1
         cur.value_sum += reward
         cur = cur.parent
 
+<<<<<<< HEAD
 
 def _best_node(root: Node) -> Node:
     solved_nodes = []
@@ -139,6 +182,40 @@ def _best_node(root: Node) -> Node:
 
 def solve(args, task, idx, to_print=True):
     # Important: bfs.get_proposals/get_value use bfs.gpt internally.
+=======
+
+def _collect_non_root_nodes(root: Node) -> List[Node]:
+    nodes: List[Node] = []
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        if node is not root:
+            nodes.append(node)
+        stack.extend(node.children)
+    return nodes
+
+def _rank_candidates(root: Node) -> List[Node]:
+    candidates = _collect_non_root_nodes(root)
+    return sorted(
+        candidates,
+        key=lambda n: (
+            n.is_solved,
+            not n.is_dead_end,
+            n.mean_value,
+            n.depth,
+            n.visits,
+        ),
+        reverse=True,
+    )
+
+def _best_node(root: Node) -> Node:
+    ranked = _rank_candidates(root)
+    if ranked:
+        return ranked[0]
+    return root
+
+def solve(args, task, idx: int, to_print: bool = True):
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     bfs.gpt = partial(base_gpt, model=args.backend, temperature=args.temperature)
 
     if to_print:
@@ -158,6 +235,7 @@ def solve(args, task, idx, to_print=True):
         _backpropagate(child, reward)
 
         if to_print:
+<<<<<<< HEAD
             infos.append({
                 "simulation": sim,
                 "selected_y": leaf.y,
@@ -166,14 +244,72 @@ def solve(args, task, idx, to_print=True):
                 "is_solved": child.is_solved,
                 "is_dead_end": child.is_dead_end,
             })
+=======
+            infos.append(
+                {
+                    "simulation": sim,
+                    "selected_y": leaf.y,
+                    "expanded_y": child.y,
+                    "reward": reward,
+                    "is_solved": child.is_solved,
+                    "is_dead_end": child.is_dead_end,
+                }
+            )
+            print(
+                f"[sim {sim + 1}/{n_simulations}] "
+                f"select={_tail_line(leaf.y)} | "
+                f"expand={_tail_line(child.y)} | "
+                f"reward={reward:.3f} | "
+                f"visits={child.visits} mean={child.mean_value:.3f} | "
+                f"solved={child.is_solved} dead_end={child.is_dead_end}"
+            )
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 
-    best = _best_node(root)
-    ys = [best.y]
+        if child.is_solved:
+            if to_print:
+                print(f"[early-stop] solved at simulation {sim + 1}/{n_simulations}")
+            break
 
+    ranked = _rank_candidates(root)
+
+    best_node = None
+    best_output = ""
+
+    for node in ranked:
+        candidate = _finalize_candidate(task, x, node.y)
+        if task.test_output(idx, candidate).get("r", 0) == 1:
+            best_node = node
+            best_output = candidate
+            break
+
+    if best_node is None:
+        best_node = _best_node(root)
+        best_output = _finalize_candidate(task, x, best_node.y)
+
+    ys = [best_output]
+
+<<<<<<< HEAD
     if hasattr(task, "finalize_output"):
         ys = [task.finalize_output(x, y) for y in ys]
 
     if to_print:
+=======
+    if to_print:
+        top_k = ranked[: min(10, len(ranked))]
+        print("-- mcts top candidates --")
+        for rank, node in enumerate(top_k, start=1):
+            print(
+                f"{rank:02d}. step={node.depth} visits={node.visits} "
+                f"mean={node.mean_value:.3f} solved={node.is_solved} "
+                f"dead_end={node.is_dead_end} | {_tail_line(node.y)}"
+            )
+        print("-- mcts selected best --")
+        print(
+            f"step={best_node.depth} visits={best_node.visits} "
+            f"mean={best_node.mean_value:.3f} solved={best_node.is_solved} "
+            f"| {_tail_line(best_node.y)}"
+        )
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
         print(ys)
 
     return ys, {"simulations": infos}

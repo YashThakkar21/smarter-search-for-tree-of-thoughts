@@ -158,6 +158,15 @@ def _value_score(numbers_str: str) -> str:
         nums = [Fraction(token) for token in numbers_str.strip().split()]
     except Exception:
         return "impossible"
+<<<<<<< HEAD
+=======
+
+    if len(nums) == 1:
+        return "sure" if nums[0] == 24 else "impossible"
+
+    return "sure" if _can_reach_24_state(_sorted_state(nums)) else "impossible"
+
+>>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 
 <<<<<<< HEAD
     if len(nums) == 1:
@@ -190,9 +199,7 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         if lines:
             return [_value_score(lines[-1])] * n
 
-    system_msg = "You are a helpful mathematical assistant. Follow the user's formatting instructions precisely."
-
-    # Extract trailing labels to pre-fill the assistant so it doesn't get confused
+    system_msg = "You are a rigid mathematical logic API. Do NOT add conversational text. Do NOT explain your steps."
     assistant_prefill = ""
 
     if mode == "propose" and "Possible next steps:" in raw_user_content:
