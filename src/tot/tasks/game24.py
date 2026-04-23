@@ -41,8 +41,6 @@ class Game24Task(Task):
             return {'r': 0}
 
     def get_ensemble_prompts(self, x: str, y: str) -> list[str]:
-        """Formats all ensemble prompts for the current state."""
-
         # 1. Extract the current remaining numbers
         last_line = y.strip().split('\n')[-1] if y.strip() else ""
         if 'left: ' in last_line:
@@ -50,22 +48,35 @@ class Game24Task(Task):
         else:
             current_numbers = x.strip()
 
-        # 2. Check for hardcoded terminal states
-        if current_numbers == '24': # If already solved
-            return ["Score: 10"] * len(value_prompts_ensemble)
-        if current_numbers == 'impossible': # If dead end
-            return ["Score: 1"] * len(value_prompts_ensemble)
+        # 2. Check for hardcoded terminal states (NOW RETURNS JSON!)
+        if current_numbers == '24':
+            return ['{"reasoning": "Already solved", "score": 10}'] * len(value_prompts_ensemble)
+        if current_numbers == 'impossible':
+            return ['{"reasoning": "Dead end", "score": 1}'] * len(value_prompts_ensemble)
 
         # 3. Format and return the ensemble
         return [prompt.format(input=current_numbers) for prompt in value_prompts_ensemble]
 
+
     def extract_numerical_score(self, output: str) -> float:
-        xml_matches = re.findall(r'<score>\s*(10|[1-9])\s*</score>', output, re.IGNORECASE)
-        if xml_matches:
-            return float(xml_matches[-1])  # last = model's final answer
-        all_numbers = re.findall(r'\b(10|[1-9])\b', output)
-        if all_numbers:
-            return float(all_numbers[-1])
+        import json
+        import re
+
+        # 1. Try to parse as strict JSON
+        try:
+            clean_output = re.sub(r'```json|```', '', output).strip()
+            data = json.loads(clean_output)
+            if "score" in data:
+                return float(data["score"])
+        except Exception:
+            pass
+
+        # 2. Fallback: Regex hunt for the JSON score key if parsing fails
+        match = re.search(r'"score"\s*:\s*(10|[1-9])', output, re.IGNORECASE)
+        if match:
+            return float(match.group(1))
+
+        # 3. Ultimate Fallback
         return 1.0
 
     @staticmethod
