@@ -56,6 +56,34 @@ class Game24Task(Task):
             # print(e)
             return {'r': 0}
 
+    def get_ensemble_prompts(self, x: str, y: str) -> list[str]:
+        """Formats all ensemble prompts for the current state."""
+
+        # 1. Extract the current remaining numbers
+        last_line = y.strip().split('\n')[-1] if y.strip() else ""
+        if 'left: ' in last_line:
+            current_numbers = last_line.split('left: ')[1].split(')')[0].strip()
+        else:
+            current_numbers = x.strip()
+
+        # 2. Check for hardcoded terminal states
+        if current_numbers == '24': # If already solved
+            return ["Score: 10"] * len(value_prompts_ensemble)
+        if current_numbers == 'impossible': # If dead end
+            return ["Score: 1"] * len(value_prompts_ensemble)
+
+        # 3. Format and return the ensemble
+        return [prompt.format(input=current_numbers) for prompt in value_prompts_ensemble]
+
+    def extract_numerical_score(self, output: str) -> float:
+        xml_matches = re.findall(r'<score>\s*(10|[1-9])\s*</score>', output, re.IGNORECASE)
+        if xml_matches:
+            return float(xml_matches[-1])  # last = model's final answer
+        all_numbers = re.findall(r'\b(10|[1-9])\b', output)
+        if all_numbers:
+            return float(all_numbers[-1])
+        return 1.0
+
     @staticmethod
     def standard_prompt_wrap(x: str, y: str='') -> str:
         raise NotImplementedError("standard_prompt not used in this configuration")
