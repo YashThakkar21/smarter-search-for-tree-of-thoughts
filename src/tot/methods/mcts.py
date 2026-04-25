@@ -1,5 +1,6 @@
 from __future__ import annotations
 import math
+from collections import Counter
 from dataclasses import dataclass, field
 from functools import partial
 from typing import List, Optional
@@ -51,6 +52,39 @@ def _normalize_reward(raw_value: float) -> float:
     if raw_value <= 0:
         return 0.0
     return raw_value / (raw_value + 1.0)
+
+
+def _clip_score_1_to_10(score: float) -> int:
+    return max(1, min(10, int(round(score))))
+
+
+def _evaluate_with_ensemble(task, x: str, y: str, aggregation: str) -> Optional[float]:
+    if not hasattr(task, "get_ensemble_prompts") or not hasattr(task, "extract_numerical_score"):
+        return None
+
+    prompts = task.get_ensemble_prompts(x, y)
+    if not prompts:
+        return None
+
+    scores: List[int] = []
+    for prompt in prompts:
+        if isinstance(prompt, str) and prompt.startswith('{"reasoning"'):
+            raw_output = prompt
+        else:
+            raw_output = bfs.gpt(prompt, n=1, stop=None, max_tokens=800)[0]
+
+        score = task.extract_numerical_score(raw_output)
+        scores.append(_clip_score_1_to_10(score))
+
+    mode = (aggregation or "average").lower()
+    if mode == "majority":
+        counts = Counter(scores)
+        # Break ties deterministically toward higher confidence.
+        best_score = max(counts.items(), key=lambda item: (item[1], item[0]))[0]
+        return best_score / 10.0
+
+    avg_score = sum(scores) / len(scores)
+    return avg_score / 10.0
 
 def _ucb_score(parent_visits: int, child: Node, c: float) -> float:
     if child.visits == 0:
@@ -109,6 +143,13 @@ def _evaluate(node: Node, args, task, x: str, idx: int) -> float:
         return 1.0
     if node.is_dead_end:
         return 0.0
+
+    agg_mode = getattr(args, "mcts_ensemble_aggregation", "average")
+    use_ensemble = getattr(args, "mcts_use_ensemble_evaluator", True)
+    if use_ensemble:
+        ensemble_reward = _evaluate_with_ensemble(task, x, node.y, agg_mode)
+        if ensemble_reward is not None:
+            return ensemble_reward
 
     n_eval = getattr(args, "n_mcts_evaluate_sample", 1)
     raw_value = bfs.get_value(task, x, node.y, n_eval)

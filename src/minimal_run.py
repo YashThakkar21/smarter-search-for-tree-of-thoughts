@@ -20,11 +20,6 @@ args = argparse.Namespace(
     prompt_sample=None,
     method_generate="propose",
     method_evaluate="value",
-    task_start_index=900,
-    task_end_index=901,
-    
-    # Modify the Search Algorithm
-    search_method="bfs",
 
     # ranges from 0 - 1362
     task_start_index=40,
@@ -43,6 +38,8 @@ args = argparse.Namespace(
     n_mcts_simulations=500,
     n_mcts_evaluate_sample=1,
     mcts_exploration=0.5,
+    mcts_use_ensemble_evaluator=True,
+    mcts_ensemble_aggregation="average",  # "average" or "majority"
 )
 
 task = Game24Task()
