@@ -1,4 +1,5 @@
 import re
+import json
 import os
 import sympy
 import pandas as pd
@@ -37,6 +38,45 @@ class Game24Task(Task):
             return {'r': int(sympy.simplify(expression) == 24)}
         except Exception:
             return {'r': 0}
+
+    def get_ensemble_prompts(self, x: str, y: str) -> list[str]:
+        # 1. Extract the current remaining numbers
+        last_line = y.strip().split('\n')[-1] if y.strip() else ""
+        if 'left: ' in last_line:
+            current_numbers = last_line.split('left: ')[1].split(')')[0].strip()
+        else:
+            current_numbers = x.strip()
+
+        # 2. Check for hardcoded terminal states (NOW RETURNS JSON!)
+        if current_numbers == '24':
+            return ['{"reasoning": "Already solved", "score": 10}'] * len(value_prompts_ensemble)
+        if current_numbers == 'impossible':
+            return ['{"reasoning": "Dead end", "score": 1}'] * len(value_prompts_ensemble)
+
+        # 3. Format and return the ensemble
+        return [prompt.format(input=current_numbers) for prompt in value_prompts_ensemble]
+
+
+    def extract_numerical_score(self, output: str) -> float:
+        import json
+        import re
+
+        # 1. Try to parse as strict JSON
+        try:
+            clean_output = re.sub(r'```json|```', '', output).strip()
+            data = json.loads(clean_output)
+            if "score" in data:
+                return float(data["score"])
+        except Exception:
+            pass
+
+        # 2. Fallback: Regex hunt for the JSON score key if parsing fails
+        match = re.search(r'"score"\s*:\s*(10|[1-9])', output, re.IGNORECASE)
+        if match:
+            return float(match.group(1))
+
+        # 3. Ultimate Fallback
+        return 1.0
 
     @staticmethod
     def standard_prompt_wrap(x: str, y: str='') -> str:
