@@ -83,62 +83,45 @@ Input: {input}
 Answer: {answer}
 Judge:'''
 
-# --- NEW ENSEMBLE PROMPTS ---
-# value_prompt_v1 = """Evaluate if the following numbers can be combined using basic arithmetic (+, -, *, /) to reach the target number 24.
-# You may think step-by-step. When you are done, you MUST provide a single integer score from 1 to 10 inside XML tags. 10 is absolutely sure, 1 is impossible.
-# Example: <score>8</score>
+_SCORING_RULE = """SCORING RULE (this is about the PUZZLE, not your confidence):
+  1-2  = clearly impossible (numbers can't combine to anywhere near 24)
+  3-4  = unlikely; no obvious path but you can't fully rule it out
+  5-6  = genuinely uncertain; some plausible directions, can't verify
+  7-8  = looks promising; near-misses or partial paths exist
+  9-10 = a valid expression to 24 definitely exists
+Use the full 1-10 range. Do not default to only 1 or 10."""
 
-# Input: {input}
-# """
-
-# value_prompt_v2 = """Look at the given set of numbers. How mathematically likely is it that they can evaluate to 24 using addition, subtraction, multiplication, and division?
-# Rate the potential of these numbers on a scale of 1 to 10 (1 = dead end, 10 = guaranteed solution).
-# Write out your reasoning, then place your final integer score inside <score> tags.
-
-# Input: {input}
-# """
-
-# value_prompt_v3 = """Act as a mathematical evaluator. Analyze the remaining numbers below. Are there clear algebraic paths to make 24?
-# Assign a probability score from 1 to 10 representing the likelihood of success. You can show your work, but your final answer MUST be an integer wrapped in <score> tags.
-
-# Input: {input}
-# Score:"""
-
-value_prompt_v1 = """Evaluate if the following numbers can be combined using basic arithmetic (+, -, *, /) to reach 24.
-
-You MUST respond using this EXACT JSON format:
+_JSON_FORMAT = """You MUST respond using this EXACT JSON format and nothing else:
 {{
-  "reasoning": "your brief step-by-step work here",
+  "reasoning": "your brief work here",
   "score": <integer from 1 to 10>
-}}
+}}"""
 
-CRITICAL SCORING RULE: 10 means a valid expression to 24 is guaranteed. 1 means it is mathematically impossible.
-
-Input: {input}
+value_prompt_v1 = f"""Evaluate whether the following numbers can be combined using basic arithmetic (+, -, *, /) and parentheses to reach 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
 Output:"""
 
-value_prompt_v2 = """Look at the given set of numbers. How mathematically likely is it that they can evaluate to 24 using addition, subtraction, multiplication, and division?
-
-You MUST respond using this EXACT JSON format:
-{{
-  "reasoning": "briefly evaluate the potential in 3 sentences",
-  "score": <integer from 1 to 10>
-}}
-(1 = dead end, 10 = guaranteed solution)
-
-Input: {input}
+value_prompt_v2 = f"""Estimate how likely it is that the following numbers can be combined with +, -, *, / and parentheses to evaluate to 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
 Output:"""
 
-value_prompt_v3 = """Act as a mathematical evaluator. Analyze the remaining numbers below. Are there clear algebraic paths to make 24? 
-
-You MUST respond using this EXACT JSON format:
-{{
-  "reasoning": "your evaluation here",
-  "score": <integer from 1 to 10>
-}}
-(10 is certain success, 1 is absolute failure)
-
-Input: {input}
+value_prompt_v3 = f"""Act as a mathematical evaluator. Analyze the remaining numbers below and decide whether there is a clear algebraic path to 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
 Output:"""
 
 value_prompts_ensemble = [value_prompt_v1, value_prompt_v2, value_prompt_v3]
