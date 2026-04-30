@@ -2,19 +2,11 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass, field
 from functools import partial
-<<<<<<< HEAD
-
-import tot.methods.bfs as bfs
-from tot.models import gpt as base_gpt
-
-
-=======
 from typing import List, Optional
 import tot.methods.bfs as bfs
 from tot.models import gpt as base_gpt
 
 @dataclass
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 class Node:
     y: str
     parent: Optional["Node"] = None
@@ -35,10 +27,6 @@ class Node:
     def mean_value(self) -> float:
         return self.value_sum / self.visits if self.visits > 0 else 0.0
 
-<<<<<<< HEAD
-
-def _is_valid_solution(task, idx, y) -> bool:
-=======
 def _tail_line(y: str) -> str:
     lines = [line.strip() for line in y.strip().split("\n") if line.strip()]
     return lines[-1] if lines else "<root>"
@@ -49,7 +37,6 @@ def _finalize_candidate(task, x: str, y: str) -> str:
     return y
 
 def _is_valid_solution(task, idx: int, x: str, y: str) -> bool:
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     try:
         candidate = _finalize_candidate(task, x, y)
         result = task.test_output(idx, candidate)
@@ -60,12 +47,12 @@ def _is_valid_solution(task, idx: int, x: str, y: str) -> bool:
 def _is_terminal(node: Node, max_steps: int) -> bool:
     return node.is_solved or node.is_dead_end or node.depth >= max_steps
 
-
 def _normalize_reward(raw_value: float) -> float:
     if raw_value <= 0:
         return 0.0
+    if raw_value <= 1.0:
+        return raw_value
     return raw_value / (raw_value + 1.0)
-
 
 def _ucb_score(parent_visits: int, child: Node, c: float) -> float:
     if child.visits == 0:
@@ -73,7 +60,6 @@ def _ucb_score(parent_visits: int, child: Node, c: float) -> float:
     exploit = child.mean_value
     explore = c * math.sqrt(math.log(max(parent_visits, 1)) / child.visits)
     return exploit + explore
-
 
 def _select(node: Node, c: float, max_steps: int) -> Node:
     cur = node
@@ -87,12 +73,7 @@ def _select(node: Node, c: float, max_steps: int) -> Node:
         cur = max(cur.children, key=lambda child: _ucb_score(cur.visits, child, c))
     return cur
 
-<<<<<<< HEAD
-
-def _expand(node: Node, task, idx, x) -> Node:
-=======
 def _expand(node: Node, task, idx: int, x: str) -> Node:
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     if node.is_solved:
         return node
 
@@ -124,19 +105,6 @@ def _expand(node: Node, task, idx: int, x: str) -> Node:
     node.children.append(child)
     return child
 
-
-<<<<<<< HEAD
-def _evaluate(node: Node, args, task, x, idx) -> float:
-    if node.is_solved:
-        return 1.0
-
-    if node.is_dead_end and node.depth >= task.steps:
-        return 0.0
-
-    raw_value = bfs.get_value(task, x, node.y, args.n_evaluate_sample)
-    return _normalize_reward(raw_value)
-
-=======
 def _evaluate(node: Node, args, task, x: str, idx: int) -> float:
     if node.is_solved:
         return 1.0
@@ -146,8 +114,6 @@ def _evaluate(node: Node, args, task, x: str, idx: int) -> float:
     n_eval = getattr(args, "n_mcts_evaluate_sample", 1)
     raw_value = bfs.get_value(task, x, node.y, n_eval)
     return _normalize_reward(raw_value)
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
-
 
 def _backpropagate(node: Node, reward: float) -> None:
     cur = node
@@ -156,33 +122,6 @@ def _backpropagate(node: Node, reward: float) -> None:
         cur.value_sum += reward
         cur = cur.parent
 
-<<<<<<< HEAD
-
-def _best_node(root: Node) -> Node:
-    solved_nodes = []
-    other_nodes = []
-
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        if node.is_solved:
-            solved_nodes.append(node)
-        elif node is not root:
-            other_nodes.append(node)
-        stack.extend(node.children)
-
-    if solved_nodes:
-        return max(solved_nodes, key=lambda n: (n.mean_value, n.visits))
-
-    if other_nodes:
-        return max(other_nodes, key=lambda n: (n.mean_value, n.visits))
-
-    return root
-
-
-def solve(args, task, idx, to_print=True):
-    # Important: bfs.get_proposals/get_value use bfs.gpt internally.
-=======
 
 def _collect_non_root_nodes(root: Node) -> List[Node]:
     nodes: List[Node] = []
@@ -215,11 +154,13 @@ def _best_node(root: Node) -> Node:
     return root
 
 def solve(args, task, idx: int, to_print: bool = True):
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
     bfs.gpt = partial(base_gpt, model=args.backend, temperature=args.temperature)
 
     if to_print:
         print(bfs.gpt)
+
+    if hasattr(task, 'set_gpt_fn'):
+        task.set_gpt_fn(bfs.gpt)
 
     x = task.get_input(idx)
     root = Node("")
@@ -235,16 +176,6 @@ def solve(args, task, idx: int, to_print: bool = True):
         _backpropagate(child, reward)
 
         if to_print:
-<<<<<<< HEAD
-            infos.append({
-                "simulation": sim,
-                "selected_y": leaf.y,
-                "expanded_y": child.y,
-                "reward": reward,
-                "is_solved": child.is_solved,
-                "is_dead_end": child.is_dead_end,
-            })
-=======
             infos.append(
                 {
                     "simulation": sim,
@@ -263,7 +194,6 @@ def solve(args, task, idx: int, to_print: bool = True):
                 f"visits={child.visits} mean={child.mean_value:.3f} | "
                 f"solved={child.is_solved} dead_end={child.is_dead_end}"
             )
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
 
         if child.is_solved:
             if to_print:
@@ -288,12 +218,6 @@ def solve(args, task, idx: int, to_print: bool = True):
 
     ys = [best_output]
 
-<<<<<<< HEAD
-    if hasattr(task, "finalize_output"):
-        ys = [task.finalize_output(x, y) for y in ys]
-
-    if to_print:
-=======
     if to_print:
         top_k = ranked[: min(10, len(ranked))]
         print("-- mcts top candidates --")
@@ -309,7 +233,6 @@ def solve(args, task, idx: int, to_print: bool = True):
             f"mean={best_node.mean_value:.3f} solved={best_node.is_solved} "
             f"| {_tail_line(best_node.y)}"
         )
->>>>>>> 0748842 (modified models to take in fractions and added a debugging tool for minimal_run)
         print(ys)
 
     return ys, {"simulations": infos}
