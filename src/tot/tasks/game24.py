@@ -1,5 +1,7 @@
 import re
+import json
 import os
+from typing import Optional
 import sympy
 import pandas as pd
 from fractions import Fraction
@@ -38,16 +40,90 @@ class Game24Task(Task):
         except Exception:
             return {'r': 0}
 
+    def get_ensemble_prompts(self, x: str, y: str) -> list:
+        # 1. Extract the current remaining numbers
+        last_line = y.strip().split('\n')[-1] if y.strip() else ""
+        if 'left: ' in last_line:
+            current_numbers = last_line.split('left: ')[1].split(')')[0].strip()
+        else:
+            current_numbers = x.strip()
+
+        # 2. Hardcoded terminal states (return JSON so they parse identically
+        #    to LLM outputs downstream)
+        if current_numbers == '24':
+            return ['{"reasoning": "Already solved", "score": 10}'] * len(value_prompts_ensemble)
+        if current_numbers == 'impossible':
+            return ['{"reasoning": "Dead end", "score": 1}'] * len(value_prompts_ensemble)
+
+        # 3. Format and return the ensemble
+        return [prompt.format(input=current_numbers) for prompt in value_prompts_ensemble]
+
+    def extract_numerical_score(self, output: str) -> Optional[float]:
+        """
+        Parse a 1-10 score from a model output. Returns None on failure so
+        the caller can decide whether to retry, skip, or substitute a default
+        rather than silently averaging in a fake score.
+
+        Handles, in order:
+          1. Clean JSON object
+          2. JSON wrapped in ```json ... ``` fences
+          3. JSON that appears AFTER preamble (e.g. gpt-oss harmony channels:
+             "analysis...assistantfinal {json}") - finds the LAST {...} block
+          4. A "score": N substring even if surrounding JSON is malformed
+        Returns None if the score cannot be located or is out of range.
+        """
+        if not output:
+            return None
+
+        # Strategy 1: try clean parse after stripping markdown fences
+        cleaned = re.sub(r'```json|```', '', output).strip()
+        try:
+            data = json.loads(cleaned)
+            if isinstance(data, dict) and "score" in data:
+                score = float(data["score"])
+                if 1 <= score <= 10:
+                    return score
+        except (json.JSONDecodeError, ValueError, TypeError):
+            pass
+
+        # Strategy 2: harmony-format models (gpt-oss-*) often emit the
+        # final JSON after an "analysis...assistantfinal" preamble. Walk
+        # all balanced {...} blocks and try the LAST one that parses.
+        candidates = re.findall(r'\{[^{}]*\}', output, flags=re.DOTALL)
+        for candidate in reversed(candidates):
+            try:
+                data = json.loads(candidate)
+                if isinstance(data, dict) and "score" in data:
+                    score = float(data["score"])
+                    if 1 <= score <= 10:
+                        return score
+            except (json.JSONDecodeError, ValueError, TypeError):
+                continue
+
+        # Strategy 3: regex over the whole output for "score": N (1..10).
+        # The \b prevents matching the leading "10" of "100", and we
+        # require the integer to be in range.
+        match = re.search(r'"score"\s*:\s*"?(\d+)"?\b', output)
+        if match:
+            try:
+                score = float(match.group(1))
+                if 1 <= score <= 10:
+                    return score
+            except ValueError:
+                pass
+
+        return None
+
     @staticmethod
-    def standard_prompt_wrap(x: str, y: str='') -> str:
+    def standard_prompt_wrap(x: str, y: str = '') -> str:
         raise NotImplementedError("standard_prompt not used in this configuration")
 
     @staticmethod
-    def cot_prompt_wrap(x: str, y: str='') -> str:
+    def cot_prompt_wrap(x: str, y: str = '') -> str:
         raise NotImplementedError("cot_prompt not used in this configuration")
 
     @staticmethod
-    def propose_prompt_wrap(x: str, y: str='') -> str:
+    def propose_prompt_wrap(x: str, y: str = '') -> str:
         current_numbers = get_current_numbers(y if y else x)
         return propose_prompt.format(input=current_numbers)
 

@@ -1,0 +1,27 @@
+{
+    "state": "4 + 8 = 12 (left: 4 6 12)\n12 * 2 = 24 (left: 24)",
+    "evaluations": [
+        {
+            "prompt_version": 1,
+            "raw_output": "{\"reasoning\": \"Already solved\", \"score\": 10}",
+            "extracted_score": 10.0,
+            "note": "Hardcoded terminal state"
+        },
+        {
+            "prompt_version": 2,
+            "raw_output": "{\"reasoning\": \"Already solved\", \"score\": 10}",
+            "extracted_score": 10.0,
+            "note": "Hardcoded terminal state"
+        },
+        {
+            "prompt_version": 3,
+            "raw_output": "{\"reasoning\": \"Already solved\", \"score\": 10}",
+            "extracted_score": 10.0,
+            "note": "Hardcoded terminal state"
+        }
+    ],
+    "average_score": 10.0,
+    "final_normalized_score": 1.0,
+    "successful_evaluations": 3,
+    "total_evaluations": 3
+}

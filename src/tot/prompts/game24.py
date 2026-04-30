@@ -82,3 +82,46 @@ impossible
 Input: {input}
 Answer: {answer}
 Judge:'''
+
+_SCORING_RULE = """SCORING RULE (this is about the PUZZLE, not your confidence):
+  1-2  = clearly impossible (numbers can't combine to anywhere near 24)
+  3-4  = unlikely; no obvious path but you can't fully rule it out
+  5-6  = genuinely uncertain; some plausible directions, can't verify
+  7-8  = looks promising; near-misses or partial paths exist
+  9-10 = a valid expression to 24 definitely exists
+Use the full 1-10 range. Do not default to only 1 or 10."""
+
+_JSON_FORMAT = """You MUST respond using this EXACT JSON format and nothing else:
+{{
+  "reasoning": "your brief work here",
+  "score": <integer from 1 to 10>
+}}"""
+
+value_prompt_v1 = f"""Evaluate whether the following numbers can be combined using basic arithmetic (+, -, *, /) and parentheses to reach 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
+Output:"""
+
+value_prompt_v2 = f"""Estimate how likely it is that the following numbers can be combined with +, -, *, / and parentheses to evaluate to 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
+Output:"""
+
+value_prompt_v3 = f"""Act as a mathematical evaluator. Analyze the remaining numbers below and decide whether there is a clear algebraic path to 24.
+ 
+{_SCORING_RULE}
+ 
+{_JSON_FORMAT}
+ 
+Input: {{input}}
+Output:"""
+
+value_prompts_ensemble = [value_prompt_v1, value_prompt_v2, value_prompt_v3]
