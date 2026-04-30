@@ -137,12 +137,8 @@ def solve(args, task, idx, to_print=True):
 def naive_solve(args, task, idx, to_print=True):
     global gpt
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-<<<<<<< HEAD
     if to_print:
         print(gpt)
-=======
-    print(gpt)
->>>>>>> c9a4fb8 (Modified the game24.py file and the minimal_run file, added the tinker to requirements)
     x = task.get_input(idx)
     ys = get_samples(task, x, '', args.n_generate_sample, args.prompt_sample, stop=None)
     return ys, {}

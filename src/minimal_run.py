@@ -27,7 +27,7 @@ args = argparse.Namespace(
     task_end_index=41,
 
     # Modify the Search Algorithm
-    search_method="mcts",
+    search_method="bfs",
 
     # BFS knobs
     method_select="greedy",
