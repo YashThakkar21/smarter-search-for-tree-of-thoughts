@@ -213,8 +213,8 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
     if mode == "crosswords_output":
         system_msg = (
             "You are an expert crossword puzzle solver. "
-            "Output ONLY a JSON object with the 5-letter answers. No reasoning, no explanation. "
-            'Exactly: {"h1": "WORD1", "h2": "WORD2", "h3": "WORD3", "h4": "WORD4", "h5": "WORD5"}'
+            "Think through the puzzle, then end your response with ONLY this JSON — no text after it: "
+            '{"h1": "WORD1", "h2": "WORD2", "h3": "WORD3", "h4": "WORD4", "h5": "WORD5"}'
         )
     elif mode == "crosswords_standard":
         system_msg = (
@@ -247,8 +247,6 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         # rfind targets the LAST "Output:" (the empty one), not the ones in examples.
         raw_user_content = raw_user_content[: raw_user_content.rfind("Output:")].strip()
         assistant_prefill = "Output: (5 rows of 5 uppercase letters separated by spaces)\n"
-    elif mode == "crosswords_output":
-        assistant_prefill = '{"h1": "'
     elif mode == "propose" and "Possible next steps:" in raw_user_content:
         raw_user_content = raw_user_content[: raw_user_content.rfind("Possible next steps:")].strip()
         assistant_prefill = "Possible next steps:\n"
@@ -278,9 +276,7 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
             effective_stop.append("<|im_end|>")
 
         if mode == "crosswords_output":
-            effective_max_tokens = 200
-            if "}" not in effective_stop:
-                effective_stop.append("}")
+            effective_max_tokens = 4096
         elif mode == "crosswords_propose":
             effective_max_tokens = 4096
             effective_stop = [token for token in effective_stop if token != "\n\n"]

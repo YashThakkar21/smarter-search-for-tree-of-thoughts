@@ -213,14 +213,26 @@ class MiniCrosswordsTask(Task):
             except (json.JSONDecodeError, TypeError, ValueError):
                 continue
 
-        # Fallback: extract key-value pairs individually.
-        # Handles prefill-started output like: MOTOR", "h2": "ITEMS", ...}
+        # Fallback 1: individual JSON key-value pairs
         rows = []
         for i in range(1, 6):
             m = re.search(rf'"?h{i}"?\s*:\s*"([A-Za-z]{{5}})"', output, re.IGNORECASE)
             rows.append(m.group(1).upper() if m else '_____')
         if any(r != '_____' for r in rows):
             return rows
+
+        # Fallback 2: reasoning text patterns like "h1 = MOTOR", "h2 likely SNEER"
+        # Take the LAST match per clue (model's most recent/final commitment)
+        rows = []
+        for i in range(1, 6):
+            matches = list(re.finditer(
+                rf'\bh{i}\b[^A-Za-z\n]{{0,80}}([A-Z]{{5}})\b',
+                output
+            ))
+            rows.append(matches[-1].group(1) if matches else '_____')
+        if any(r != '_____' for r in rows):
+            return rows
+
         return []
 
     @staticmethod
