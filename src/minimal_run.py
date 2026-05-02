@@ -5,7 +5,7 @@ from debug_utils import (
     print_plain_solution,
     print_selected_solution,
 )
-from tot.methods.bfs import solve as bfs_solve
+from tot.methods.bfs import solve as bfs_solve, naive_solve
 from tot.methods.mcts import solve as mcts_solve
 from tot.tasks.game24 import Game24Task
 from tot.tasks.crosswords import MiniCrosswordsTask
@@ -17,14 +17,14 @@ args = argparse.Namespace(
     temperature=0.7,
     task="crosswords", #crosswords, game24
 
-    naive_run=False,
-    prompt_sample=None,
-    method_generate="propose",
+    naive_run=True,
+    prompt_sample="output",
+    method_generate="sample",
     method_evaluate="value",
 
     # ranges from 0 - 1362
-    task_start_index=40,
-    task_end_index=41,
+    task_start_index=0,
+    task_end_index=1,
 
     # Modify the Search Algorithm
     search_method="bfs",
@@ -32,7 +32,7 @@ args = argparse.Namespace(
     # BFS knobs
     method_select="greedy",
     n_generate_sample=1,
-    n_evaluate_sample=3,
+    n_evaluate_sample=1,
     n_select_sample=5,
 
     # MCTS knobs
@@ -42,7 +42,12 @@ args = argparse.Namespace(
 )
 
 task = MiniCrosswordsTask() if args.task == "crosswords" else Game24Task()
-solve = bfs_solve if args.search_method == "bfs" else mcts_solve
+if args.naive_run:
+    solve = naive_solve
+elif args.search_method == "bfs":
+    solve = bfs_solve
+else:
+    solve = mcts_solve
 
 # Debuging
 debug = True

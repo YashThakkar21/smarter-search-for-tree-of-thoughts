@@ -4,6 +4,10 @@ from functools import partial
 from tot.models import gpt
 
 def get_value(task, x, y, n_evaluate_sample, cache_value=True):
+    if not hasattr(task, 'value_prompt_wrap'):
+        if hasattr(task, 'evaluate'):
+            return float(task.evaluate(x, y, n_evaluate_sample))
+        raise AttributeError(f"{type(task).__name__} has no value_prompt_wrap or evaluate method")
     value_prompt = task.value_prompt_wrap(x, y)
     if cache_value and value_prompt in task.value_cache:
         return task.value_cache[value_prompt]
@@ -18,7 +22,7 @@ def get_values(task, x, ys, n_evaluate_sample, cache_value=True):
     local_value_cache = {}
     for y in ys:
         if y in local_value_cache:
-            value = 0
+            value = local_value_cache[y]
         else:
             value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[y] = value
@@ -33,8 +37,13 @@ def get_votes(task, x, ys, n_evaluate_sample):
 
 def get_proposals(task, x, y):
     propose_prompt = task.propose_prompt_wrap(x, y)
-    raw = gpt(propose_prompt, n=1, stop=None)[0]
-    proposals = [p.strip() for p in raw.split('\n') if p.strip()]
+    outputs = gpt(propose_prompt, n=1, stop=None)
+    print(f'[propose] raw output: {repr(outputs[0][:200])}')
+    if hasattr(task, 'propose_outputs_unwrap'):
+        proposals = task.propose_outputs_unwrap(x, y, outputs, n_max_propose=-1)
+        print(f'[propose] parsed {len(proposals)} proposals')
+        return proposals
+    proposals = [p.strip() for p in outputs[0].split('\n') if p.strip()]
     return [y + p + '\n' for p in proposals]
 
 def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
@@ -42,6 +51,8 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
         prompt = task.standard_prompt_wrap(x, y)
     elif prompt_sample == 'cot':
         prompt = task.cot_prompt_wrap(x, y)
+    elif prompt_sample == 'output':
+        prompt = task.output_prompt_wrap(x, y)
     else:
         raise ValueError(f'prompt_sample {prompt_sample} not recognized')
     samples = gpt(prompt, n=n_generate_sample, stop=stop)
@@ -56,6 +67,8 @@ def _is_game24_complete(y: str) -> bool:
 def solve(args, task, idx, to_print=True):
     global gpt
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    if hasattr(task, 'set_gpt_fn'):
+        task.set_gpt_fn(gpt)
     print(gpt)
 
     x = task.get_input(idx)
@@ -94,7 +107,9 @@ def solve(args, task, idx, to_print=True):
             raise ValueError(f'Unknown evaluation method: {args.method_evaluate}')
 
         if args.method_select == 'sample':
-            ps = np.array(values) / sum(values)
+            clipped = np.array([max(0.0, v) for v in values])
+            total = clipped.sum()
+            ps = clipped / total if total > 0 else np.ones(len(values)) / len(values)
             select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
         elif args.method_select == 'greedy':
             select_ids = sorted(ids, key=lambda i: values[i], reverse=True)[:args.n_select_sample]

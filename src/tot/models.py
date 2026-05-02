@@ -53,6 +53,16 @@ def _decode_text(model: str, token_ids):
 
 def _infer_mode(prompt_text: str) -> str:
     lower = prompt_text.lower()
+    if "possible answers for unfilled words" in lower:
+        return "crosswords_propose"
+    if "single integer from 1 to 10" in lower:
+        return "crosswords_score"
+    if '"h1": "word1"' in lower:
+        return "crosswords_output"
+    if "solve 5x5 mini crosswords" in lower:
+        return "crosswords_standard"
+    if "crossword state" in lower and '"score"' in lower:
+        return "crosswords_eval"
     if "possible next steps" in lower:
         return "propose"
     if "judge:" in lower or "sure/impossible" in lower or "sure/likely/impossible" in lower:
@@ -61,6 +71,19 @@ def _infer_mode(prompt_text: str) -> str:
 
 def _clean_output(text: str, mode: str) -> str:
     text = text.replace("<|im_end|>", "").replace("<|im_start|>", "").strip()
+
+    if mode == "crosswords_propose":
+        return text  # propose_outputs_unwrap does flexible parsing on raw output
+
+    if mode == "crosswords_output":
+        return text  # _parse_json_board extracts the JSON from reasoning output
+
+    if mode == "crosswords_eval":
+        return text  # extract_numerical_score handles JSON parsing
+
+    if mode == "crosswords_score":
+        m = re.search(r'\b(10|[1-9])\b', text)
+        return m.group(1) if m else "1"
 
     if mode == "propose":
         valid_lines = []
@@ -165,7 +188,7 @@ def _value_score(numbers_str: str) -> str:
     return "sure" if _can_reach_24_state(_sorted_state(nums)) else "impossible"
 
 
-def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=128, n=1, stop=None) -> list:
+def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=2048, n=1, stop=None) -> list:
     messages = [{"role": "user", "content": prompt}]
     return chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)
 
@@ -187,12 +210,46 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         if lines:
             return [_value_score(lines[-1])] * n
 
-    system_msg = "You are a helpful mathematical assistant. Follow the user's formatting instructions precisely."
+    if mode == "crosswords_output":
+        system_msg = (
+            "You are an expert crossword puzzle solver. "
+            "Output ONLY a JSON object with the 5-letter answers. No reasoning, no explanation. "
+            'Exactly: {"h1": "WORD1", "h2": "WORD2", "h3": "WORD3", "h4": "WORD4", "h5": "WORD5"}'
+        )
+    elif mode == "crosswords_standard":
+        system_msg = (
+            "You are an expert crossword puzzle solver. "
+            "You will be shown examples of solved crosswords, then a new puzzle to solve. "
+            "Output ONLY the 5x5 grid: exactly 5 rows, each row containing 5 uppercase letters separated by single spaces. "
+            "Do not output any reasoning, analysis, explanation, or other text — only the 5 rows."
+        )
+    elif mode == "crosswords_eval":
+        system_msg = (
+            "You are a crossword evaluator. Respond ONLY with valid JSON in the exact format: "
+            '{"reasoning": "<brief explanation>", "score": <integer 1-10>}'
+        )
+    elif mode in ("crosswords_propose", "crosswords_score"):
+        system_msg = "You are an expert crossword puzzle solver. Follow the formatting instructions precisely."
+    else:
+        system_msg = "You are a helpful mathematical assistant. Follow the user's formatting instructions precisely."
 
-    # Extract trailing labels to pre-fill the assistant so it doesn't get confused
     assistant_prefill = ""
 
-    if mode == "propose" and "Possible next steps:" in raw_user_content:
+    if mode == "crosswords_propose" and "Possible answers for unfilled words:" in raw_user_content:
+        raw_user_content = raw_user_content[: raw_user_content.rfind("Possible answers for unfilled words:")].strip()
+        assistant_prefill = "Possible answers for unfilled words:\n"
+    elif mode == "crosswords_standard" and "Thoughts:" in raw_user_content and raw_user_content.rstrip().endswith("Thoughts:"):
+        # cot_prompt — prefill the Thoughts: anchor so the model starts structured reasoning.
+        raw_user_content = raw_user_content.rstrip()[: -len("Thoughts:")].strip()
+        assistant_prefill = "Thoughts:\n"
+    elif mode == "crosswords_standard" and "Output:" in raw_user_content:
+        # standard_prompt — prefill Output: so the model completes with the grid directly.
+        # rfind targets the LAST "Output:" (the empty one), not the ones in examples.
+        raw_user_content = raw_user_content[: raw_user_content.rfind("Output:")].strip()
+        assistant_prefill = "Output: (5 rows of 5 uppercase letters separated by spaces)\n"
+    elif mode == "crosswords_output":
+        assistant_prefill = '{"h1": "'
+    elif mode == "propose" and "Possible next steps:" in raw_user_content:
         raw_user_content = raw_user_content[: raw_user_content.rfind("Possible next steps:")].strip()
         assistant_prefill = "Possible next steps:\n"
     elif mode == "value" and "Judge:" in raw_user_content:
@@ -220,7 +277,24 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         if "<|im_end|>" not in effective_stop:
             effective_stop.append("<|im_end|>")
 
-        if mode == "propose":
+        if mode == "crosswords_output":
+            effective_max_tokens = 200
+            if "}" not in effective_stop:
+                effective_stop.append("}")
+        elif mode == "crosswords_propose":
+            effective_max_tokens = 4096
+            effective_stop = [token for token in effective_stop if token != "\n\n"]
+        elif mode == "crosswords_standard":
+            effective_max_tokens = 8192
+            # Only stop on the chat turn boundary or if the model tries to start
+            # a new few-shot example — never on \n\n, which fires after every grid row.
+            if "\nInput:" not in effective_stop:
+                effective_stop.append("\nInput:")
+        elif mode == "crosswords_eval":
+            effective_max_tokens = 512
+        elif mode == "crosswords_score":
+            effective_max_tokens = 10
+        elif mode == "propose":
             effective_max_tokens = 512
             effective_stop = [token for token in effective_stop if token != "\n\n"]
         elif mode == "value":
@@ -247,6 +321,8 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
             output_tokens = seq.tokens
             completion_tokens += len(output_tokens)
             decoded = _decode_text(model, output_tokens)
+            if mode in ("crosswords_propose", "crosswords_score", "crosswords_standard", "crosswords_output", "crosswords_eval"):
+                print(f'[{mode}] raw decoded ({len(output_tokens)} tokens): {repr(decoded[:300])}')
             outputs.append(_clean_output(decoded, mode))
 
     return outputs

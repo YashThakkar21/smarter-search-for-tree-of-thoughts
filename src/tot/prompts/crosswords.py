@@ -100,9 +100,8 @@ P I E T Y
 Input:
 {input}
 
-Output:
+Output: (5 rows, each row is 5 uppercase letters separated by spaces, nothing else)
 '''
-
 
 
 cot_prompt = '''Solve 5x5 mini crosswords. Given an input of 5 horizontal clues and 5 vertical clues, generate thoughts about which 5-letter word fits each clue, then an output of 5 rows, where each row is 5 letter separated by space.
@@ -264,14 +263,32 @@ P I E T Y
 
 Input:
 {input}
+
+Thoughts:
 '''
 
-
-propose_prompt = '''Let's play a 5 x 5 mini crossword, where each word should have exactly 5 letters.
+output_prompt = '''Solve the following 5x5 mini crossword.
 
 {input}
 
-Given the current status, list all possible answers for unfilled or changed words, and your confidence levels (certain/high/medium/low), using the format "h1. apple (medium)". Use "certain" cautiously and only when you are 100% sure this is the correct word. You can list more then one possible answer for each word.
+IMPORTANT: Do NOT show your reasoning. Output ONLY the final JSON.
+
+{{"h1": "WORD1", "h2": "WORD2", "h3": "WORD3", "h4": "WORD4", "h5": "WORD5"}}
+'''
+
+propose_prompt = '''Let's play a 5 x 5 mini crossword, where each word should have exactly 5 letters.
+
+INSTRUCTIONS: List possible answers for unfilled or changed words with confidence levels.
+Format — one answer per line, exactly like this (position. word (confidence)):
+h1. tasks (high)
+h2. motor (certain)
+v1. tiger (medium)
+v2. scone (low)
+Confidence levels: certain = 100% sure, high = likely correct, medium = possible, low = a guess.
+You may list multiple candidates per position. Output ONLY lines in the format above, no other text.
+
+Current crossword state:
+{input}
 '''
 
 
@@ -323,4 +340,64 @@ I cannot think of any words now. 4 letters are constrained, and it is extremely 
 impossible
 
 {input}
+'''
+
+
+# =======================
+# JSON-BASED SCORING (aligned with game24.py)
+# =======================
+
+_SCORING_RULE_CROSSWORD = """SCORING RULE (this is about the crossword state, not your confidence):
+  1-2  = inconsistent; many answers conflict with clues or letter constraints
+  3-4  = unlikely; several weak matches or conflicts
+  5-6  = uncertain; some answers fit but crossings are shaky
+  7-8  = promising; most answers fit clues and crossings are mostly consistent
+  9-10 = very strong; answers fit clues well and crossings are fully or nearly consistent
+Use the full 1-10 range. Do not default to only 1 or 10."""
+
+_JSON_FORMAT = """You MUST respond using this EXACT JSON format and nothing else:
+{
+  "reasoning": "brief explanation of clue fit and crossing consistency",
+  "score": <integer from 1 to 10>
+}"""
+
+value_prompt_v1 = f"""Evaluate the current crossword state. For each filled position, check if the answer fits the clue and respects all letter constraints from crossing words.
+
+{_SCORING_RULE_CROSSWORD}
+
+{_JSON_FORMAT}
+
+Current state:
+{{input}}"""
+
+value_prompt_v2 = f"""Estimate how likely it is that the current crossword state leads to a valid solution. Check clue fit and crossing letter consistency.
+
+{_SCORING_RULE_CROSSWORD}
+
+{_JSON_FORMAT}
+
+Current state:
+{{input}}"""
+
+value_prompt_v3 = f"""Act as a crossword evaluator. Analyze the filled words below and decide whether the current board is on track for a valid solution.
+
+{_SCORING_RULE_CROSSWORD}
+
+{_JSON_FORMAT}
+
+Current state:
+{{input}}"""
+
+value_prompts_ensemble = [value_prompt_v1, value_prompt_v2, value_prompt_v3]
+
+
+# ---- Per-clue scoring (used by evaluate() in the solver) ----
+score_prompt = '''Rate how well this 5-letter answer fits the crossword clue.
+
+Reply with ONLY a single integer from 1 to 10:
+1 = completely wrong
+10 = perfect match
+
+Clue: {clue}
+Answer: {answer}
 '''
