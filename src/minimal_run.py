@@ -20,9 +20,9 @@ args = argparse.Namespace(
     method_generate="propose",
     method_evaluate="value",
 
-    # ranges from 0 - 1362
-    task_start_index=40,
-    task_end_index=43,
+    # ranges from 0 - 1362 for 24
+    task_start_index=22,
+    task_end_index=42,
 
     # Modify the Search Algorithm
     search_method="mcts",
@@ -77,5 +77,3 @@ for i in range(args.task_start_index, args.task_end_index):
         print()
     else:
         print_plain_solution(results)
-
-print(sum / 21)
