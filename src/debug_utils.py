@@ -1,5 +1,40 @@
 import re
-import sympy
+
+def _normalize_crossword_grid(solution: str) -> str:
+    rows = []
+    for line in solution.strip().splitlines():
+        line = line.strip()
+        compact = re.fullmatch(r'[A-Za-z]{5}', line)
+        spaced = re.fullmatch(r'[A-Za-z](?:\s+[A-Za-z]){4}', line)
+        if compact:
+            letters = compact.group(0).upper()
+        elif spaced:
+            letters = re.sub(r'\s+', '', spaced.group(0)).upper()
+        else:
+            continue
+        rows.append(' '.join(letters))
+        if len(rows) == 5:
+            break
+    return '\n'.join(rows) if len(rows) == 5 else ''
+
+def _select_solution(results) -> str:
+    candidates = [result for result in results if result and result.strip()]
+    if not candidates:
+        return ''
+
+    ranked_grids = []
+    for index, candidate in enumerate(candidates):
+        grid = _normalize_crossword_grid(candidate)
+        if not grid:
+            continue
+        letters = re.sub(r'[^A-Z]', '', grid)
+        placeholder_count = letters.count('X')
+        ranked_grids.append(((placeholder_count, index), grid))
+
+    if ranked_grids:
+        return min(ranked_grids, key=lambda item: item[0])[1]
+
+    return candidates[0]
 
 def explain_evaluation(task, idx: int, solution: str) -> None:
     from tot.tasks.crosswords import MiniCrosswordsTask
@@ -51,6 +86,8 @@ def _explain_crosswords(task, idx: int, solution: str) -> None:
         print("Evaluation: incorrect")
 
 def _explain_game24(task, idx: int, solution: str) -> None:
+    import sympy
+
     puzzle = task.get_input(idx)
     print(f"Puzzle {idx}: {puzzle}")
 
@@ -83,13 +120,13 @@ def _explain_game24(task, idx: int, solution: str) -> None:
         print(f"Evaluation: incorrect (invalid expression: {exc})")
 
 def print_selected_solution(results) -> str:
+    solution = _select_solution(results)
     print("\nSelected solution:")
-    print(results)
-    solution = results[0] if results else ""
+    print(solution)
     print()
     return solution
 
 def print_plain_solution(results) -> None:
-    solution = results[0] if results else ""
+    solution = _select_solution(results)
     print(solution)
     print()

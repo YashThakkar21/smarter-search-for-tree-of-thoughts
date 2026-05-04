@@ -35,9 +35,9 @@ def get_votes(task, x, ys, n_evaluate_sample):
     values = task.vote_outputs_unwrap(vote_outputs, len(ys))
     return values
 
-def get_proposals(task, x, y):
+def get_proposals(task, x, y, n_generate_sample=1):
     propose_prompt = task.propose_prompt_wrap(x, y)
-    outputs = gpt(propose_prompt, n=1, stop=None)
+    outputs = gpt(propose_prompt, n=n_generate_sample, stop=None)
     print(f'[propose] raw output: {repr(outputs[0][:200])}')
     if hasattr(task, 'propose_outputs_unwrap'):
         proposals = task.propose_outputs_unwrap(x, y, outputs, n_max_propose=-1)
@@ -89,7 +89,7 @@ def solve(args, task, idx, to_print=True):
                 for y in ys
             ]
         elif args.method_generate == 'propose':
-            new_ys = [get_proposals(task, x, y) for y in ys]
+            new_ys = [get_proposals(task, x, y, args.n_generate_sample) for y in ys]
         else:
             raise ValueError(f'Unknown generation method: {args.method_generate}')
 

@@ -167,6 +167,8 @@ class MiniCrosswordsTask(Task):
             self.xs.append(self.env.render_clues())
         self.steps = 10
         self.cache_proposals = {}
+        self.proposal_score_cache = {}
+        self._seen_next_states = {}
         self.value_cache = {}
         self._gpt_fn = _default_gpt
 
@@ -178,6 +180,7 @@ class MiniCrosswordsTask(Task):
 
     def get_input(self, idx: int) -> str:
         self.env.reset(idx)
+        self._seen_next_states = {}
         return self.env.render_clues()
 
     def test_output(self, idx: int, output: str):
@@ -194,6 +197,25 @@ class MiniCrosswordsTask(Task):
             _, _, _, info = self.env.step(f'h{i}. {word}')
         info['r'] = info.get('r_word', 0)
         return info
+
+    @staticmethod
+    def _format_grid_rows(rows: list) -> list:
+        formatted = []
+        for row in rows[:5]:
+            letters = re.sub(r'[^a-zA-Z]', '', str(row)).upper()[:5]
+            if len(letters) != 5:
+                return []
+            formatted.append(' '.join(letters))
+        return formatted if len(formatted) == 5 else []
+
+    @staticmethod
+    def _format_board_rows(board: list) -> list:
+        rows = []
+        for i in range(5):
+            row = board[i * 5:(i + 1) * 5]
+            letters = [str(ch).upper() if str(ch).isalpha() else 'X' for ch in row]
+            rows.append(' '.join(letters))
+        return rows
 
     @staticmethod
     def _parse_json_board(output: str) -> list:
@@ -240,30 +262,91 @@ class MiniCrosswordsTask(Task):
         """Extract up to 5 valid grid rows (exactly 5 alpha chars) from model output."""
         board = []
         for line in output.strip().splitlines():
-            line = line.strip().lower()
+            line = line.strip().upper()
             if len(line) == 5 and line.isalpha():
                 board.append(line)
         return board[:5]
 
     @staticmethod
+    def _extract_assigned_rows(output: str) -> list:
+        normalized = output.replace('\xa0', ' ').replace('\u2009', ' ').replace('\u200b', '')
+        rows = [''] * 5
+        verbs = r'(?:=|:|is|are|be|becomes|became|would be|could be|likely|answer(?:\s+is)?)'
+        for i in range(1, 6):
+            patterns = [
+                rf'(?:\brow\s*{i}\b|\bh{i}\b)[^\n]{{0,180}}?{verbs}\s*["\']?([A-Za-z]{{5}})\b',
+                rf'(?:\brow\s*{i}\b|\bh{i}\b)[^\n]{{0,80}}\b([A-Za-z]{{5}})\s+(?:fits|matches|works|solved)\b',
+            ]
+            matches = []
+            for pattern in patterns:
+                matches.extend(re.finditer(pattern, normalized, flags=re.IGNORECASE))
+            if matches:
+                rows[i - 1] = matches[-1].group(1)
+        return rows
+
+    @staticmethod
     def _extract_grid_rows(output: str) -> list:
         """Find 5 consecutive grid rows: compact (abcde) or spaced (A B C D E)."""
+        json_rows = MiniCrosswordsTask._parse_json_board(output)
+        formatted = MiniCrosswordsTask._format_grid_rows(json_rows)
+        if formatted:
+            return formatted
+
         normalized = output.replace('\xa0', ' ').replace('\u2009', ' ').replace('\u200b', '')
         lines = normalized.splitlines()
 
-        compact = [(i, ln.strip()) for i, ln in enumerate(lines) if re.match(r'^[a-zA-Z]{5}$', ln.strip())]
-        for k in range(len(compact) - 4):
-            idxs = [compact[k + j][0] for j in range(5)]
-            if idxs == list(range(idxs[0], idxs[0] + 5)):
-                return [compact[k + j][1] for j in range(5)]
+        def parse_row(line: str) -> str:
+            line = line.strip()
+            patterns = [
+                r'^([a-zA-Z])\s+([a-zA-Z])\s+([a-zA-Z])\s+([a-zA-Z])\s+([a-zA-Z])$',
+                r'^([a-zA-Z]{5})$',
+                r'^(?:h[1-5]|row\s*[1-5]|[1-5])[\.\):\-\s]+([a-zA-Z]{5}|[a-zA-Z](?:\s+[a-zA-Z]){4})$',
+            ]
+            for pattern in patterns:
+                match = re.match(pattern, line, flags=re.IGNORECASE)
+                if not match:
+                    continue
+                if len(match.groups()) == 5:
+                    return ''.join(match.groups())
+                return match.group(1)
+            return ''
 
-        spaced = [(i, ln.strip()) for i, ln in enumerate(lines) if re.match(r'^[A-Z] [A-Z] [A-Z] [A-Z] [A-Z]$', ln.strip())]
-        for k in range(len(spaced) - 4):
-            idxs = [spaced[k + j][0] for j in range(5)]
-            if idxs == list(range(idxs[0], idxs[0] + 5)):
-                return [spaced[k + j][1] for j in range(5)]
+        rows = []
+        for line in lines:
+            row = parse_row(line)
+            if row:
+                rows.append(row)
+                formatted = MiniCrosswordsTask._format_grid_rows(rows)
+                if formatted:
+                    return formatted
+            else:
+                rows = []
 
-        return MiniCrosswordsTask._clean_board(output) or normalized.split('Output:')[-1].strip().split('\n')[-5:]
+        labeled_rows = []
+        for i in range(1, 6):
+            matches = list(re.finditer(
+                rf'\bh{i}\b[^A-Za-z\n]{{0,80}}([A-Za-z]{{5}}|[A-Za-z](?:\s+[A-Za-z]){{4}})\b',
+                normalized,
+                flags=re.IGNORECASE,
+            ))
+            if not matches:
+                break
+            labeled_rows.append(matches[-1].group(1))
+        formatted = MiniCrosswordsTask._format_grid_rows(labeled_rows)
+        if formatted:
+            return formatted
+
+        assigned = MiniCrosswordsTask._extract_assigned_rows(normalized)
+        formatted = MiniCrosswordsTask._format_grid_rows(assigned)
+        if formatted:
+            return formatted
+        if any(assigned):
+            return MiniCrosswordsTask._format_grid_rows([
+                row if row else 'XXXXX' for row in assigned
+            ])
+
+        return MiniCrosswordsTask._format_grid_rows(MiniCrosswordsTask._clean_board(output))
+
     def _apply_history(self, idx: int, y: str):
         """Replay BFS word-placement history (lines like 'h1. motor') into self.env."""
         self.env.reset(idx)
@@ -271,6 +354,92 @@ class MiniCrosswordsTask(Task):
             line = line.strip()
             if line and (line.startswith('h') or line.startswith('v')):
                 self.env.step(line)
+
+    @staticmethod
+    def _parse_action(action: str) -> Optional[tuple]:
+        match = re.match(r'^\s*([hv][1-5])\.\s*([a-zA-Z]{5})\s*$', action)
+        if not match:
+            return None
+        return match.group(1).lower(), match.group(2).lower()
+
+    @staticmethod
+    def _answer_index(pos: str) -> int:
+        idx = int(pos[1]) - 1
+        return idx if pos.startswith('h') else idx + 5
+
+    @staticmethod
+    def _cell_indices(pos: str) -> list:
+        idx = int(pos[1]) - 1
+        if pos.startswith('h'):
+            start = idx * 5
+            return list(range(start, start + 5))
+        return list(range(idx, 25, 5))
+
+    def _canonical_history(self, y: str) -> str:
+        actions = {}
+        for line in y.strip().split('\n'):
+            parsed = self._parse_action(line)
+            if parsed is None:
+                continue
+            pos, word = parsed
+            actions[pos] = word
+
+        ordered = sorted(actions.items(), key=lambda item: self._answer_index(item[0]))
+        return ''.join(f'{pos}. {word}\n' for pos, word in ordered)
+
+    def _proposal_is_usable(self, proposal: str) -> bool:
+        parsed = self._parse_action(proposal)
+        if parsed is None:
+            return False
+
+        pos, word = parsed
+        ans_idx = self._answer_index(pos)
+        if self.env.ans[ans_idx].lower() == word:
+            return False
+
+        for cell_idx, letter in zip(self._cell_indices(pos), word.upper()):
+            current = self.env.board[cell_idx]
+            if current != '_' and current != letter:
+                return False
+        return True
+
+    @staticmethod
+    def _extract_status_label(output: str) -> Optional[str]:
+        if not output:
+            return None
+        lines = [line.strip().lower() for line in output.splitlines() if line.strip()]
+        for line in reversed(lines):
+            for label in ('sure', 'maybe', 'impossible'):
+                if re.search(rf'\b{label}\b', line):
+                    return label
+        return None
+
+    def _paper_status_count(self) -> dict:
+        count = {'sure': 0, 'maybe': 0, 'impossible': 0}
+        for ans, clue in zip(self.env.ans, self.env.data):
+            if ans.count('_') >= 4:
+                continue
+
+            line = f'{clue}: {" ".join(ans.lower())}'
+            prompt = value_prompt.format(input=line)
+            if prompt in self.env.prompt_status_cache:
+                res = self.env.prompt_status_cache[prompt]
+            else:
+                res = self._gpt_fn(prompt)[0]
+                self.env.prompt_status_cache[prompt] = res
+
+            label = self._extract_status_label(res)
+            if label in count:
+                count[label] += 1
+        return count
+
+    @staticmethod
+    def _score_status_count(count: dict) -> float:
+        if not sum(count.values()):
+            return 1.0
+        if count['impossible']:
+            return max(0.001, 0.1 * count['sure'] + 0.02 * count['maybe'] - 0.2 * (count['impossible'] - 1))
+        return 1.0 + 2.0 * count['sure'] + 0.5 * count['maybe']
 
     def set_status(self, x: str, y: str):
         idx = self.xs.index(x)
@@ -284,18 +453,28 @@ class MiniCrosswordsTask(Task):
     def cot_prompt_wrap(x: str, y: str = '') -> str:
         return cot_prompt.format(input=x) + y
 
-    @staticmethod
-    def output_prompt_wrap(x: str, y: str = '') -> str:
-        return output_prompt.format(input=x)
+    def output_prompt_wrap(self, x: str, y: str = '') -> str:
+        idx = self.xs.index(x)
+        self._apply_history(idx, y)
+        return output_prompt.format(input=x, state=self.env.render())
 
     def propose_prompt_wrap(self, x: str, y: str = '') -> str:
         idx = self.xs.index(x)
+        y = self._canonical_history(y)
         self._apply_history(idx, y)
-        return propose_prompt.format(input=self.env.render_ans())
+        return propose_prompt.format(input=self.env.render())
 
     def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
         confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}
         proposals_to_scores = {}
+
+        def add_proposal(proposal: str, score: float):
+            if proposal.endswith('. xxxxx'):
+                return
+            if not self._proposal_is_usable(proposal):
+                return
+            proposals_to_scores[proposal] = proposals_to_scores.get(proposal, 0) + score
+
         # Use re.search so proposals are found anywhere in the text (incl. reasoning output)
         pattern = re.compile(
             r'\b([hv][1-5])[\.\:]\s*([a-zA-Z]{5})\b(?:[^\S\n]*\((certain|high|medium|low)\))?',
@@ -303,46 +482,71 @@ class MiniCrosswordsTask(Task):
         )
         for output in outputs:
             for m in pattern.finditer(output):
+                line_start = output.rfind('\n', 0, m.start()) + 1
+                context = output[line_start:m.start()].lower()
+                if 'pattern' in context:
+                    continue
                 proposal = m.group(1).lower() + '. ' + m.group(2).lower()
                 conf = m.group(3).lower() if m.group(3) else 'medium'
                 score = confidence_to_value.get(conf, 0.2)
-                proposals_to_scores[proposal] = proposals_to_scores.get(proposal, 0) + score
+                add_proposal(proposal, score)
+            for i, row in enumerate(self._extract_assigned_rows(output), start=1):
+                if not row:
+                    continue
+                proposal = f'h{i}. {row.lower()}'
+                add_proposal(proposal, confidence_to_value['medium'])
+            rows = self._extract_grid_rows(output)
+            if len(rows) == 5:
+                for i, row in enumerate(rows, start=1):
+                    word = re.sub(r'[^A-Za-z]', '', row).lower()
+                    if len(word) != 5:
+                        continue
+                    proposal = f'h{i}. {word}'
+                    add_proposal(proposal, confidence_to_value['medium'])
 
         proposals = sorted(proposals_to_scores.items(), key=lambda p: p[1], reverse=True)
         if n_max_propose != -1:
             proposals = proposals[:n_max_propose]
-        return [y + proposal[0] + '\n' for proposal in proposals]
+        results = []
+        for proposal, score in proposals:
+            new_y = self._canonical_history(y + proposal + '\n')
+            state_key = (x, new_y.count('\n'))
+            seen = self._seen_next_states.setdefault(state_key, set())
+            if new_y in seen:
+                continue
+            seen.add(new_y)
+            self.proposal_score_cache[new_y] = score
+            results.append(new_y)
+        return results
 
     def evaluate(self, x: str, y: str, n_evaluate_sample: int) -> float:
+        y = self._canonical_history(y)
         cache_key = (x, y)
         if cache_key in self.value_cache:
             return self.value_cache[cache_key]
 
-        prompts = self.get_ensemble_prompts(x, y)
-        scores = []
-        for prompt in prompts:
-            res = self._gpt_fn(prompt)[0]
-            score = self.extract_numerical_score(res)
-            if score is not None:
-                scores.append(score)
+        idx = self.xs.index(x)
+        self._apply_history(idx, y)
 
-        result = float(sum(scores) / len(scores)) if scores else 1.0
+        count = self._paper_status_count()
+        result = self._score_status_count(count)
+        result += 0.01 * self.proposal_score_cache.get(y, 0.0)
         self.value_cache[cache_key] = result
         return result
 
     def finalize_output(self, x: str, y: str) -> str:
         idx = self.xs.index(x)
+        y = self._canonical_history(y)
         self._apply_history(idx, y)
 
         prompt = self.output_prompt_wrap(x, y)
         raw = self._gpt_fn(prompt)[0]
-        rows = self._parse_json_board(raw)
+        rows = self._extract_grid_rows(raw)
         if len(rows) == 5:
             return '\n'.join(rows)
 
         # Fallback: use whatever BFS placed on the board
-        board = self.env.board
-        return '\n'.join(''.join(board[i * 5:(i + 1) * 5]).upper() for i in range(5))
+        return '\n'.join(self._format_board_rows(self.env.board))
 
     def get_ensemble_prompts(self, x: str, y: str) -> list:
         idx = self.xs.index(x)
@@ -352,7 +556,7 @@ class MiniCrosswordsTask(Task):
             return ['{"reasoning": "Board solved", "score": 10}'] * len(value_prompts_ensemble)
 
         state = self.env.render_ans()
-        return [prompt.format(input=state) for prompt in value_prompts_ensemble]
+        return [prompt.replace('{input}', state) for prompt in value_prompts_ensemble]
 
     def extract_numerical_score(self, output: str) -> Optional[float]:
         if not output:

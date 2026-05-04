@@ -100,7 +100,9 @@ P I E T Y
 Input:
 {input}
 
-Output: (5 rows, each row is 5 uppercase letters separated by spaces, nothing else)
+Return only the final answer grid. Each of the 5 rows must contain exactly 5 uppercase letters separated by single spaces.
+
+Output:
 '''
 
 
@@ -267,13 +269,18 @@ Input:
 Thoughts:
 '''
 
-output_prompt = '''Solve the following 5x5 mini crossword.
+output_prompt = '''Solve the following 5x5 mini crossword and return the final answer grid.
 
+Clues:
 {input}
 
-IMPORTANT: Do NOT show your reasoning. Output ONLY the final JSON.
+Current state:
+{state}
 
-{{"h1": "WORD1", "h2": "WORD2", "h3": "WORD3", "h4": "WORD4", "h5": "WORD5"}}
+IMPORTANT: Do NOT show your reasoning. Output ONLY 5 rows.
+Each row must contain exactly 5 uppercase letters separated by single spaces.
+
+Output:
 '''
 
 propose_prompt = '''Let's play a 5 x 5 mini crossword, where each word should have exactly 5 letters.
@@ -289,6 +296,8 @@ You may list multiple candidates per position. Output ONLY lines in the format a
 
 Current crossword state:
 {input}
+
+Possible answers for unfilled or changed words:
 '''
 
 
