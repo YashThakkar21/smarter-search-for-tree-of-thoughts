@@ -21,7 +21,7 @@ args = argparse.Namespace(
     method_evaluate="value",
 
     # ranges from 0 - 1362
-    task_start_index=22,
+    task_start_index=40,
     task_end_index=43,
 
     # Modify the Search Algorithm

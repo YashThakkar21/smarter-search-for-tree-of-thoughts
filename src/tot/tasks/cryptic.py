@@ -566,10 +566,14 @@ class CrypticTask(Task):
                 # from the prefill-tokenisation pathology). We accept any
                 # `key="value" | indicator="value"` pattern and assume the
                 # first quoted span is the fodder regardless of the key name.
+                #
+                # The values are matched with [^"]+ (not [^"']+) because
+                # real clues contain apostrophes: indicator="Fig 'n'" must
+                # match as a single value, not break at the inner '.
                 if not results:
                     for m in re.finditer(
-                        r'(?im)^\s*Wordplay\s*:\s*\w*=?["\']([^"\']+)["\']\s*\|\s*'
-                        r'indicator\s*=\s*["\']([^"\']+)["\']\s*$',
+                        r'(?im)^\s*Wordplay\s*:\s*\w*=?"([^"]+)"\s*\|\s*'
+                        r'indicator\s*=\s*"([^"]+)"\s*$',
                         raw_output,
                     ):
                         f, i = m.group(1).strip(), m.group(2).strip()
