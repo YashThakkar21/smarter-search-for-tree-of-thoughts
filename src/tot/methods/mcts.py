@@ -106,26 +106,51 @@ def _expand(node: Node, task, idx, x) -> Node:
 #     return normalized * (0.5 + 0.5 * depth_weight)
 
 def _get_ensemble_value(task, x, y) -> float:
-    """Queries the LLM with multiple prompts and averages the 1-10 scores."""
+    """Query the LLM with multiple prompts and average the 1-10 scores.
+
+    Failed parses are retried once with more max_tokens (gpt-oss harmony
+    preamble eats into the budget, especially for tasks with longer
+    reasoning like cryptic crosswords), then DROPPED from the average
+    rather than treated as zero - same philosophy as test_evaluator.py.
+    If every prompt fails, fall back to the midpoint instead of crashing.
+
+    Hardcoded "terminal-state" prompts (game24 emits JSON-shaped strings
+    like '{"reasoning": "Already solved", "score": 10}') are detected by
+    leading '{' and parsed directly without calling the LLM.
+    """
     prompts = task.get_ensemble_prompts(x, y)
-    total_score = 0.0
+    scores = []
 
     for prompt in prompts:
-        # If the state is already solved/dead, the prompt formatting caught it
-        if prompt.startswith("Score:"):
+        # Hardcoded JSON terminal-state shortcut - parse without an LLM call.
+        if prompt.lstrip().startswith('{'):
             score = task.extract_numerical_score(prompt)
-        else:
-            # Call the LLM (assuming base_gpt is configured in your global scope)
-            outputs = bfs.gpt(prompt, n=1, stop=None)
+            if score is not None:
+                scores.append(score)
+            continue
+
+        # First attempt with a normal token budget.
+        outputs = bfs.gpt(prompt, n=1, stop=None, max_tokens=800)
+        score = task.extract_numerical_score(outputs[0])
+
+        # Retry with more headroom if the harmony preamble pushed the JSON
+        # past the cutoff. This is the difference between "model couldn't
+        # decide" and "model decided but we never saw it".
+        if score is None:
+            outputs = bfs.gpt(prompt, n=1, stop=None, max_tokens=1500)
             score = task.extract_numerical_score(outputs[0])
 
-        total_score += score
+        if score is not None:
+            scores.append(score)
 
-    # Calculate average (e.g., 21 / 3 = 7.0)
-    avg_score = total_score / len(prompts)
+    if not scores:
+        # Every prompt failed to parse. Fall back to the midpoint (0.5 on
+        # the normalised 0-1 scale) so MCTS treats the node as neutral
+        # rather than getting stuck or crashing.
+        return 0.5
 
-    # Normalize from 1-10 scale down to 0.1-1.0 scale for UCB math
-    return avg_score / 10.0
+    avg_score = sum(scores) / len(scores)
+    return avg_score / 10.0  # 1-10 -> 0.1-1.0
 
 
 def _evaluate(node: Node, args, task, x, idx) -> float:

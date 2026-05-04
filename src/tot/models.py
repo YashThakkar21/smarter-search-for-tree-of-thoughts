@@ -35,15 +35,6 @@ def _get_tokenizer(model: str):
         _tokenizers[model] = tok
     return _tokenizers[model]
 
-def _encode_text(model: str, text: str):
-    tokenizer = _get_tokenizer(model)
-    ids = tokenizer.encode(text)
-    if isinstance(ids, dict):
-        ids = ids.get("input_ids", ids)
-    if hasattr(ids, "tolist"):
-        ids = ids.tolist()
-    return ids
-
 def _decode_text(model: str, token_ids):
     tokenizer = _get_tokenizer(model)
     try:
@@ -51,17 +42,50 @@ def _decode_text(model: str, token_ids):
     except TypeError:
         return tokenizer.decode(token_ids)
 
+# --- HELPER FUNCTIONS ---
 def _infer_mode(prompt_text: str) -> str:
     lower = prompt_text.lower()
-    if "possible next steps" in lower:
+    # Cryptic-task prompts must be detected FIRST. They legitimately contain
+    # substrings like "scoring rule" (in value prompts) that would otherwise
+    # route them through the game24 value/propose pipeline, which assumes
+    # arithmetic-puzzle output formats and breaks cryptic-clue parsing.
+    cryptic_markers = (
+        "cryptic crossword",      # appears in solve / propose / value_v1 / value_v3
+        "cryptic clue",           # appears in value_v2
+        "cryptic-crossword",      # appears in value_v3 ("strict cryptic-crossword judge")
+        "definition + wordplay",  # answer-step prompt
+        '"proposals":',           # JSON schema marker shown in prompts
+    )
+    if any(m in lower for m in cryptic_markers):
+        return "cryptic"
+    if "possible next steps" in lower or "possible definitions:" in lower or "possible wordplays:" in lower or "possible answers:" in lower:
         return "propose"
-    if "judge:" in lower or "sure/impossible" in lower or "sure/likely/impossible" in lower:
+    if "judge:" in lower or "sure/impossible" in lower or "sure/likely/impossible" in lower or "scoring rule" in lower:
         return "value"
     return "default"
 
 def _clean_output(text: str, mode: str) -> str:
+    # 1. Clean up gpt-oss-120b harmony channel leakage
+    final_matches = list(re.finditer(r'(?i)(?:assistant\n?final|<\|im_start\|>final)', text))
+    if final_matches:
+        text = text[final_matches[-1].end():]
+
+    analysis_matches = re.search(r'(?i)(?:assistant\n?analysis|<\|im_start\|>analysis)', text)
+    if analysis_matches:
+        text = text[:analysis_matches.start()]
+
     text = text.replace("<|im_end|>", "").replace("<|im_start|>", "").strip()
 
+    # Cryptic prompts produce structured output (JSON object or line-based,
+    # whichever the prompt requested). The TASK layer (CrypticTask's
+    # propose_outputs_unwrap, extract_numerical_score, _extract_answer)
+    # is the parser. Don't second-guess the format here - the bridge logic
+    # below was designed around game24's prefill scheme, and applying it to
+    # cryptic output corrupts perfectly good responses.
+    if mode == "cryptic":
+        return text
+
+    # 2. Bridge the CrypticTask parsing bug & Strip Double-Prefixes
     if mode == "propose":
         valid_lines = []
         for line in text.split("\n"):
@@ -70,15 +94,34 @@ def _clean_output(text: str, mode: str) -> str:
                 match = re.match(r".+?\(left:[^)]*\)", line)
                 if match:
                     valid_lines.append(match.group(0).strip().strip('"'))
-        return "\n".join(valid_lines)
+            elif line.startswith("Definition:"):
+                val = line.split(":", 1)[1].strip()
+                if val.lower().startswith("definition:"):
+                    val = val.split(":", 1)[1].strip()
+                valid_lines.append(f'{{"definition": "{val}"}}')
+            elif line.startswith("Wordplay:"):
+                m = re.search(r'fodder=["\']?([^"\']+)["\']?\s*\|\s*indicator=["\']?([^"\']+)["\']?', line, re.I)
+                if m:
+                    valid_lines.append(f'{{"fodder": "{m.group(1)}", "indicator": "{m.group(2)}"}}')
+            elif line.startswith("Answer:"):
+                val = line.split(":", 1)[1].strip()
+                if val.lower().startswith("answer:"):
+                    val = val.split(":", 1)[1].strip()
+                valid_lines.append(f'{{"answer": "{val}"}}')
+
+        if valid_lines:
+            return "\n".join(valid_lines)
+        return text
 
     if mode == "value":
+        if "{" in text and "score" in text.lower():
+            return text
         lines = [line.strip().lower() for line in text.splitlines() if line.strip()]
         for line in reversed(lines):
             for label in ("sure", "likely", "impossible"):
                 if label in line:
                     return label
-        return "impossible"
+        return text
 
     return text
 
@@ -92,79 +135,45 @@ def _propose_steps(numbers_str: str) -> str:
     nums = [Fraction(token) for token in numbers_str.strip().split()]
     steps: List[str] = []
     seen_states = set()
-
     for i, j in itertools.combinations(range(len(nums)), 2):
         a, b = nums[i], nums[j]
         remaining = [nums[k] for k in range(len(nums)) if k != i and k != j]
-
-        candidates = [
-            ("+", a, b, a + b),
-            ("-", a, b, a - b),
-            ("-", b, a, b - a),
-            ("*", a, b, a * b),
-        ]
-        if b != 0:
-            candidates.append(("/", a, b, a / b))
-        if a != 0:
-            candidates.append(("/", b, a, b / a))
-
+        candidates = [("+", a, b, a + b), ("-", a, b, a - b), ("-", b, a, b - a), ("*", a, b, a * b)]
+        if b != 0: candidates.append(("/", a, b, a / b))
+        if a != 0: candidates.append(("/", b, a, b / a))
         for op, left, right, result in candidates:
-            if result <= 0:
-                continue
-
+            if result <= 0: continue
             if remaining:
-                if op == "*" and (left == 1 or right == 1):
-                    continue
-                if op == "/" and right == 1:
-                    continue
-
+                if op == "*" and (left == 1 or right == 1): continue
+                if op == "/" and right == 1: continue
             next_state = _sorted_state(remaining + [result])
-            if next_state in seen_states:
-                continue
+            if next_state in seen_states: continue
             seen_states.add(next_state)
-
             left_str = " ".join(_fmt_fraction(v) for v in next_state)
-            steps.append(
-                f"{_fmt_fraction(left)} {op} {_fmt_fraction(right)} = "
-                f"{_fmt_fraction(result)} (left: {left_str})"
-            )
-
+            steps.append(f"{_fmt_fraction(left)} {op} {_fmt_fraction(right)} = {_fmt_fraction(result)} (left: {left_str})")
     return "\n".join(steps)
 
 @lru_cache(maxsize=None)
 def _can_reach_24_state(state: tuple[Fraction, ...]) -> bool:
-    if len(state) == 1:
-        return state[0] == 24
-
+    if len(state) == 1: return state[0] == 24
     nums = list(state)
     for i, j in itertools.combinations(range(len(nums)), 2):
         a, b = nums[i], nums[j]
         rest = [nums[k] for k in range(len(nums)) if k != i and k != j]
-
         candidates = [a + b, a - b, b - a, a * b]
-        if b != 0:
-            candidates.append(a / b)
-        if a != 0:
-            candidates.append(b / a)
-
+        if b != 0: candidates.append(a / b)
+        if a != 0: candidates.append(b / a)
         for candidate in candidates:
-            if _can_reach_24_state(_sorted_state(rest + [candidate])):
-                return True
-
+            if _can_reach_24_state(_sorted_state(rest + [candidate])): return True
     return False
 
 def _value_score(numbers_str: str) -> str:
-    try:
-        nums = [Fraction(token) for token in numbers_str.strip().split()]
-    except Exception:
-        return "impossible"
-
-    if len(nums) == 1:
-        return "sure" if nums[0] == 24 else "impossible"
-
+    try: nums = [Fraction(token) for token in numbers_str.strip().split()]
+    except Exception: return "impossible"
+    if len(nums) == 1: return "sure" if nums[0] == 24 else "impossible"
     return "sure" if _can_reach_24_state(_sorted_state(nums)) else "impossible"
 
-
+# --- CORE API CALL ---
 def gpt(prompt, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=128, n=1, stop=None) -> list:
     messages = [{"role": "user", "content": prompt}]
     return chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)
@@ -173,37 +182,79 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
     global completion_tokens, prompt_tokens
 
     sampling_client = _get_sampling_client(model)
-    raw_user_content = "\n".join(message["content"] for message in messages)
+    tokenizer = _get_tokenizer(model)
+
+    raw_user_content = "\n".join(m["content"] for m in messages if m["role"] == "user")
     mode = _infer_mode(raw_user_content)
 
     if mode == "propose":
         matches = re.findall(r"Input:\s*([\d\s./-]+)", raw_user_content)
         if matches:
-            numbers_str = matches[-1].strip()
-            return [_propose_steps(numbers_str)] * n
+            return [_propose_steps(matches[-1].strip())] * n
 
     if mode == "value":
         lines = [line.strip() for line in raw_user_content.splitlines() if line.strip()]
         if lines:
             return [_value_score(lines[-1])] * n
 
-    system_msg = "You are a helpful mathematical assistant. Follow the user's formatting instructions precisely."
+    has_system = any(m.get("role") == "system" for m in messages)
+    api_messages = []
+    if not has_system:
+        api_messages.append({
+            "role": "system",
+            "content": "You are a helpful assistant. Do exactly as requested."
+        })
+    api_messages.extend(messages)
 
-    # Extract trailing labels to pre-fill the assistant so it doesn't get confused
+    # --- NATIVE TEXT PREFILL ---
     assistant_prefill = ""
+    lower_content = raw_user_content.lower()
 
-    if mode == "propose" and "Possible next steps:" in raw_user_content:
-        raw_user_content = raw_user_content[: raw_user_content.rfind("Possible next steps:")].strip()
-        assistant_prefill = "Possible next steps:\n"
-    elif mode == "value" and "Judge:" in raw_user_content:
-        raw_user_content = raw_user_content[: raw_user_content.rfind("Judge:")].strip()
-        assistant_prefill = "Judge:\n"
+    if mode == "cryptic":
+        # Deliberately NO prefill. The cryptic prompts specify their output
+        # format (JSON object or line-based, prompt-by-prompt) explicitly,
+        # so the model doesn't need a head start - and prefilling has been
+        # observed to corrupt the first generation tokens (e.g. prefilling
+        # 'Wordplay: ' produced 'et="among"' instead of 'fodder="among"',
+        # because the BPE boundary between the prefilled space and the
+        # natural-continuation 'fodder' tokenises differently than what the
+        # model expects). Trust the chat template + harmony channels.
+        pass
+    elif mode == "propose":
+        if "Possible next steps:" in api_messages[-1]["content"]:
+            api_messages[-1]["content"] = api_messages[-1]["content"].replace("Possible next steps:", "").strip()
+            assistant_prefill = "Possible next steps:\n"
+        elif "possible definitions:" in lower_content:
+            assistant_prefill = "Definition: "
+        elif "possible wordplays:" in lower_content:
+            assistant_prefill = "Wordplay: "
+        elif "possible answers:" in lower_content:
+            assistant_prefill = "Answer: "
 
-    prompt_text = (
-        f"<|im_start|>system\n{system_msg}<|im_end|>\n"
-        f"<|im_start|>user\n{raw_user_content}<|im_end|>\n"
-        f"<|im_start|>assistant\n{assistant_prefill}"
-    )
+    elif mode == "value":
+        if "Judge:" in api_messages[-1]["content"]:
+            api_messages[-1]["content"] = api_messages[-1]["content"].replace("Judge:", "").strip()
+            assistant_prefill = "Judge:\n"
+        elif "scoring rule" in lower_content:
+            assistant_prefill = '{\n  "score": '
+
+    elif mode == "default":
+        if "clue:" in lower_content and "wordplay" in lower_content:
+            assistant_prefill = '{\n  "reasoning": "'
+
+    if assistant_prefill:
+        api_messages.append({"role": "assistant", "content": assistant_prefill})
+        input_ids = tokenizer.apply_chat_template(api_messages, add_generation_prompt=False)
+    else:
+        input_ids = tokenizer.apply_chat_template(api_messages, add_generation_prompt=True)
+
+    if isinstance(input_ids, dict) or hasattr(input_ids, "keys"):
+        if "input_ids" in input_ids:
+            input_ids = input_ids["input_ids"]
+    if isinstance(input_ids, list) and len(input_ids) > 0 and isinstance(input_ids[0], list):
+        input_ids = input_ids[0]
+    if hasattr(input_ids, "tolist"):
+        input_ids = input_ids.tolist()
 
     outputs = []
     remaining = n
@@ -212,21 +263,30 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         batch_size = min(remaining, 20)
         remaining -= batch_size
 
-        input_ids = _encode_text(model, prompt_text)
         prompt_tokens += len(input_ids)
         prompt = types.ModelInput.from_ints(input_ids)
 
         effective_stop = [stop] if isinstance(stop, str) else list(stop or [])
-        if "<|im_end|>" not in effective_stop:
-            effective_stop.append("<|im_end|>")
+        if "<|im_end|>" not in effective_stop: effective_stop.append("<|im_end|>")
 
-        if mode == "propose":
-            effective_max_tokens = 512
-            effective_stop = [token for token in effective_stop if token != "\n\n"]
+        if mode == "cryptic":
+            # Cryptic reasoning is verbose AND exploratory; gpt-oss-120b's
+            # analysis channel can burn 4000+ tokens evaluating-and-rejecting
+            # candidate answers before firing the final channel - especially
+            # on hard clues like "Fig 'n' ram! (5,7)" -> MIXED FARMING, where
+            # we've seen 12k+ tokens of analysis with patterns like
+            # "Could be MERE DAB? Not. Maybe BULLDOZER RAM? Not." 6000 isn't
+            # always enough either, but at T<=0.5 the wandering largely stops
+            # and 6000 is comfortable. Easy clues finish in 200-500 tokens
+            # regardless of budget.
+            effective_max_tokens = max(max_tokens, 6000) if max_tokens else 6000
+        elif mode == "propose":
+            effective_max_tokens = max(max_tokens, 512) if max_tokens else 512
+            effective_stop = [t for t in effective_stop if t != "\n\n"]
         elif mode == "value":
-            effective_max_tokens = 64
+            effective_max_tokens = max(max_tokens, 128) if max_tokens else 128
         else:
-            effective_max_tokens = max(max_tokens, 128)
+            effective_max_tokens = max(max_tokens, 256) if max_tokens else 256
 
         sampling_params = types.SamplingParams(
             temperature=temperature,
@@ -234,20 +294,27 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
             stop=effective_stop,
         )
 
-        result = sampling_client.sample(
-            prompt=prompt,
-            num_samples=batch_size,
-            sampling_params=sampling_params,
-        )
+        try:
+            result = sampling_client.sample(
+                prompt=prompt,
+                num_samples=batch_size,
+                sampling_params=sampling_params,
+            )
 
-        if hasattr(result, "result"):
-            result = result.result(timeout=REQUEST_TIMEOUT_SECS)
+            if hasattr(result, "result"):
+                result = result.result(timeout=REQUEST_TIMEOUT_SECS)
 
-        for seq in result.sequences:
-            output_tokens = seq.tokens
-            completion_tokens += len(output_tokens)
-            decoded = _decode_text(model, output_tokens)
-            outputs.append(_clean_output(decoded, mode))
+            for seq in result.sequences:
+                output_tokens = seq.tokens
+                completion_tokens += len(output_tokens)
+                decoded = _decode_text(model, output_tokens)
+
+                if assistant_prefill:
+                    decoded = assistant_prefill + decoded
+
+                outputs.append(_clean_output(decoded, mode))
+        except Exception as e:
+            raise RuntimeError(f"Tinker Sampling Call Failed: {str(e)}")
 
     return outputs
 

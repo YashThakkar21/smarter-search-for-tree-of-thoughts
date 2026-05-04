@@ -33,8 +33,20 @@ def get_votes(task, x, ys, n_evaluate_sample):
 
 def get_proposals(task, x, y):
     propose_prompt = task.propose_prompt_wrap(x, y)
-    raw = gpt(propose_prompt, n=1, stop=None)[0]
-    proposals = [p.strip() for p in raw.split('\n') if p.strip()]
+    # max_tokens=4000 gives gpt-oss harmony format room for its analysis
+    # channel before the final-channel JSON. Hard cryptic clues can spend
+    # 2000+ tokens in analysis, so we need genuine headroom rather than
+    # the 800/1500 we used originally. models.py enforces a floor of 4000
+    # for cryptic mode, so this number aligns the call sites.
+    raw = gpt(propose_prompt, n=1, stop=None, max_tokens=4000)[0]
+    # If the task knows how to filter raw output (e.g. extract JSON
+    # proposals from harmony-format leakage), let it. Otherwise fall back
+    # to the legacy "every non-empty line is a proposal" behaviour so this
+    # patch is backward-compatible with game24 / text / crosswords.
+    if hasattr(task, 'propose_outputs_unwrap'):
+        proposals = task.propose_outputs_unwrap(x, y, raw)
+    else:
+        proposals = [p.strip() for p in raw.split('\n') if p.strip()]
     return [y + p + '\n' for p in proposals]
 
 def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):

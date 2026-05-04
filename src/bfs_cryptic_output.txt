@@ -1,0 +1,545 @@
+Your Tinker SDK version is outdated. Please upgrade to the latest version.
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+-- new_ys --: ('Definition: ram\n', 'Definition: Fig\n', "Definition: Fig 'n' ram\n", "Definition: Fig 'n'\n")
+-- sol values --: (3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: ram\n', 'Definition: Fig\n']
+
+-- new_ys --: ('Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\n', 'Definition: ram\nWordplay: fodder="Fig" | indicator="around n"\n', 'Definition: ram\nWordplay: fodder="Fig n" | indicator="reversed"\n', 'Definition: Fig\nWordplay: fodder="FIGNRAM" | indicator="mixed up"\n', 'Definition: Fig\nWordplay: fodder="Fig n ram" | indicator="in"\n', 'Definition: Fig\nWordplay: fodder="RAM" | indicator="inside Fig n"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\n', 'Definition: ram\nWordplay: fodder="Fig" | indicator="around n"\n']
+
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 12703).
+  raw head: 'analysisWe need to parse clue: "Fig \'n\' ram! (5, 7)". Definition: ram. Wordplay: fodder="Fig" | indicator="around n". So we have fodder "Fig". Indicator "around n" meaning we need to put N inside "Fig"? Or "around n" could mean surround N with something? Fodder "Fig" maybe we need to insert N into "fig" to get a word meaning ram? But enumeration is (5,7) i.e., two words, first 5 letters then 7 let'
+  raw tail: ' n". So we need to manipulate "fig" around n to get answer.\n\nThus answer likely contains letters F I G and N. Possibly an anagram of FIGN -> "FING". Then we need something else to make 5,7. Could be "'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+-- new_ys --: ('Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\nAnswer: SHEEP FARMING\n',)
+-- sol values --: (1.0,)
+-- choices --: ['Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\nAnswer: SHEEP FARMING\n']
+
+['Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\nAnswer: SHEEP FARMING\n']
+
+Selected solution:
+['Definition: ram\nWordplay: fodder="Fig n ram" | indicator="mixed up"\nAnswer: SHEEP FARMING\n']
+
+Puzzle 22: Fig 'n' ram! (5, 7)
+Gold Answer: MIXED FARMING
+Extracted Answer: SHEEP FARMING
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Counter! Counter!\n', 'Definition: Right Hook!\n', 'Definition: Right Hook! Left Jab! Counter! Counter!\n', 'Definition: Right Hook! Left Jab! Counter!\n')
+-- sol values --: (2.0, 2.0, 1.0, 1.0)
+-- choices --: ['Definition: Counter! Counter!\n', 'Definition: Right Hook!\n']
+
+-- new_ys --: ('Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\n', 'Definition: Counter! Counter!\nWordplay: fodder="Hook jab" | indicator="left"\n', 'Definition: Right Hook!\nWordplay: fodder="Hook" | indicator="right"\n', 'Definition: Right Hook!\nWordplay: fodder="Jab" | indicator="left"\n', 'Definition: Right Hook!\nWordplay: fodder="Counter Counter" | indicator="reversal"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\n']
+
+-- new_ys --: ('Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\nAnswer: BAR\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\nAnswer: RET\n')
+-- sol values --: (3.0, 2.0)
+-- choices --: ['Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\nAnswer: BAR\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\nAnswer: RET\n']
+
+['Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\nAnswer: BAR\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\nAnswer: RET\n']
+
+Selected solution:
+['Definition: Counter! Counter!\nWordplay: fodder="Right Hook Left jab" | indicator="counter"\nAnswer: BAR\n', 'Definition: Counter! Counter!\nWordplay: fodder="Counter Counter" | indicator="right"\nAnswer: RET\n']
+
+Puzzle 23: Right Hook! Left Jab! Counter! Counter! (3)
+Gold Answer: BAR
+Extracted Answer: BAR
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: transplants\n', 'Definition: Doctor\n', 'Definition: heart of one!\n', 'Definition: one!\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: transplants\n', 'Definition: Doctor\n']
+
+-- new_ys --: ('Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\n', 'Definition: transplants\nWordplay: fodder="one" | indicator="heart of"\n', 'Definition: transplants\nWordplay: fodder="DR" | indicator="with"\n', 'Definition: Doctor\nWordplay: fodder="HEART" | indicator="transplants"\n', 'Definition: Doctor\nWordplay: fodder="ONE" | indicator="heart of"\n', 'Definition: Doctor\nWordplay: fodder="HEARTONE" | indicator="with"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\n', 'Definition: transplants\nWordplay: fodder="one" | indicator="heart of"\n']
+
+-- new_ys --: ('Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: HEART\n', 'Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: EARTH\n', 'Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: HATER\n', 'Definition: transplants\nWordplay: fodder="one" | indicator="heart of"\nAnswer: GRAFT\n', 'Definition: transplants\nWordplay: fodder="one" | indicator="heart of"\nAnswer: SENDS\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: HEART\n', 'Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: EARTH\n']
+
+['Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: HEART\n', 'Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: EARTH\n']
+
+Selected solution:
+['Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: HEART\n', 'Definition: transplants\nWordplay: fodder="heart" | indicator="Doctor"\nAnswer: EARTH\n']
+
+Puzzle 24: Doctor transplants heart with heart of one! (5)
+Gold Answer: DONOR
+Extracted Answer: HEART
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: turning back\n', 'Definition: Wolf pack\n', 'Definition: with uncertainty\n', 'Definition: uncertainty, initially\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: turning back\n', 'Definition: Wolf pack\n']
+
+-- new_ys --: ('Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\n', 'Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\n', 'Definition: turning back\nWordplay: fodder="turns" | indicator="with uncertainty, initially"\n', 'Definition: turning back\nWordplay: fodder="wolf" | indicator="roved (reversal) + uncertainty, initially"\n', 'Definition: turning back\nWordplay: fodder="wolf pack" | indicator="roved (anagram) with uncertainty, initially"\n', 'Definition: Wolf pack\nWordplay: fodder="PACKROVED" | indicator="with"\n')
+-- sol values --: (6.0, 4.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\n', 'Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\n']
+
+-- new_ys --: ('Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\nAnswer: DEVOUR\n', 'Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\nAnswer: DEVOUR\n')
+-- sol values --: (9.0, 2.0)
+-- choices --: ['Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\nAnswer: DEVOUR\n', 'Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\nAnswer: DEVOUR\n']
+
+['Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\nAnswer: DEVOUR\n', 'Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\nAnswer: DEVOUR\n']
+
+Selected solution:
+['Definition: Wolf pack\nWordplay: fodder="ROVED" | indicator="with uncertainty, initially"\nAnswer: DEVOUR\n', 'Definition: Wolf pack\nWordplay: fodder="ROVEDU" | indicator="turning back"\nAnswer: DEVOUR\n']
+
+Puzzle 25: Wolf pack roved with uncertainty, initially turning back (6)
+Gold Answer: DEVOUR
+Extracted Answer: DEVOUR
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Son\n', 'Definition: maybe?\n', 'Definition: Chopped a digit off\n', "Definition: I'm cut!\n")
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Son\n', 'Definition: maybe?\n']
+
+-- new_ys --: ('Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\n', 'Definition: Son\nWordplay: fodder="SONIMCUT" | indicator="chopped"\n', 'Definition: Son\nWordplay: fodder="SONIMCUTCHOPPED" | indicator="maybe"\n', 'Definition: Son\nWordplay: fodder="SONIMCUT" | indicator="a digit off"\n', 'Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="a digit off"\n', 'Definition: maybe?\nWordplay: fodder="SONIM" | indicator="cut!"\n')
+-- sol values --: (6.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\n', 'Definition: Son\nWordplay: fodder="SONIMCUT" | indicator="chopped"\n']
+
+-- new_ys --: ('Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLY\n', 'Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLE\n', 'Definition: Son\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: MUTONICS\n')
+-- sol values --: (2.0, 2.0, 2.0)
+-- choices --: ['Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLY\n', 'Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLE\n']
+
+['Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLY\n', 'Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLE\n']
+
+Selected solution:
+['Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLY\n', 'Definition: maybe?\nWordplay: fodder="SONIMCUT" | indicator="chopped"\nAnswer: POSSIBLE\n']
+
+Puzzle 26: Son, I'm cut! Chopped a digit off, maybe? (8)
+Gold Answer: MISCOUNT
+Extracted Answer: POSSIBLY
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Miss World\n', 'Definition: runners up\n', 'Definition: Eva\n', 'Definition: Eva and Ruth\n')
+-- sol values --: (4.0, 4.0, 2.0, 2.0)
+-- choices --: ['Definition: Miss World\n', 'Definition: runners up\n']
+
+-- new_ys --: ('Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth - runners" | indicator="up to"\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up"\n', 'Definition: runners up\nWordplay: fodder="Eva and Ruth" | indicator="runners up"\n', 'Definition: runners up\nWordplay: fodder="Eva Ruth" | indicator="runners"\n', 'Definition: runners up\nWordplay: fodder="Miss World" | indicator="up"\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth - runners" | indicator="up to"\n']
+
+-- new_ys --: ('Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: QUEEN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: CROWN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth - runners" | indicator="up to"\nAnswer: TITLE\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: EARTH\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth - runners" | indicator="up to"\nAnswer: QUEEN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth - runners" | indicator="up to"\nAnswer: CROWN\n')
+-- sol values --: (3.0, 3.0, 3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: QUEEN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: CROWN\n']
+
+['Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: QUEEN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: CROWN\n']
+
+Selected solution:
+['Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: QUEEN\n', 'Definition: Miss World\nWordplay: fodder="Eva and Ruth" | indicator="runners up to"\nAnswer: CROWN\n']
+
+Puzzle 27: Eva and Ruth - runners up to Miss World (5)
+Gold Answer: EARTH
+Extracted Answer: QUEEN
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ("Definition: Noah's boat?\n", 'Definition: priority\n', "Definition: boarding Noah's boat?\n", 'Definition: Primate couples\n')
+-- sol values --: (6.0, 5.0, 4.0, 2.0)
+-- choices --: ["Definition: Noah's boat?\n", 'Definition: priority\n']
+
+-- new_ys --: ('Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\n', 'Definition: Noah\'s boat?\nWordplay: fodder="priority" | indicator="in boarding"\n', 'Definition: priority\nWordplay: fodder="PRIOR" | indicator="a"\n', 'Definition: priority\nWordplay: fodder="ARK" | indicator="boarding"\n', 'Definition: priority\nWordplay: fodder="PRIMATE" | indicator="couples"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\n']
+
+-- new_ys --: ('Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\nAnswer: EMBARK\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\nAnswer: ARKING\n')
+-- sol values --: (2.0, 2.0)
+-- choices --: ['Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\nAnswer: EMBARK\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\nAnswer: ARKING\n']
+
+['Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\nAnswer: EMBARK\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\nAnswer: ARKING\n']
+
+Selected solution:
+['Definition: Noah\'s boat?\nWordplay: fodder="primate" | indicator="with priority"\nAnswer: EMBARK\n', 'Definition: Noah\'s boat?\nWordplay: fodder="couples" | indicator="boarding"\nAnswer: ARKING\n']
+
+Puzzle 28: Primate couples with priority in boarding Noah's boat? (6)
+Gold Answer: BONOBO
+Extracted Answer: EMBARK
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: < 20?\n', 'Definition: 20?\n', 'Definition: _\n', 'Definition: _ < 20?\n')
+-- sol values --: (2.0, 2.0, 1.0, 1.0)
+-- choices --: ['Definition: < 20?\n', 'Definition: 20?\n']
+
+-- new_ys --: ('Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\n', 'Definition: < 20?\nWordplay: fodder="TWENTY ONE" | indicator="mixed up"\n', 'Definition: 20?\nWordplay: fodder="under twenty" | indicator="less than"\n', 'Definition: 20?\nWordplay: fodder="less than twenty" | indicator="in"\n', 'Definition: 20?\nWordplay: fodder="under twenty" | indicator="confused"\n')
+-- sol values --: (8.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\n']
+
+-- new_ys --: ('Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\nAnswer: THANTWENTY\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: UNDERTWENTY\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: TWENTYUNDER\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: UNDERTWEN\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\nAnswer: THANTWENTY\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: UNDERTWENTY\n']
+
+['Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\nAnswer: THANTWENTY\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: UNDERTWENTY\n']
+
+Selected solution:
+['Definition: < 20?\nWordplay: fodder="LESS THAN TWENTY" | indicator="in"\nAnswer: THANTWENTY\n', 'Definition: < 20?\nWordplay: fodder="UNDER TWENTY" | indicator="about"\nAnswer: UNDERTWENTY\n']
+
+Puzzle 29: _ < 20? (10)
+Gold Answer: UNDERSCORE
+Extracted Answer: THANTWENTY
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: then spread liberally\n', 'Definition: Add a dash of honey\n', 'Definition: cut one pea\n', 'Definition: Add a dash of honey, cut one pea\n')
+-- sol values --: (6.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: then spread liberally\n', 'Definition: Add a dash of honey\n']
+
+-- new_ys --: ('Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\n', 'Definition: then spread liberally\nWordplay: fodder="one pea" | indicator="cut"\n', 'Definition: then spread liberally\nWordplay: fodder="honey cut one pea" | indicator="add a dash of"\n', 'Definition: Add a dash of honey\nWordplay: fodder="ONEPEA" | indicator="spread liberally"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\n', 'Definition: then spread liberally\nWordplay: fodder="one pea" | indicator="cut"\n']
+
+-- new_ys --: ('Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SLATHERED\n', 'Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SMOTHERED\n', 'Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: GENEROUSLY\n', 'Definition: then spread liberally\nWordplay: fodder="one pea" | indicator="cut"\nAnswer: APOPHYENA\n')
+-- sol values --: (4.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SLATHERED\n', 'Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SMOTHERED\n']
+
+['Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SLATHERED\n', 'Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SMOTHERED\n']
+
+Selected solution:
+['Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SLATHERED\n', 'Definition: then spread liberally\nWordplay: fodder="honey" | indicator="dash of"\nAnswer: SMOTHERED\n']
+
+Puzzle 30: Add a dash of honey, cut one pea, then spread liberally (9)
+Gold Answer: HYPHENATE
+Extracted Answer: SLATHERED
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Box\n', 'Definition: dead pet of Schrödinger\n', 'Definition: half-skeleton\n', 'Definition: skeleton\n')
+-- sol values --: (5.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: Box\n', 'Definition: dead pet of Schrödinger\n']
+
+-- new_ys --: ('Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\n', 'Definition: Box\nWordplay: fodder="dead pet of Schrödinger + almost half-skeleton" | indicator="for"\n', 'Definition: dead pet of Schrödinger\nWordplay: fodder="half-skeleton" | indicator="almost"\n', 'Definition: dead pet of Schrödinger\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains"\n', 'Definition: dead pet of Schrödinger\nWordplay: fodder="Box for" | indicator="contains almost half-skeleton"\n')
+-- sol values --: (8.0, 7.0, 6.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\n']
+
+-- new_ys --: ('Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\nAnswer: CASKET\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\nAnswer: CASKET\n')
+-- sol values --: (4.0, 3.0)
+-- choices --: ['Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\nAnswer: CASKET\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\nAnswer: CASKET\n']
+
+['Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\nAnswer: CASKET\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\nAnswer: CASKET\n']
+
+Selected solution:
+['Definition: Box\nWordplay: fodder="dead pet of Schrödinger" | indicator="contains almost half-skeleton"\nAnswer: CASKET\n', 'Definition: Box\nWordplay: fodder="cat" | indicator="contains"\nAnswer: CASKET\n']
+
+Puzzle 31: Box for dead pet of Schrödinger contains almost half-skeleton (6)
+Gold Answer: CASKET
+Extracted Answer: CASKET
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Boat wreckage\n', 'Definition: rough sea\n', 'Definition: Torpedo!\n', 'Definition: midnight\n')
+-- sol values --: (4.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: Boat wreckage\n', 'Definition: rough sea\n']
+
+-- new_ys --: ('Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\n', 'Definition: Boat wreckage\nWordplay: fodder="MIDNIGHT" | indicator="around"\n', 'Definition: rough sea\nWordplay: fodder="TORPEDO" | indicator="wreckage"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\n']
+
+-- new_ys --: ('Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\nAnswer: TORPEDON\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\nAnswer: SEABOATS\n')
+-- sol values --: (2.0, 2.0)
+-- choices --: ['Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\nAnswer: TORPEDON\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\nAnswer: SEABOATS\n']
+
+['Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\nAnswer: TORPEDON\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\nAnswer: SEABOATS\n']
+
+Selected solution:
+['Definition: Boat wreckage\nWordplay: fodder="TORPEDO" | indicator="swallowed by rough sea around midnight"\nAnswer: TORPEDON\n', 'Definition: Boat wreckage\nWordplay: fodder="SEA" | indicator="rough"\nAnswer: SEABOATS\n']
+
+Puzzle 32: Torpedo! Boat wreckage swallowed by rough sea around midnight (8)
+Gold Answer: SABOTAGE
+Extracted Answer: TORPEDON
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: to conceal\n', 'Definition: Lie (v.)\n', 'Definition: to twist\n', 'Definition: twist; to conceal\n')
+-- sol values --: (5.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: to conceal\n', 'Definition: Lie (v.)\n']
+
+-- new_ys --: ('Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="twisted"\n', 'Definition: Lie (v.)\nWordplay: fodder="to conceal" | indicator="twist"\n', 'Definition: Lie (v.)\nWordplay: fodder="twist" | indicator="to conceal"\n', 'Definition: Lie (v.)\nWordplay: fodder="to" | indicator="twist; to conceal"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\n']
+
+-- new_ys --: ('Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\nAnswer: VEIL\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\nAnswer: VEIL\n')
+-- sol values --: (6.0, 2.0)
+-- choices --: ['Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\nAnswer: VEIL\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\nAnswer: VEIL\n']
+
+['Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\nAnswer: VEIL\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\nAnswer: VEIL\n']
+
+Selected solution:
+['Definition: to conceal\nWordplay: fodder="Lie" | indicator="to twist"\nAnswer: VEIL\n', 'Definition: to conceal\nWordplay: fodder="Lie" | indicator="twist"\nAnswer: VEIL\n']
+
+Puzzle 33: Lie (v.) to twist; to conceal (4)
+Gold Answer: VEIL
+Extracted Answer: VEIL
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Surrounded by\n', 'Definition: frantic maids\n', 'Definition: shouting "TEA!"\n', 'Definition: TEA!\n')
+-- sol values --: (7.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Surrounded by\n', 'Definition: frantic maids\n']
+
+-- new_ys --: ('Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\n', 'Definition: frantic maids\nWordplay: fodder="frantic maids" | indicator="by"\n', 'Definition: frantic maids\nWordplay: fodder="TEA" | indicator="surrounded by"\n', 'Definition: frantic maids\nWordplay: fodder="maids" | indicator="shouting"\n')
+-- sol values --: (10.0, 9.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\n']
+
+-- new_ys --: ('Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\nAnswer: AMIDST\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\nAnswer: AMIDST\n')
+-- sol values --: (9.0, 9.0)
+-- choices --: ['Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\nAnswer: AMIDST\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\nAnswer: AMIDST\n']
+
+['Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\nAnswer: AMIDST\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\nAnswer: AMIDST\n']
+
+Selected solution:
+['Definition: Surrounded by\nWordplay: fodder="maids t" | indicator="frantic"\nAnswer: AMIDST\n', 'Definition: Surrounded by\nWordplay: fodder="maids" | indicator="shouting “TEA!” (add T, then frantic)"\nAnswer: AMIDST\n']
+
+Puzzle 34: Surrounded by frantic maids shouting "TEA!" (6)
+Gold Answer: AMIDST
+Extracted Answer: AMIDST
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: actions\n', 'Definition: heart & grit\n', 'Definition: Defending human rights\n', 'Definition: showing heart & grit\n')
+-- sol values --: (6.0, 5.0, 3.0, 3.0)
+-- choices --: ['Definition: actions\n', 'Definition: heart & grit\n']
+
+-- new_ys --: ('Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\n', 'Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\n', 'Definition: actions\nWordplay: fodder="Defending Human Rights Leads" | indicator="to"\n', 'Definition: heart & grit\nWordplay: fodder="human rights" | indicator="leads to"\n', 'Definition: heart & grit\nWordplay: fodder="actions" | indicator="defending"\n', 'Definition: heart & grit\nWordplay: fodder="defending human rights" | indicator="shows"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\n', 'Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\n']
+
+-- new_ys --: ('Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\nAnswer: DEEDS\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: DEEDS\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: MOVES\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: STEPS\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\nAnswer: DEEDS\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: DEEDS\n']
+
+['Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\nAnswer: DEEDS\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: DEEDS\n']
+
+Selected solution:
+['Definition: actions\nWordplay: fodder="heart & grit" | indicator="showing"\nAnswer: DEEDS\n', 'Definition: actions\nWordplay: fodder="human rights" | indicator="defending"\nAnswer: DEEDS\n']
+
+Puzzle 35: Defending human rights leads to actions showing heart & grit (5)
+Gold Answer: GNASH
+Extracted Answer: DEEDS
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Display\n', 'Definition: notice\n', 'Definition: exotic bird\n', 'Definition: swallows beginning to notice\n')
+-- sol values --: (4.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: Display\n', 'Definition: notice\n']
+
+-- new_ys --: ('Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\n', 'Definition: Display\nWordplay: fodder="exotic bird has swallows beginning to notice" | indicator="by"\n', 'Definition: notice\nWordplay: fodder="bird has s" | indicator="exotic"\n', 'Definition: notice\nWordplay: fodder="exotic bird has swallows" | indicator="by"\n', 'Definition: notice\nWordplay: fodder="show emu s" | indicator="by"\n')
+-- sol values --: (9.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\n']
+
+-- new_ys --: ('Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\nAnswer: BRANDISH\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\nAnswer: BRANDISH\n')
+-- sol values --: (10.0, 3.0)
+-- choices --: ['Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\nAnswer: BRANDISH\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\nAnswer: BRANDISH\n']
+
+['Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\nAnswer: BRANDISH\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\nAnswer: BRANDISH\n']
+
+Selected solution:
+['Definition: Display\nWordplay: fodder="bird has N" | indicator="exotic"\nAnswer: BRANDISH\n', 'Definition: Display\nWordplay: fodder="bird has S N" | indicator="exotic"\nAnswer: BRANDISH\n']
+
+Puzzle 36: Display by exotic bird has swallows beginning to notice (8)
+Gold Answer: BRANDISH
+Extracted Answer: BRANDISH
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: of course\n', 'Definition: Last lecture\n', 'Definition: to teach\n', 'Definition: overworked pupils\n')
+-- sol values --: (4.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: of course\n', 'Definition: Last lecture\n']
+
+-- new_ys --: ('Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\n', 'Definition: of course\nWordplay: fodder="overworked pupils" | indicator="to teach"\n', 'Definition: of course\nWordplay: fodder="last lecture" | indicator="over"\n', 'Definition: Last lecture\nWordplay: fodder="pupils" | indicator="overworked"\n', 'Definition: Last lecture\nWordplay: fodder="lecture of course" | indicator="last"\n', 'Definition: Last lecture\nWordplay: fodder="to teach" | indicator="over"\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\n', 'Definition: of course\nWordplay: fodder="overworked pupils" | indicator="to teach"\n']
+
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 13325).
+  raw head: 'analysisWe need to parse clue: "Last lecture of course to teach overworked pupils? (3, 6)". Definition: "of course". So answer phrase (3,6) meaning maybe "sure thing", "no doubt", "as sure", "for sure", "you bet". But definition "of course" could be "as a matter of fact"? But 3,6 pattern: "Yes indeed" (3,6) is "Yes indeed" (3,6). That fits definition "of course" as affirmation. Could be "you bet!"'
+  raw tail: 'aybe we need to "lecture" (i.e., put "lecture" around something). "Last lecture of course" maybe part of clue? Actually "Last lecture of course" could be "C" (last letter of lecture) of "course"? That'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+-- new_ys --: ('Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YOU BETCHA\n', 'Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YES INDEED\n', 'Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: THE ANSWER\n')
+-- sol values --: (4.0, 2.0, 2.0)
+-- choices --: ['Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YOU BETCHA\n', 'Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YES INDEED\n']
+
+['Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YOU BETCHA\n', 'Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YES INDEED\n']
+
+Selected solution:
+['Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YOU BETCHA\n', 'Definition: of course\nWordplay: fodder="lecture of course" | indicator="last"\nAnswer: YES INDEED\n']
+
+Puzzle 37: Last lecture of course to teach overworked pupils? (3, 6)
+Gold Answer: EYE STRAIN
+Extracted Answer: YOU BETCHA
+Evaluation: INCORRECT
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: foremost huffing and puffing creature\n', 'Definition: creature\n', 'Definition: Original\n', 'Definition: Big Bad Wolf\n')
+-- sol values --: (3.0, 3.0, 2.0, 2.0)
+-- choices --: ['Definition: foremost huffing and puffing creature\n', 'Definition: creature\n']
+
+-- new_ys --: ('Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="huffing and puffing"\n', 'Definition: creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\n', 'Definition: creature\nWordplay: fodder="foremost huffing and puffing" | indicator="original"\n', 'Definition: creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\n']
+
+-- new_ys --: ('Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\nAnswer: BLOWFISH\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\nAnswer: BLOWFISH\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\nAnswer: WOLFIEST\n')
+-- sol values --: (2.0, 2.0, 2.0)
+-- choices --: ['Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\nAnswer: BLOWFISH\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\nAnswer: BLOWFISH\n']
+
+['Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\nAnswer: BLOWFISH\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\nAnswer: BLOWFISH\n']
+
+Selected solution:
+['Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf" | indicator="original"\nAnswer: BLOWFISH\n', 'Definition: foremost huffing and puffing creature\nWordplay: fodder="Big Bad Wolf is" | indicator="foremost"\nAnswer: BLOWFISH\n']
+
+Puzzle 38: Original Big Bad Wolf is foremost huffing and puffing creature (8)
+Gold Answer: BLOWFISH
+Extracted Answer: BLOWFISH
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Mark\n', 'Definition: relationship\n', 'Definition: everything\n', 'Definition: lost everything\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Mark\n', 'Definition: relationship\n']
+
+-- new_ys --: ('Definition: Mark\nWordplay: fodder="really" | indicator="lost"\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\n', 'Definition: Mark\nWordplay: fodder="everything" | indicator="after"\n', 'Definition: relationship\nWordplay: fodder="relationship" | indicator="after end of"\n', 'Definition: relationship\nWordplay: fodder="MARK REALLY" | indicator="lost"\n', 'Definition: relationship\nWordplay: fodder="EVERYTHING" | indicator="lost"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Mark\nWordplay: fodder="really" | indicator="lost"\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\n']
+
+-- new_ys --: ('Definition: Mark\nWordplay: fodder="really" | indicator="lost"\nAnswer: PREY\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\nAnswer: PLOT\n')
+-- sol values --: (2.0, 2.0)
+-- choices --: ['Definition: Mark\nWordplay: fodder="really" | indicator="lost"\nAnswer: PREY\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\nAnswer: PLOT\n']
+
+['Definition: Mark\nWordplay: fodder="really" | indicator="lost"\nAnswer: PREY\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\nAnswer: PLOT\n']
+
+Selected solution:
+['Definition: Mark\nWordplay: fodder="really" | indicator="lost"\nAnswer: PREY\n', 'Definition: Mark\nWordplay: fodder="relationship" | indicator="end of"\nAnswer: PLOT\n']
+
+Puzzle 39: Mark really lost everything after end of relationship (4)
+Gold Answer: PREY
+Extracted Answer: PREY
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: 7-Eleven uniform\n', 'Definition: uniform among\n', 'Definition: among ugliest\n', 'Definition: ugliest uniforms\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: 7-Eleven uniform\n', 'Definition: uniform among\n']
+
+-- new_ys --: ('Definition: 7-Eleven uniform\nWordplay: fodder="ugliest uniforms" | indicator="among"\n', 'Definition: 7-Eleven uniform\nWordplay: fodder="ugliest" | indicator="uniform"\n', 'Definition: 7-Eleven uniform\nWordplay: fodder="seven" | indicator="uniform"\n', 'Definition: uniform among\nWordplay: fodder="ugliest uniforms" | indicator="uniform among"\n', 'Definition: uniform among\nWordplay: fodder="7-Eleven uniform" | indicator="among"\n', 'Definition: uniform among\nWordplay: fodder="ugliest" | indicator="7-Eleven"\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: 7-Eleven uniform\nWordplay: fodder="ugliest uniforms" | indicator="among"\n', 'Definition: 7-Eleven uniform\nWordplay: fodder="ugliest" | indicator="uniform"\n']
+
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 13239).
+  raw head: 'analysisWe need to parse clue: "7-Eleven uniform among ugliest uniforms (5, 4)". Definition: "7-Eleven uniform". So answer likely something describing the uniform of 7-Eleven (the convenience store chain). Possibly "green hat"? Actually 7-Eleven staff wear orange polo shirts? They have "orange shirt"? They have "yellow vest"? Hmm.\n\nWordplay: fodder = "ugliest uniforms" indicator "among". So we nee'
+  raw tail: ' Not really. But "STUNI" not a word. So not.\n\nMaybe we need to take "ugliest" and "uniforms" and find common letters to make phrase "t-shirt"? Let\'s see letters for "t shirt": T,S,H,I,R,T. We have T,S'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 13485).
+  raw head: 'analysisWe need to solve cryptic clue: "7-Eleven uniform among ugliest uniforms (5, 4)". Definition: "7-Eleven uniform". Wordplay: fodder="ugliest" | indicator="uniform". So we need to take "ugliest" and apply some uniform indicator to get phrase (5,4). Maybe "uniform among ugliest uniforms" suggests we take a uniform (i.e., same letters) among the letters of "ugliest"? Or "uniform" could be an an'
+  raw tail: 'rm among ugliest uniforms?) Not.\n\nBut "fruit" could be definition of "ugli". Actually "ugli" is a fruit. So answer "fruit ugli" (5,4) would be definition "7-Eleven uniform"? Not.\n\nMaybe the definition'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+['Definition: 7-Eleven uniform\nWordplay: fodder="ugliest uniforms" | indicator="among"\n', 'Definition: 7-Eleven uniform\nWordplay: fodder="ugliest" | indicator="uniform"\n']
+
+Selected solution:
+['Definition: 7-Eleven uniform\nWordplay: fodder="ugliest uniforms" | indicator="among"\n', 'Definition: 7-Eleven uniform\nWordplay: fodder="ugliest" | indicator="uniform"\n']
+
+Puzzle 40: 7-Eleven uniform among ugliest uniforms (5, 4)
+Gold Answer: MINUS FOUR
+Extracted Answer: None
+Evaluation: INCORRECT
+(Parse failed - could not extract an answer from the model's output)
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ("Definition: Oceanographer's\n", 'Definition: 9 to 5\n', 'Definition: is noble?\n', 'Definition: noble?\n')
+-- sol values --: (2.0, 2.0, 2.0, 2.0)
+-- choices --: ["Definition: Oceanographer's\n", 'Definition: 9 to 5\n']
+
+
+[CrypticTask] step 2/3 (wordplay): 0 proposals extracted (raw output length = 194).
+  raw head: 'Wordplay: fodder="Oceanographer\'s" | indicator="9 to 5"  \nWordplay: fodder="Oceanographer\'s" | indicator="backward from 9 to 5"  \nWordplay: fodder="Oceanographer\'s" | indicator="reversal of 9‑5"'
+  DIAGNOSIS: Output present but didn't match any expected
+  cryptic format (JSON {{"proposals": [...]}} or legacy
+  line-based). Inspect the raw head/tail above.
+-- new_ys --: ('Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\n')
+-- sol values --: (7.0, 2.0)
+-- choices --: ['Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\n']
+
+-- new_ys --: ('Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\nAnswer: ARGON\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\nAnswer: CANOE\n')
+-- sol values --: (6.0, 2.0)
+-- choices --: ['Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\nAnswer: ARGON\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\nAnswer: CANOE\n']
+
+['Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\nAnswer: ARGON\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\nAnswer: CANOE\n']
+
+Selected solution:
+['Definition: 9 to 5\nWordplay: fodder="OCEANOGRAPHERS" | indicator="9 to 5"\nAnswer: ARGON\n', 'Definition: 9 to 5\nWordplay: fodder="OCEAN" | indicator="noble?"\nAnswer: CANOE\n']
+
+Puzzle 41: Oceanographer's 9 to 5 is noble? (5)
+Gold Answer: ARGON
+Extracted Answer: ARGON
+Evaluation: CORRECT!
+
+functools.partial(<function gpt at 0x000001B5D4F28360>, model='openai/gpt-oss-120b', temperature=0.7)
+-- new_ys --: ('Definition: Victorian-styled drawer\n', 'Definition: Original\n', 'Definition: dry rot\n', 'Definition: centuries ago?\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Victorian-styled drawer\n', 'Definition: Original\n']
+
+-- new_ys --: ('Definition: Original\nWordplay: fodder="dry rot" | indicator="scraped"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="dry rot" | indicator="scraped"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="Original Dry Rot Scraped From" | indicator="original"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="Victorian‑styled drawer from centuries" | indicator="from"\n', 'Definition: Original\nWordplay: fodder="Victorian" | indicator="styled"\n', 'Definition: Original\nWordplay: fodder="drawer" | indicator="from centuries ago"\n')
+-- sol values --: (3.0, 2.0, 2.0, 2.0, 2.0, 2.0)
+-- choices --: ['Definition: Original\nWordplay: fodder="dry rot" | indicator="scraped"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="dry rot" | indicator="scraped"\n']
+
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 13610).
+  raw head: 'analysisWe need to solve cryptic clue: "Original dry rot scraped from Victorian-styled drawer from centuries ago? (2, 5)". Definition: Original. Wordplay: fodder="dry rot" | indicator="scraped". So we need to "scrape" letters from "dry rot"? Usually "scraped" could mean an anagram, or "removed letters" (scraped off). But "scraped from" maybe means take letters out of something? The fodder is "dry '
+  raw tail: 'mark maybe count as 5? No.\n\nBut maybe answer "OF YORE" is (2,4) but they wrote (2,5) by mistake. Could propose anyway.\n\nAlso "DR YROT" not.\n\nLet\'s think of phrase "or" + "dryt"? Could be "or" + "dryt"'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+
+[CrypticTask] step 3/3 (answer): 0 proposals extracted (raw output length = 13652).
+  raw head: 'analysisWe need to solve cryptic clue: "Original dry rot scraped from Victorian-styled drawer from centuries ago? (2,5)". Definition: "Victorian-styled drawer". Wordplay: fodder="dry rot" | indicator="scraped". So we need to take "dry rot", "scraped" indicates maybe an anagram? Scraped could be anagram indicator. So anagram of "dry rot" gives letters D R Y R O T = 6 letters. But answer length is ('
+  raw tail: 'ffer"? yields 8.\n\nBut answer length 2,5 maybe "coffer" not.\n\nLet\'s think of 5-letter word meaning drawer from centuries ago (i.e., "coffer"). That\'s 6.\n\nBut 5-letter could be "trunk". That\'s 5 letters'
+  DIAGNOSIS: Model ran out of tokens in the analysis channel
+  before reaching final. Bump max_tokens further (try 6000),
+  and/or lower temperature (e.g. 0.3-0.5) so the model
+  doesn't wander through as many candidate answers before
+  converging. Cryptic reasoning is exploratory by nature,
+  but high temperature compounds the wandering.
+['Definition: Original\nWordplay: fodder="dry rot" | indicator="scraped"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="dry rot" | indicator="scraped"\n']
+
+Selected solution:
+['Definition: Original\nWordplay: fodder="dry rot" | indicator="scraped"\n', 'Definition: Victorian-styled drawer\nWordplay: fodder="dry rot" | indicator="scraped"\n']
+
+Puzzle 42: Original dry rot scraped from Victorian-styled drawer from centuries ago? (2, 5)
+Gold Answer: DA VINCI
+Extracted Answer: None
+Evaluation: INCORRECT
+(Parse failed - could not extract an answer from the model's output)
