@@ -1,0 +1,14 @@
+functools.partial(<function gpt at 0x00000251F05284A0>, model='openai/gpt-oss-120b', temperature=0.7)
+[sim 1/500] select=<root> | expand=Definition: Fig | reward=0.178 | visits=1 mean=0.178 | solved=False dead_end=False
+[sim 2/500] select=<root> | expand=Definition: ram! | reward=0.133 | visits=1 mean=0.133 | solved=False dead_end=False
+[sim 3/500] select=<root> | expand=Definition: Fig 'n' ram! | reward=0.089 | visits=1 mean=0.089 | solved=False dead_end=False
+[sim 4/500] select=<root> | expand=Definition: 'n' | reward=0.111 | visits=1 mean=0.111 | solved=False dead_end=False
+[sim 5/500] select=Definition: Fig | expand=Wordplay: fodder="FIGNRAM" | indicator="ram!" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 6/500] select=Definition: ram! | expand=Wordplay: fodder="FIG N RAM" | indicator="mixed up" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 7/500] select=Definition: 'n' | expand=Wordplay: fodder="FIG N RAM" | indicator="mixed up" | reward=0.139 | visits=1 mean=0.139 | solved=False dead_end=False
+[sim 8/500] select=Definition: Fig 'n' ram! | expand=Wordplay: fodder="FIG N RAM" | indicator="mixed up" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 9/500] select=Definition: Fig | expand=Wordplay: fodder="N RAM" | indicator="Fig" | reward=0.139 | visits=1 mean=0.139 | solved=False dead_end=False
+[sim 10/500] select=Definition: ram! | expand=Wordplay: fodder="FIG" | indicator="around N in RAM" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 11/500] select=Definition: Fig 'n' ram! | expand=Wordplay: fodder="FIGNRAM" | indicator="confused" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 12/500] select=Definition: 'n' | expand=Wordplay: fodder="RAM" | indicator="reversed" | reward=0.167 | visits=1 mean=0.167 | solved=False dead_end=False
+[sim 13/500] select=Wordplay: fodder="FIGNRAM" | indicator="ram!" | expand=Answer: MANGO FRUIT | reward=0.000 | visits=1 mean=0.000 | solved=False dead_end=True
