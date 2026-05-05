@@ -11,15 +11,17 @@ from debug_utils import (
 from tot.methods.bfs import solve as bfs_solve, naive_solve
 from tot.methods.dfs import solve as dfs_solve
 from tot.methods.mcts import solve as mcts_solve
+from tot.methods.astar import solve as astar_solve
 from tot.tasks.game24 import Game24Task
 from tot.tasks.crosswords import MiniCrosswordsTask
+from tot.tasks.text import TextTask
 
 load_dotenv()
 
 args = argparse.Namespace(
     backend="openai/gpt-oss-120b",
     temperature=0.7,
-    task="crosswords", #crosswords, game24
+    task="crosswords", #crosswords, game24, text
 
     naive_run=False,
     prompt_sample="propose",
@@ -30,7 +32,7 @@ args = argparse.Namespace(
     task_start_index=0,
     task_end_index=1,
 
-    # Modify the Search Algorithm
+    # Modify the Search Algorithm: bfs | dfs | mcts | astar
     search_method="bfs",
 
     # BFS knobs
@@ -49,6 +51,12 @@ args = argparse.Namespace(
     dfs_max_per_state=3,
     dfs_prune=True,
     dfs_finalize_with_model=False,
+
+    # A* knobs
+    # n_astar_expansions: total nodes popped from the open set (budget)
+    # n_astar_evaluate_sample: LLM calls per heuristic evaluation
+    n_astar_expansions=200,
+    n_astar_evaluate_sample=1,
 )
 
 # ---------------------------------------------------------------------------
@@ -65,7 +73,12 @@ PAPER_CROSSWORDS_INDEXES = list(range(0, 100, 5))
 PAPER_CROSSWORDS_QUIET_SOLVER = False
 PAPER_CROSSWORDS_PRINT_SOLUTIONS = False
 
-task = MiniCrosswordsTask() if args.task == "crosswords" else Game24Task()
+if args.task == "crosswords":
+    task = MiniCrosswordsTask()
+elif args.task == "text":
+    task = TextTask()
+else:
+    task = Game24Task()
 if args.naive_run:
     solve = naive_solve
 elif args.search_method == "bfs":
@@ -74,6 +87,8 @@ elif args.search_method == "dfs":
     if args.task != "crosswords":
         raise ValueError('search_method="dfs" only supports crosswords')
     solve = dfs_solve
+elif args.search_method == "astar":
+    solve = astar_solve
 else:
     solve = mcts_solve
 
