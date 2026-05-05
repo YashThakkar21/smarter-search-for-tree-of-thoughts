@@ -1,0 +1,14 @@
+[
+  {
+    "idx": 0,
+    "solution": "M A Y B E\nM A Y B E\nM A Y B E\nM A Y B E\nS N E E R",
+    "best_y": "h1. agend\nh2. motor\nh5. slurp\nv1. amass\nv2. goral\n",
+    "metrics": {
+      "r_letter": 0.64,
+      "r_word": 0.4,
+      "r_game": false,
+      "r": 0.4
+    },
+    "expansions_used": 50
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "idx": 900,
+    "solution": "4 * 5 = 20 (left: 6 10 20)\n10 - 6 = 4 (left: 4 20)\n4 + 20 = 24 (left: 24)\nAnswer: ((10 - 6) + (4 * 5)) = 24",
+    "best_y": "4 * 5 = 20 (left: 6 10 20)\n10 - 6 = 4 (left: 4 20)\n4 + 20 = 24 (left: 24)\n",
+    "metrics": {
+      "r": 1
+    },
+    "expansions_used": 0
+  }
+]

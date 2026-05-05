@@ -1,0 +1,242 @@
+[
+  {
+    "idx": 0,
+    "solution": "S A I G A\nM O T O R\nS A I G A\nA G O R A\nT A U N T",
+    "best_y": "h1. issue\nv2. saiga\n",
+    "metrics": {
+      "r_letter": 0.0,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 38
+  },
+  {
+    "idx": 5,
+    "solution": "P A R C H\nB E S T E\nI J E B U\nX X X X X\nX X X X X",
+    "best_y": "h1. parch\nh2. besti\nh3. ijoij\n",
+    "metrics": {
+      "r_letter": 0.08,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 30
+  },
+  {
+    "idx": 10,
+    "solution": "C X X X X\nX X X X X\nX X X X X\nX X X X X\nX X X X X",
+    "best_y": "v1. clown\nv3. beast\nv5. ocean\n",
+    "metrics": {
+      "r_letter": 0.08,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 40
+  },
+  {
+    "idx": 15,
+    "solution": "M A Y B E\nM A Y B E\nM A Y B E\nM A Y B E\nM A Y B E",
+    "best_y": "h2. turan\nh3. ramie\nh4. prone\n",
+    "metrics": {
+      "r_letter": 0.36,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 38
+  },
+  {
+    "idx": 20,
+    "solution": "T O N I C\nE L O P E\nE L O P E\nT O N I C\nE L O P E",
+    "best_y": "h1. tonic\nh4. tonic\nh5. pound\n",
+    "metrics": {
+      "r_letter": 0.04,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 41
+  },
+  {
+    "idx": 25,
+    "solution": "E L E C T\nL A M I C\nL A M I C\nL A M I C\nL A M I C",
+    "best_y": "h1. elect\nh2. euros\n",
+    "metrics": {
+      "r_letter": 0.04,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 34
+  },
+  {
+    "idx": 30,
+    "solution": "C L I N G\nW I D E N\nR I S C H\nS C A R E\nC R O A K",
+    "best_y": "h1. grasp\nh2. widen\nh3. risch\nh4. scare\n",
+    "metrics": {
+      "r_letter": 0.16,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 33
+  },
+  {
+    "idx": 35,
+    "solution": "A B E T S\nC R E S T\nE S S A Y\nU N S A W\nT A M E R",
+    "best_y": "h1. abets\nh3. essay\nh5. tamer\n",
+    "metrics": {
+      "r_letter": 0.36,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 44
+  },
+  {
+    "idx": 40,
+    "solution": "P L A I N\nP L A I N\nP L A I N\nG R A C E\nG R A C E",
+    "best_y": "h1. disco\nh2. derma\nh3. plain\n",
+    "metrics": {
+      "r_letter": 0.2,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 36
+  },
+  {
+    "idx": 45,
+    "solution": "E R U C T\nA R E N A\nX X X X X\nX X X X X\nX X X X X",
+    "best_y": "h1. eruct\nh2. arena\nv1. eaves\n",
+    "metrics": {
+      "r_letter": 0.2,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 40
+  },
+  {
+    "idx": 50,
+    "solution": "P A S T O\nP R I N T\nB L E N D\nB L E N D\nB L E N D",
+    "best_y": "h1. pasto\nh2. print\nh5. blend\n",
+    "metrics": {
+      "r_letter": 0.0,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 33
+  },
+  {
+    "idx": 55,
+    "solution": "X X X X X\nR E N E W\nX X X X X\nX X X X X\nX X X X X",
+    "best_y": "h1. swarm\nh2. renew\nh3. sioux\nh4. totem\n",
+    "metrics": {
+      "r_letter": 0.32,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 38
+  },
+  {
+    "idx": 60,
+    "solution": "X X X X X\nA L E R T\nG E C K O\nR A I S E\nM A Y B E",
+    "best_y": "h2. klobf\nh3. igglo\nh4. raise\n",
+    "metrics": {
+      "r_letter": 0.24,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 37
+  },
+  {
+    "idx": 65,
+    "solution": "S C E N E\nS C E N E\nS C E N E\nS C E N E\nS C E N E",
+    "best_y": "h1. woods\nh2. quill\nh5. ferry\n",
+    "metrics": {
+      "r_letter": 0.04,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 33
+  },
+  {
+    "idx": 70,
+    "solution": "A R A B I\nX X X X X\nA B A T E\nR I N S E\nX X X X X",
+    "best_y": "h1. arabi\nh3. abate\nh4. rinse\n",
+    "metrics": {
+      "r_letter": 0.4,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 37
+  },
+  {
+    "idx": 75,
+    "solution": "Y X X X X\nX X X X X\nX X X X X\nX X X X X\nX X X X X",
+    "best_y": "h2. intro\nh3. khain\nv1. yikes\n",
+    "metrics": {
+      "r_letter": 0.2,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 30
+  },
+  {
+    "idx": 80,
+    "solution": "S I N A I\nO C C U R\nO C C U R\nO C C U R\nO C C U R",
+    "best_y": "h1. edeny\nh3. woods\nh5. realm\n",
+    "metrics": {
+      "r_letter": 0.16,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 36
+  },
+  {
+    "idx": 85,
+    "solution": "G O D E T\nH A B I T\nG H O U L\nG H O U L\nG H O U L",
+    "best_y": "h1. godet\nh2. habit\n",
+    "metrics": {
+      "r_letter": 0.04,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 40
+  },
+  {
+    "idx": 90,
+    "solution": "T I T X X\nX X X X X\nX X X X X\nX X X X X\nX X X X X",
+    "best_y": "h1. titan\nh2. fermi\nh3. korea\n",
+    "metrics": {
+      "r_letter": 0.08,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 37
+  },
+  {
+    "idx": 95,
+    "solution": "P R I N T\nC Y M A R\nS L I C E\nS E N S E\nT R E A D",
+    "best_y": "",
+    "metrics": {
+      "r_letter": 0.0,
+      "r_word": 0.0,
+      "r_game": false,
+      "r": 0.0
+    },
+    "expansions_used": 1
+  }
+]

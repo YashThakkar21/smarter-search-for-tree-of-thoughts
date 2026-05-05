@@ -1,0 +1,1555 @@
+[001/20] idx=0
+       done  expansions=38  r=0.000  r_letter=0.00  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h2. motor (certain)\nh4. salon (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. salon (medium)\nh5. scoff (medium)\nv1. amass (high)\nv5. drier (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (certain)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (high)\nh5. scoff (high)\nv1. iheap (medium)\nv2. saiga (medium)\nv4. uzzle (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (high)\nv1. amass (high)\nv2. chiru (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (medium)\nh5. taunt (certain)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. salon (high)\nh5. sneer (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. taunt (high)\nv1. amass (high)\nv2. goran (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. amast (medium)\nv2. gorda (medium)\nv5. grant (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. grand (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. tasks (high)\nh1. items (medium)\nh3. flowe (medium)\nh4. salon (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. tasks (high)\nh4. salon (medium)\nv1. amass (high)\nv3. ststo (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. salon (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. amass (certain)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. salon (medium)\nh1. stoke (medium)\nh2. stoke (medium)\nh3. stoke (medium)\nh4. stoke (medium)\nh5. stoke (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. tasks (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. tasks (high)\nh3. ornat (medium)\nh4. ballu (low)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. given (medium)\nh2. given (medium)\nh3. given (medium)\nh4. given (medium)\nh5. given (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. donee (high)\nh1. agent (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. motor (certain)\nv1. pilep (low)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. salon (medium)\nh5. scoff (medium)\nv1. impel (high)\nv2. sorey (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. pretz (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. scoff (high)\nv1. imbed (medium)\nv2. sorda (medium)\nh1. amass (medium)\nh2. stilt (medium)\nh3. showy (medium)\nh4. stilt (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. salon (high)\nv1. impel (medium)\nv3. stone (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. salon (high)\nv1. impel (medium)\nv2. sorma (medium)\nv3. stone (medium)\nv5. given (medium)\nh1. issue (medium)\nh3. showy (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. issue (medium)\nh2. motor (medium)\nh3. bushy (medium)\nh4. etage (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. salon (high)\nh5. sneer (medium)\nv1. impel (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. brush (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. motor (certain)\nh5. taunt (high)\nv1. iters (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. motor (certain)\nv1. irest (medium)\nv2. sable (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (medium)\nv2. sandz (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. motor (certain)\nv1. iress (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. motor (certain)\nv1. iques (medium)\nv2. sorch (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. lunar (high)\nh2. lungs (medium)\nh2. loose (low)\nh3. obras (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. salon (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. motor (certain)\nh4. plaza (high)\nv2. srika (medium)'
+[propose] parsed 6 proposals
+S A I G A
+M O T O R
+S A I G A
+A G O R A
+T A U N T
+[002/20] idx=5
+       done  expansions=30  r=0.000  r_letter=0.08  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. parch (high)\nh2. besti (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. outdo (high)\nh3. igbef (medium)\nh4. seder (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. parch (high)\nh3. ijoij (medium)\nh4. seder (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. parch (high)\nh2. bests (high)\nh3. ijoij (medium)\nh4. seder (certain)\nh5. agood (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. seder (high)\nv1. poise (medium)\nv2. auror (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. seder (high)\nv1. poise (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. ibobo (high)\nh4. seder (high)\nh5. etera (medium)\nv2. aufre (low)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h3. arian (high)\nh4. sodas (medium)\nh5. agarl (low)\nv1. poise (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. seder (high)\nv1. poise (medium)\nv2. aufuv (low)\nv3. rtane (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. seder (high)\nh5. agean (medium)\nv1. poyed (low)\nv2. auoty (low)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. Yoruba. (high)\nh5. Eternal.\xa0(\xa0\xa0\xa0?\xa0\xa0 )'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. seder (high)\nv1. poise (high)\nv4. ceder (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. iboib (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. agape (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. outdo (high)\nh4. seder (high)\nv1. pivot (medium)\nv1. pitch (medium)\nv2. again (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. outdo (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. outdo (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. seder (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. yorub (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. parch (high)\nh3. yorba (medium)\nh1. bleed (medium)\nh2. abash (medium)\nh3. yorub (medium)\nh4. abash (medium)\nh5. etern (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h1. parch (high)\nh3. yoruo (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. parch (high)\nv3. dodge (medium)\nv4. clerk (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. parch (high)\nv3. dodge (medium)\nv4. clerk (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. parch (high)\nv1. ebast (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. parch (high)\nh3. ijoij (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. agesy (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. agone (medium)\nv1. abets (high)\nv2. vetor (medium)\nv3. oshod (low)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. parch (high)\nh5. agape (high)\nv1. bysby (medium)\nv2. eoeeo (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. parch (high)\nv1. bysby (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. parch (high)\nh4. seder (high)'
+[propose] parsed 1 proposals
+P A R C H
+B E S T E
+I J E B U
+X X X X X
+X X X X X
+[003/20] idx=10
+       done  expansions=40  r=0.000  r_letter=0.08  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. bebop (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. hibak (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. bebop (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. caged (high)\nh2. loble (high)\nh3. olman (medium)\nv2. error (high)\nv5. ocean (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. bebop (high)\nh2. hibak (medium)\nh3. friar (high)\nv1. clown (low)\nv2. error (low)\nv3. being (low)'
+[propose] parsed 9 proposals
+[propose] raw output: 'v1. bhove (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. accept (high)\nh5. grag? (low)\nv1. bhf?? (medium)\nv2. eir?? (medium)\nv3. bbe? (medium)\nv4. oar? (medium)\nv5. pke? (no\xa0confidence)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h5. argal (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. obese (high)\nh4. vexed (medium)\nh5. eloan (low)\nv2. eiqua (low)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. friar (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. abate (high)\nh3. abets (medium)\nh4. naend (medium)\nh4. naran (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h3. obese (high)\nh4. draft (high)\nh5. enrig (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. monod (medium)\nh3. moner (low)\nh4. taken (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. hibak (medium)\nh2. hibac (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. argal (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. freej (high)\nh1. bebop (medium)\nh2. snack (medium)\nh3. snack (medium)\nh4. snack (medium)\nh5. snack (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. abaca (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. argil (medium)\nv1. fuffy (medium)\nv2. error (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. hibak (medium)\nh2. buffo (medium)\nh3. friar (medium)\nh4. eerie (medium)\nh5. argal (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. freej (high)\nh5. ghyls (low)\nv1. sauro (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. freej (high)\nh2. mallo (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. argal (medium)\nh2. malva (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. liana (high)\nh3. oboes (medium)\nh4. welft (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h3. orate (medium)\nh4. wobob (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. cejaz (high)\nh1. cedes (medium)\nh2. lranz (high)\nh2. lranu (low)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. ceder (high)\nh1. cebar (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. cable (high)\nh1. canth (medium)\nh1. catch (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h1. caged (high)\nh1. coton (medium)\nh1. candu (low)\nh3. omaha (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. cuban (high)\nh2. leese (high)\nv2. error (certain)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. bebop (high)\nh3. friar (high)\nv1. could (medium)\nh2. dress (medium)\nh3. dress (medium)\nh4. dress (medium)\nh5. dress (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. cubby (high)\nh1. cubic (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. leech (high)\nh3. ohier (medium)\nv2. aarar (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. leech (high)\nh3. obian (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. cubic (high)\nh1. ciban (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. caged (high)\nh1. cantr (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. choco (high)\nh2. lilac (high)\nh3. obede (medium)\nh4. wardu (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. canto (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. celeo (high)\nh1. cedno (medium)\nh2. lrand (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. cubbo (high)\nh2. leech (high)\nh4. wenen (medium)\nv2. error (certain)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. lilac (high)\nh3. obese (medium)\nh4. wield (medium)\nh5. naran (low)'
+[propose] parsed 3 proposals
+C X X X X
+X X X X X
+X X X X X
+X X X X X
+X X X X X
+[004/20] idx=15
+       done  expansions=38  r=0.100  r_letter=0.36  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h1. canis (high)\nh2. turan (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. turan (medium)\nh3. ramie (high)\nh4. prone (high)\nh5. chink (medium)\nv1. coter (medium)\nv3. noria (medium)\nv5. sheen (high)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. canis (high)\nh3. abaca (high)\nh4. prone (high)\nh5. chamo (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. prone (high)\nv1. cadre (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. chink (medium)\nv1. corps (high)\nv2. arara (high)\nv3. nemos (medium)\nv5. sheen (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. prone (high)\nv1. creel (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. prone (high)\nh5. chiru (medium)\nv1. ctrix (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. prone (high)\nv5. sheen (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. prone (high)\nh5. chink (medium)\nv1. ctrix (medium)\nv2. aaaab (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. turan (high)\nh3. ramif (medium)\nv1. craft (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. ramie (high)\nh5. nilot (medium)\nh1. sneer (medium)\nh2. sneer (medium)\nh4. sneer (medium)\nh5. saiga (medium)\nh1. canis (medium)\nh2. turan (medium)\nh4. prone (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. ramet (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. turan (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. Turkish (high)\nh5. Nilgiri (medium)\nv1. CORP\xa0(high)\nv2. ARAR (low)\nv3\xa0\xa0:\xa0\xa0\xa0\xa0...'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. turan (high)\nh3. ramie (high)\nv1. cotpc (medium)\nv5. sleel (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. ramio (medium)\nh3. ramie (high)\nh4. prone (high)\nh4. faced (medium)\nh1. wrong (medium)\nh2. nrach (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h4. prone (high)\nh5. chiru (medium)\nv1. ctrix (medium)\nv5. sheen (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. prone (high)\nh5. chink (medium)\nv1. ctrix (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. prone (high)\nh4. faced (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. raman (high)\nh5. sable (high)\nv2. austr (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. ramet (high)\nh3. ramie (certain)\nh4. prone (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. ramie (high)\nh5. nilot (low)\nh1. turan (medium)\nh2. turan (medium)\nh3. faced (medium)\nh4. faced (medium)\nh5. eland (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. ramie (high)\nh4. prone (high)\nv1. ctalc (medium)\nv2. augau (medium)\nv5. given (medium)\nh1. canis (medium)\nh2. turan (medium)\nh3. troop (medium)\nh4. wrong (medium)\nh5. troop (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. prone (high)\nv1. ctrie (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. ramif (medium)\nh4. prone (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. prone (high)\nv2. abhor (medium)\nv5. sheen (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. uygur (high)\nh4. prone (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. altos (high)\nh4. prone (high)\nv1. crick (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. kazak (high)\nh3. ramie (medium)\nh4. prone (medium)\nh5. chitn (low)\nv2. araru (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. oroko (high)\nh3. tepix (medium)\nh4. prone (medium)\nh5. rheuo (low)\nv3. nairo (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h3. siber (medium)\nh4. prone (high)\nh5. chiru (medium)\nv1. cotot (low)\nv2. arufa (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. canis (medium)\nh2. oghur (medium)\nh3. corps (medium)\nh4. corps (medium)\nh5. corps (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. canis (high)\nh3. abaca (high)\nh5. chiti (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h1. canid (high)\nh3. ramet (high)\nv1. troop (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. canis (high)\nh3. ramus (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. canis (high)\nh3. ramet (high)\nv3. trich (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. canis (high)\nv1. atatc (low)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. ramie (high)\nh5. nilot (medium)'
+[propose] parsed 3 proposals
+M A Y B E
+M A Y B E
+M A Y B E
+M A Y B E
+M A Y B E
+[005/20] idx=20
+       done  expansions=41  r=0.000  r_letter=0.04  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. elect (high)\nv4. cider (medium)\nh3. tooth (medium)\nh4. sopor (medium)\nh5. pound (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. soter (low)\nh5. pound (low)\nv4. cider (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. elect (high)\nh3. erode (medium)\nh5. pound (medium)\nv1. chess (medium)\nv2. heron (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. elect (high)\nh4. tonic (high)\nv2. snipe (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'v1. ehime (medium)\nv2. lefte (medium)\nv4. cider (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. rated (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. irate (medium)\nh3. irrel (low)\nh4. mocha (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. afoul (high)\nh5. pound (medium)\nv3. elope (medium)\nv4. cider (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. swirl (low)\nh4. drink (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. chomp (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. helix (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. ragged (high)\nh5. quid (high)\nv1. ehg?? (medium)\nv2. lede? (medium)\nv3\xa0\xa0\xa0\xa0?\xa0\xa0?\xa0\xa0\xa0...<|call|>'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. helix (high)\nh4. tonic (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. gnarl (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. elude (medium)\nh2. elude (medium)\nh3. eaten (medium)\nh4. elude (medium)\nh5. liras (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. tonic (medium)\nh4. drink (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. helix (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. helix (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. elect (high)\nh2. spirl (medium)\nh4. seder (medium)\nh5. pound (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. could (medium)\nh2. could (medium)\nh3. edged (medium)\nh4. could (medium)\nh5. could (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. chase (high)\nh2. helix (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. chose (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. sotot (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. helix (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. pound (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. elect (high)\nv5. given (medium)\nh1. heron (medium)\nh2. wrong (medium)\nh3. wrong (medium)\nh4. heron (medium)\nh5. pound (medium)\nh1. blank (medium)\nh2. helix (medium)\nh3. tooth (medium)\nh4. blank (m'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. pound (medium)\nh4. sleep (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. elect (high)\nh1. optio (medium)\nh5. pound (low)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. elect (high)\nv1. chute (medium)\nv2. ceece (medium)\nv3. elope (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. fEEd (high)\nh1. dE??? (medium)\nh4. sP??? (low)\nh4. ... (... )'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. pound (low)\nv1. enets (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. helix (high)\nv1. chess (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. elect (medium)\nh2. limon (medium)\nh3. limon (medium)\nh4. sopor (medium)\nh5. enact (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. coil (high)\nh2. scroll\xa0(\xa0low\xa0)\nh3. rag\xa0(\xa0\xa0?\xa0)\nh3\xa0\xa0\xa0\xa0\xa0\xa0\xa0...'
+[propose] parsed 3 proposals
+[propose] raw output: 'v3. elope (medium)\nv4. cider (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 4 proposals
+T O N I C
+E L O P E
+E L O P E
+T O N I C
+E L O P E
+[006/20] idx=25
+       done  expansions=34  r=0.000  r_letter=0.04  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. elect (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. eagle (medium)\nh4. creep (high)\nh5. water (medium)'
+[propose] parsed 11 proposals
+[propose] raw output: 'h1. elect (high)\nh2. money (medium)\nh4. creep (medium)\nh3. eagle (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. elect (high)\nh3. eagle (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h2. coin (high)\nh3. owl (medium)\nh5. hydrant (high)\nv1. E???? (low)\nv2. L????\nv3. E???? \nv4. C???? \nv5…'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. aegon (medium)\nh5. tuner (medium)\nv2. later (low)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. abomb (high)\nh2. acoin (low)\nh3. euler (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. slide (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. iotas (high)\nh4. creep (medium)\nh5. squir (low)\nv3. enflo (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'v1. epics (medium)\nv2. learn (low)\nv3. enemy (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. epics (medium)\nv3. enemy (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. eagle (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. penny (medium)\nv5. given (medium)\nh1. hello (medium)\nh2. hello (medium)\nh3. hello (medium)\nh4. hello (medium)\nh5. hello (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. money (medium)\nh2. token (low)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. ecrsw (low)\nv2. lalla (low)\nv3. elmel (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. slide (high)\nv1. emitw (low)\nv2. loffa (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. quirk (high)\nh3. gnarl (medium)\nh4. creep (medium)\nv5. eater (certain)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. croup (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. coin (high)\nh2. argent (medium)\nh3. owl\xa0\xa0(\xa0\xa0\xa0)\xa0\xa0?? \nh3\xa0\xa0… \nh4\xa0\xa0… \n\nWe cannot answer\xa0? \n\n(\xa0\xa0\xa0\xa0\xa0\xa0).'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. slide (high)\nv1. etrow (medium)\nv2. loana (medium)\nv3. eklat (medium)\nv4. cehne (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'v1. ecris (medium)\nv3. eliel (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. buho (high)\nh5. spry (high)\nv1. eek? (medium)\nv2. lull? (lull?\xa0?\xa0??\xa0\xa0\xa0…\xa0\xa0…\xa0\xa0…\xa0\xa0…\xa0...\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0……\xa0…\xa0…\xa0…\xa0…\xa0…\xa0...\xa0…\xa0…\xa0…\xa0……\xa0…\xa0…\xa0………………………………………… \nv...'
+[propose] parsed 0 proposals
+[propose] raw output: 'v1. eross (medium)\nv2. lilia (medium)\nv3. eliel (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. coin (high)\nh3. European owl (high)\nh5. hose\xa0‑\xa0\xa0\xa0\u200b\xa0\xa0\u200b\xa0\xa0\u200b\xa0\xa0\u200b\xa0\u200b\xa0\n\n\n\n[hmm...]'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. eyesy (medium)\nv2. lunge (medium)\nv3. eliel (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. money (medium)\nh4. slide (high)\nh4. creep (medium)\nv5. given (medium)\nh1. lamic (medium)\nh2. lamic (medium)\nh3. lamic (medium)\nh4. lamic (medium)\nh5. lamic (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h2. money (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. eased (medium)\nv2. linal (medium)\nv5. three (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. glide (high)\nh4. creep (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v1. quell (medium)\nv3. egham (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. money (medium)\nh2. penny (low)\nh4. glide (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. glide (high)\nh4. creep (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. money (medium)\nh4. creep (high)\nh4. slide (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. xenon (high)\nh4. repel (high)\nh5. torch (medium)\nv2. larna (medium)'
+[propose] parsed 7 proposals
+E L E C T
+L A M I C
+L A M I C
+L A M I C
+L A M I C
+[007/20] idx=30
+       done  expansions=33  r=0.000  r_letter=0.16  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. clutch (c) \nh2.\xa0\xa0?\xa0\xa0\n\n\n\n(Note: The response is incomplete incomplete).'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. karst (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. tintt (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. given (medium)\nh1. croak (medium)\nh2. croak (medium)\nh3. croak (medium)\nh4. gandk (medium)\nh5. croak (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. grasp (medium)\nh2. croak (medium)\nh3. tintt (medium)\nh4. croak (medium)\nh5. tintt (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. TINTED (high)\nh3. CANASTA (medium)\nh4. DOMINATE (high)\nh4. SCATTER\xa0\xa0(\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0?\xa0\xa0\xa0 ) (low\xa0\xa0)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. rummy (medium)\nh5. karst (high)\nv1. gblgb (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. knock (medium)\nh4. domin (medium)\nh4. teeth (medium)\nv1. gbark (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. maybe (medium)\nh5. karst (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. lever (high)\nh5. karst (high)\nv1. gripe (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. enlarge tool (high)\nh4. subdue? (medium)\nv1. G_T_K (high)\nv2. R_\xa0\xa0…'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. quell (high)\nh4. cedar (low)\nh5. karst (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. lever (high)\nh4. scare (high)\nh5. karst (high)\nv1. gloat (medium)\nv2. reaim (medium)\nv3. avoid (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. giant (medium)\nh4. dread (medium)\nh4. cedar (medium)\nv1. glout (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h5. karst (high)\nv2. react (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. quell (high)\nh4. cedar (medium)\nh5. karst (medium)\nv1. gstik (low)\nv1. gstop (low)\nv2. rpaul (low)\nv2. rpaen (low)\nv3. aarse (low)\nv3. aarem (low)\nv4. sdooh (low)\nv4. sdope (low)\nv5. peton (low)\nv'
+[propose] parsed 13 proposals
+[propose] raw output: 'h4. dread (high)\nh4. cedar (medium)\nh5. karst (medium)\nh5. karan (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. tyran (high)\nh4. cedar (low)\nh5. karan (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h2. lever (high)\nh5. karat (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. grasp (medium)\nh2. grosk (medium)\nh3. grosk (medium)\nh4. scare (medium)\nh5. glosk (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. karst (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. enlar (high)\nh2. enlge (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. enlarge (high)\nh2. enlarge (certain)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. karma (medium)\nh1. fixed (medium)\nh2. risch (medium)\nh3. risch (medium)\nh4. risch (medium)\nh5. risch (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. karst (high)\nv1. grasp (medium)\nv2. reuch (medium)\nv4. shash (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. karst (high)\nv1. geeks (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. enlarge (high)\nh2. enlarge? (medium)\nh2. tool? (low)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. spade (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. karst (high)\nv1. gripe (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. karst (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. spade (high)\nh5. karst (high)\nv1. gutat (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. karst (high)\nv1. gltqt (low)\nv2. reauz (low)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. gwack (medium)'
+[propose] parsed 0 proposals
+C L I N G
+W I D E N
+R I S C H
+S C A R E
+C R O A K
+[008/20] idx=35
+       done  expansions=44  r=0.100  r_letter=0.36  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h1. can\xa0(\xa0high\xa0)\nh2. poet\xa0(\xa0high\xa0)\nh3\xa0\xa0\xa0\xa0...'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. theme (high)\nh5. tacer (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. sifts (medium)\nh5. tacer (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. tamer (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'v3. unsew (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h5. tabor (medium)\nh1. abets (medium)\nh2. skald (medium)\nh3. theme (medium)\nh4. sifts (medium)\nh5. tawer (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'v2. bhuta (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h5. sizer (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. theme (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'v1. ambit (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v1. allot (medium)\nh1. third (medium)\nh2. third (medium)\nh3. topic (medium)\nh4. sieve (medium)\nh5. third (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. theme (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. theme (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. poet (high)\nh4. sift (high)\nv1. A top: SPARK?; herald \nv2. \nv3. \nv4 \nv5'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. theme (high)\nh1. abets (medium)\nh2. acoat (medium)\nh3. acoat (medium)\nh4. acoat (medium)\nh5. acoat (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. motif (high)\nv1. alert (medium)\nv2. bella (low)\nh1. rivet (medium)\nh2. rivet (medium)\nh3. rivet (medium)\nh4. rivet (medium)\nh5. rivet (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. barde (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v5. given (medium)\nh1. abets (medium)\nh2. barde (medium)\nh4. sifts (medium)\nh3. topic (medium)\nh5. tawer (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. trial (high)\nh3. theme (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. cobur (low)\nv1. aesta (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. essay (high)\nh4. sieve (high)\nh4. ravel (medium)\nh5. taker (medium)\nh1. abets (medium)\nh2. poets (medium)\nh4. maybe (medium)\nh5. tawer (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h5. cobur (medium)\nv2. bonus (medium)\nv3. eeeee (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. motif (high)\nv1. apart (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. sifts (high)\nh5. tamer (medium)\nv1. aptal (low)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. trial (high)\nh5. bower (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. try\xadby\xa0(high)\nh5. cr\xa0??\xa0(low)\nv1. apex?\xa0(medium)\nv2. bob\xa0?\xa0(???\xa0??)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. sieve (high)\nv1. apart (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. motif (high)\nv1. apart (high)\nv2. bolla (medium)\nv4. ttone (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. sieve (medium)\nh5. tanni (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. poets (medium)\nh4. rinse (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. abets (medium)\nh2. poets (medium)\nh3. motif (medium)\nh4. sieve (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. taver (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. tamer (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. ambit (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. theme (medium)\nh2. poets (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h5. tamer (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. arson (medium)\nv1. abets (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. tamer (medium)\nv1. abets (medium)\nh1. abets (medium)\nh3. board (medium)\nh4. sieve (medium)\nh2. poete (medium)\nh3. leave (medium)\nh4. leave (medium)\nh5. taker (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. theme (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. cobur (low)\nv2. brine (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. theme (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. bard (high)\nh2. poet\xa0(\xa0high\xa0)\nh5. tacker\xa0(\xa0high\xa0)\nh5\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0… (low\xa0)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. minst (low)\nh3. motif (high)\nh3. essay (medium)\nh1. trave (medium)\nh2. trube (medium)\nh4. range (medium)\nh5. basis (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. sifts (medium)'
+[propose] parsed 1 proposals
+A B E T S
+C R E S T
+E S S A Y
+U N S A W
+T A M E R
+[009/20] idx=40
+       done  expansions=36  r=0.100  r_letter=0.20  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h1. disco (high)\nh3. overt (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. derma (medium)\nh3. overt (high)\nh4. manso (medium)\nv1. duomo (certain)\nv2. invar (high)\nh2. uncap (high)\nh2. doffs (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h1. disco (high)\nh2. doffs (high)\nh4. manor (medium)\nh5. stake (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. disco (high)\nh4. manse (high)\nh5. exact (medium)\nv1. basil (medium)\nv2. alloy (medium)\nv3. ulcer (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. derob (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv1. ddomi (medium)\nv2. ievie (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. derob (high)\nh5. exact (high)\nv4. cream (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. derma (high)\nh4. manor (medium)\nh1. grace (medium)\nh2. grace (medium)\nh3. grace (medium)\nh4. grace (medium)\nh5. grace (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. uncap (high)\nv1. duomo (high)\nh1. cause (medium)\nh3. cause (medium)\nh4. manse (medium)\nh5. match (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv1. duomo (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. derma (high)\nh1. grace (medium)\nh2. uncap (medium)\nh3. grace (medium)\nh4. grace (medium)\nh5. grace (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. overt (medium)\nh4. manor (high)\nh5. order (medium)\nv2. invar (high)\nv3. could (medium)\nh1. disco (medium)\nh2. comes (medium)\nh4. manse (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. manor (medium)\nv3. slash (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. overt (high)\nh3. plain (medium)\nh4. manor (high)\nh4. recte (medium)\nh5. exact (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h3. overt (high)\nh4. manor (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. manor (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. overt (high)\nh5. exact (high)\nv1. duomo (high)\nv2. inoxi (medium)\nv3. scold (medium)\nv4. canal (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. overt (high)\nh5. exact (high)\nv1. duomo (certain)\nv2. invar (certain)\nv4. canal (medium)\nh1. disco (medium)\nh2. uncap (medium)\nh4. manor (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. explicit (high)\nh3. unhidden (high)\nh5. arrange\xa0(high)\nh5.\xa0\xa0\xa0\xa0\xa0\xa0\xa0?\xa0\xa0\xa0\n\n\n\nv\xa0\xa0\xa0\n\n\n\nv\xa0\xa0\n\n\n\n...'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. disco (medium)\nh2. recti (medium)\nh3. recti (medium)\nh4. durer (medium)\nh5. order (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. overt (high)\nh3. naked (medium)\nh4. manor (high)\nh4. recti (medium)\nh5. exact (medium)\nv1. ddost (medium)\nv1. ddpod (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv1. ddomi (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. overt (high)\nh5. order (high)\nv2. steel (medium)\nv3. stain (medium)\nv4. delta (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. manor (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. overt (high)\nh5. exact (high)\nv2. steel (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv4. delta (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. overt (high)\nh3. openi (medium)\nh4. manor (medium)\nh1. grace (medium)\nh2. grace (medium)\nh3. grace (medium)\nh4. grace (medium)\nh5. grace (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h3. plain (high)\nh3. overt (high)\nh4. manor (high)\nh1. otter (medium)\nh2. otter (medium)\nh4. otter (medium)\nh5. order (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv1. ddomi (medium)\nv2. iepot (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. overt (high)\nh3. plain (medium)\nh4. recto (medium)\nh5. exact (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. manor (high)\nh5. exact (high)\nv1. duomo (high)\nv2. inver (medium)\nv3. shame (medium)\nv4. marsh (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. overt (high)\nh5. order (high)\nv3. shame (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. overt (high)\nh4. recto (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. given (medium)\nh2. comes (medium)\nh3. overt (medium)\nh4. overt (medium)\nh5. doffs (medium)'
+[propose] parsed 3 proposals
+P L A I N
+P L A I N
+P L A I N
+G R A C E
+G R A C E
+[010/20] idx=45
+       done  expansions=40  r=0.100  r_letter=0.20  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h1. eruct (high)\nh3. alert (high)\nh5. enter (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. place (high)\nh3. alert (high)\nh4. drunk (low)\nh5. enter (high)\nv1. evade (medium)\nv1. elude (medium)\nv4. curse (medium)\nv5. tenor (high)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. belch (high)\nh1. eruct (medium)\nh2. place (high)\nh2. locus (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. eruct (high)\nh2. sitee (medium)\nh3. alert (high)\nv1. evade (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h3. alert (high)\nh3. admon (medium)\nh4. alcoh (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. alcho (medium)\nh5. enter (high)\nv1. evade (high)\nv5. tenor (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. alert (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. epide (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. evade (high)\nv2. rerun (medium)\nv4. curse (medium)\nv5. tenor (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. arson (high)\nh4. lewis (medium)\nh5. zilch (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. doper (high)\nh5. enter (high)\nv1. evade (high)\nv3. unapp (medium)\nv5. tenor (medium)\nv5. given (medium)\nh1. eruct (medium)\nh2. place (medium)\nh3. admon (medium)\nh3. place (medium)\nh4. evade (mediu'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. I____ (high) \nh4. D____ (high) \nh5. E____ (high) \nv2. RL___ (medium) \nv3. UA____ (medium) \nv4. C____ (medium) \nv5. TE____ (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. arena (high)\nh5. enter (high)\nv1. evade (high)\nv2. relet (medium)\nv3. undue (medium)\nv4. curse (medium)\nv5. tenor (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. arena (high)\nh4. lamer (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. venue (high)\nh4. drunk (medium)\nh5. enter (high)\nv4. curse (medium)\nv5. tenor (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. drunk (high)\nh5. enter (high)\nv1. evade (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. alcoh (high)\nh5. enter (high)\nv1. evade (certain)\nv2. renew (high)\nv3. unfit (medium)\nv4. curse (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. place (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. arena (high)\nh2. place (medium)\nh4. sober (low)\nh4. tipsy (medium)\nh5. enter (high)\nv1. evade (medium)\nv5. tenor (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. arena (high)\nh2. place (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. place (high)\nh2. venue (medium)\nh3. alert (high)\nh3. cauta (medium)\nh4. binge (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. alert (high)\nh4. lamer (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. arena (high)\nh2. place (high)\nh3. alert (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. place (high)\nh4. lamer (medium)\nh1. eruct (medium)\nh3. evade (medium)\nh5. evade (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. venue (high)\nh3. alert (high)\nv1. evade (high)\nv2. reurn (medium)\nv3. unfit (medium)\nv4. cince (medium)\nv5. tenor (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. place (high)\nh4. lamer (medium)\nv1. evade (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. place (high)\nh2. venue (medium)\nh3. alert (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. venue (high)\nh5. enter (high)\nv1. evade (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. evade (high)\nv2. recur (high)\nv5. tenor (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. evade (high)\nv2. rewet (medium)\nv3. undue (medium)\nv5. tenor (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. evade (high)\nv2. renew (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. vista (high)\nh3. alert (high)\nh4. drier (medium)\nh5. enter (high)\nv3. unnee (medium)\nv5. given (medium)\nh1. eruct (medium)\nh2. unfit (medium)\nh3. unfit (medium)\nh4. unfit (medium)\nh5. eruct (mediu'
+[propose] parsed 8 proposals
+[propose] raw output: 'h2. venue (high)\nh3. alert (high)\nh4. souse (medium)\nh5. enter (high)\nv1. evade (high)\nv2. relet (medium)\nv3. undue (medium)\nv5. tenor (certain)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h2. place (high)\nh3. alert (high)\nh4. drunk (medium)\nh5. enter (high)\nv1. evade (high)\nv4. curse (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. locus (high)\nh3. alert (medium)\nh3. alarm (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. alert (high)\nh3. alarm (medium)\nh4. drunk (medium)\nh5. enter (high)\nv1. evade (medium)\nv5. tenor (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. alert (high)\nv1. evade (high)\nv2. rewin (low)\nv3. unset (medium)\nv5. tenor (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. drunk (medium)\nh5. enter (high)\nv1. evade (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. drunk (high)\nh5. enter (high)\nv1. evade (high)\nv2. rerun (high)\nv4. curse (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. alert (high)\nh5. enter (high)\nv1. evade (high)\nv2. renew (medium)\nv3. unfit (medium)\nv5. tenor (medium)'
+[propose] parsed 2 proposals
+E R U C T
+A R E N A
+X X X X X
+X X X X X
+X X X X X
+[011/20] idx=50
+       done  expansions=33  r=0.000  r_letter=0.00  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. cream (high)\nh2. print (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. inner (high)\nh5. merge (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. merge (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. litho (medium)\nv1. bevel (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. litho (high)\nh5. blend (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. custs (high)\nh1. custo (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. custo (high)\nh4. agent (high)\nh4. agend (low)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. internal (high)\nh4. item (high)\nv1. CL?M (medium)\nv2. UI??? (medium)\nv3. ST??? (medium)\nv4. TH???\xa0(low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. internal (high)\nh4. agenda (high)\nv1. CL?M (medium)\nv2. UI?E (medium)\nv3. ST?R'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. custo (high)\nh3. endor (medium)\nh3. inter (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v1. clime (medium)\nv2. mince (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. blend (high)\nv2. sting (medium)\nv3. stint (medium)\nh1. creme (medium)\nh2. would (medium)\nh3. would (medium)\nh4. would (medium)\nh5. merge (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v1. slici (medium)\nv2. swing (medium)\nv4. sheen (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h5. merge (high)\nv1. cliff (medium)\nv4. mheat (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. blend (high)\nv1. clich (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. inner (high)\nv1. blade (medium)\nv2. wield (medium)\nv3. stain (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. internal (high)\nh4. agenda (high)\nv1. CL?B (medium)\nv2. UI?L? (medium)\nv3. ST??? (medium)\nv4. TH??? (medium)\nv5. OO??? (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. entra (medium)\nh3. inter (high)\nh4. agagu (medium)\nh3. inner (medium)\nh4. tasks (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. custo (high)\nh1. cream (high)\nh3. inner (medium)\nh3. innie (medium)\nh3. innii (medium)\nh1. shank (medium)\nh2. shank (medium)\nh3. shank (medium)\nh4. shank (medium)\nh5. shank (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. custard (high)\nh3. internal (high)\nh4. agenda (high)\nv1. _L__L (medium)\nv2. _I.... (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'v2. sling (medium)\nv3. stain (medium)\nv5. sorry (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. lithograph (high) (???)\\nh3. internal (medium) (???)\\nh4. agenda (high)\\nv1. CLEFT? (low\xa0??)\\nv2. RAI…\\n...'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. A lithograph: _A___ (high)\nh3. Anatomically on the inside: _I____ (high)\nh4. ...'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. cleft (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. inner (high)\nv1. cpbib (low)\nv2. urgel (medium)\nv3. sible (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. litho (high)\nh2. print (medium)\nv1. cleft (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. lithograph (high) (???)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. custo (high)\nh1. cream (high)\nh1. pasto (low)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. flans (medium)\nh1. would (medium)\nh2. would (medium)\nh3. would (medium)\nh4. order (medium)\nh5. would (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. internal (high)\nh4. item (high)\nv1. CP?B (medium)\nv2. RR?L...'
+[propose] parsed 5 proposals
+[propose] raw output: 'v1. spikb (low)\nv2. pryal (low)\nv3. iipne (low)'
+[propose] parsed 7 proposals
+[propose] raw output: 'v1. epsil (medium)\nv2. trpwl (medium)\nv3. slice (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. custo (high)\nh1. cream (high)\nh1. pasta (low)\nh3. enenz (medium)'
+[propose] parsed 5 proposals
+P A S T O
+P R I N T
+B L E N D
+B L E N D
+B L E N D
+[012/20] idx=55
+       done  expansions=38  r=0.100  r_letter=0.32  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h2. renew (high)\nh3. chevy (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. totem (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. renew (high)\nh3. choct (medium)\nh4. totot (medium)\nh1. resow (medium)\nh2. resow (medium)\nh3. resow (medium)\nh4. resow (medium)\nh5. resow (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. renew (high)\nh4. totem (high)\nv3. cedar (medium)\nv4. email (medium)\nv5. enemy (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. cheet (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. apache (high)\nh3. hopi (medium)\nh5. pantry (high)\nh5. cellar\xa0(low\xa0).'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. throng (high)\nh5. cellar (high)\nv1. irct? (low)\nv2. reho? (low)\nv3. net? (low)\nv4. eae? (??) (low)\nv5. wnm... (??) (low)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. swarm (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. choct (low)\nh4. totem (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. namir (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. apache (high)\nh4. mask (high)\nh5. pantry (medium)\nv2. reseed (high)\nv3. oak... (medium)\nv4. weblink (medium)\nv5. dweller? (low)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. totem (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'v1. skeik (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. swarm (medium)\nh2. rearm (medium)\nh3. cheva (medium)\nh4. totem (medium)\nh5. store (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. swarm (high)\nh2. renew (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. crew (high)\nh2. recruit (medium)\nh5. pantry (low)\nh5. cellar\xa0(\xa0\xa0\xa0\xa0\xa0)\nv1. scorch\xa0(\xa0\xa0\xa0\xa0\xa0)\nv1\xa0\xa0\xa0\xa0\xa0\xa0(\xa0\xa0…\xa0\xa0)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. swarm (high)\nv1. irrit (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. swarm (high)\nv1. irrit (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. scaut (medium)\nh1. swarm (medium)\nh2. renew (medium)\nh3. choct (medium)\nh4. totem (medium)\nh5. store (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. swarm (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. renew (high)\nh3. cheet (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. choct (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. racte (medium)\nv3. sleet (medium)\nv4. ocean (medium)\nh1. phone (medium)\nh2. phone (medium)\nh3. phone (medium)\nh4. phone (medium)\nh5. phone (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. choct (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. mob (high)\nh5. cellar (medium)\nv1. ract? (low)\nv2. echo? (medium)\nv3. sot? (low)\nv4. oce? ...... (low)\nv5. wtm... (low)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. throng (high)\nh2. recruit (high)\nh5. pantry (high)\nv1. grit? (medium)\nv2. replant? (medium)\nv3. fright?\xa0\xa0(\xa0\xa0?\xa0\xa0??\xa0\xa0) (\xa0\xa0???\xa0\xa0)\nv4\xa0\xa0\xa0?\xa0\xa0\n\n\n\nI cannot provide\xa0\xa0the\xa0\xa0…\xa0\xa0…\xa0\xa0\n\n\n\nSorry\xa0\xa0…\xa0We\xa0\xa0\n\n\n\n---\n\n\n\n'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. irrit (medium)\nv5. enemy (certain)'
+[propose] parsed 0 proposals
+[propose] raw output: 'v2. resew (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. totem (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. totem (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. throng (high)\nh1. mass (high)\nh5. cellar (medium)\nh5. pantry? (low)\nv1. arct?\xa0(\xa0?\xa0)\nv1.\xa0?\xa0\nv2\xa0?\xa0\nv3\xa0\xa0...'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. swarm (high)\nh2. renew (high)\nv5. enemy (certain)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. crew (high)\nh2. recruit (medium)\nh5. pantry (low)\nh5. cellar\xa0(\xa0low\xa0)\nv1. SCAT\xa0(\xa0\xa0?\xa0) \nv1\xa0(\xa0\xa0?\xa0\xa0\xa0… )\xa0\xa0\xa0\xa0…\xa0…\n\nv\xa0\u200b\xa0\xa0…… \n\n(Note\xa0\xa0…\xa0…\xa0…\xa0…\xa0…\xa0...\xa0…\xa0)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. gangs (high)\nh3. iroqu (medium)\nh5. drink (medium)\nv4. email (medium)\nv5. enemy (high)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h2. squad (medium)\nh2. staff (medium)\nv1. scrap (high)\nv1. scats (low)\nv2. wheat (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'v1. scats (high)\nv4. racer (medium)\nv5. motel (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. crowd (high)\nh5. store (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. ewers (high)\nv3. anata (medium)'
+[propose] parsed 5 proposals
+X X X X X
+R E N E W
+X X X X X
+X X X X X
+X X X X X
+[013/20] idx=60
+       done  expansions=37  r=0.100  r_letter=0.24  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h2. siren (high)\nh3. igglo (medium)\nh4. raise (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. raise (high)\nh5. eider (high)\nv1. glare (high)\nv2. patio (medium)\nv5. sheik (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. siren (high)\nh5. eider (medium)\nv2. porch (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. siren (high)\nh4. raise (high)\nh5. eider (medium)\nv1. glued (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. siren (high)\nh4. raise (medium)\nv2. porch (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. grove (high)\nh2. siren (high)\nh3. agama (medium)\nh4. raise (high)\nh5. eider (high)\nv2. porch (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. woods (medium)\nh2. siren (high)\nh2. alarm (medium)\nh4. raise (high)\nh5. duvet (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h5. eider (high)\nv1. glare (high)\nv2. patio (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. woods (medium)\nh3. iggyd (medium)\nh2. siren (medium)\nh4. raise (medium)\nh5. eider (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. woods (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. raise (high)\nv1. dsire (medium)\nv2. uifel (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. raise (high)\nv1. upset (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. raise (high)\nv1. wsnke (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. iggyl (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. siren (high)\nv1. glare (high)\nv2. patio (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. gloam (high)\nh1. glems (medium)\nh2. larmo (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. gloom (high)\nh1. gleas (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h2. siren (high)\nh5. eider (high)\nv1. glare (certain)\nv2. riora (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. eider (high)\nv1. glare (high)\nv2. riora (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. alarm (high)\nh2. siren (high)\nh3. gecko (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. quilt (medium)\nv1. glare (high)\nv2. patio (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'v1. glare (medium)\nv3. artem (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. eider (high)\nv1. glare (certain)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. grove (medium)\nh3. iguan (medium)\nv5. given (medium)\nh1. glare (medium)\nh2. glare (medium)\nh3. glare (medium)\nh4. glare (medium)\nh5. glare (medium)\nh2. alarm (medium)\nh4. raise (medium)\nh5. duvet '
+[propose] parsed 5 proposals
+[propose] raw output: 'v1. glare (certain)\nv3. acorn (medium)\nv4. ricks (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. siren (high)\nv1. glare (certain)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. siren (high)\nv1. glare (high)\nv2. patio (medium)\nv4. darks (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. woods (medium)\nh5. eider (high)\nh5. quilt (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. siren (high)\nv1. glare (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. grove (medium)\nh3. gecko (medium)\nv1. stare (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. siren (certain)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. woods (medium)\nh4. raise (high)\nh5. quilt (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. quilt (medium)\nv5. given (medium)\nh1. scorn (medium)\nh2. fixed (medium)\nh3. scorn (medium)\nh4. scorn (medium)\nh5. scorn (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. raise (high)\nh5. quilt (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. raise (high)\nv1. asisq (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. woods (low)\nh4. raise (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. siren (high)\nh2. klobf (medium)'
+[propose] parsed 2 proposals
+X X X X X
+A L E R T
+G E C K O
+R A I S E
+M A Y B E
+[014/20] idx=65
+       done  expansions=33  r=0.000  r_letter=0.04  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h2. plume (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. woods (high)\nh3. velar (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. velar (medium)\nv1. gripe (medium)\nv2. level (medium)\nv3. amuse (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. quill (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. stern (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. scowb (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v5. given (medium)\nv1. could (medium)\nh1. ouija (medium)\nh2. ouija (medium)\nh3. ouija (medium)\nh4. ouija (medium)\nh5. wrong (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. barge (medium)\nh1. level (medium)\nh2. quill (medium)\nh3. level (medium)\nh4. level (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. forest (high)\nh4. medial (high)\nv1. quiver (medium)\nv2. nuance (medium)\nv3. tiltil? (low)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. woods (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. scowp (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'v1. whine (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. veloc (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'v1. quasi (medium)\nv2. queue (medium)\nv3. sully (medium)\nv4. sloth (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. forest (high)\nh4. median (high)\nh5. keel? (medium)\nv1. spurious? (low)\nv5.\xa0? (low)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. motor (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. woods (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. FOREST (high)\nh4. CENTRAL (high)\nv1. EPHEMERAL (medium)\nv2. SLE… (low)\nv3. PULL… (... )'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. median (high)\nh5. scow (high)\nv1. whor (low)\nv15.\xa0\xa0? (???)\nv2\xa0\xa0? \nv3\xa0\xa0? \nv5\xa0\xa0??'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. gripe (high)\nh1. gripe (medium)\nh2. gripe (medium)\nh3. gripe (medium)\nh4. gripe (medium)\nh5. gripe (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. gripe (high)\nv3. amuse (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'v1. gpaps (low)'
+[propose] parsed 4 proposals
+[propose] raw output: 'v1. gripe (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h5. scull (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'v1. gripe (certain)\nv3. outre (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. uvula (high)\nh1. pepup (medium)\nh2. pepup (medium)\nh4. pepup (medium)\nh5. barge (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. woods (medium)\nh5. ferry (high)\nv1. grump (certain)\nv2. liver (medium)\nv3. amuse (medium)\nv5. exalt (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. stern (medium)\nv1. ppage (medium)\nh1. pepup (medium)\nh2. plume (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. velom (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. river (medium)\nv5. given (medium)\nh1. uvula (medium)\nh3. blank (medium)\nh5. scull (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. forest (high)\nh1. timber (medium)\nh3. palate? (low)\nh3. vel\xad?\xa0\xa0(\xa0\xa0\xa0\xa0\xa0\xa0\xa0… )'
+[propose] parsed 0 proposals
+[propose] raw output: 'v1. quark (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'v1. squad (medium)'
+[propose] parsed 0 proposals
+S C E N E
+S C E N E
+S C E N E
+S C E N E
+S C E N E
+[015/20] idx=70
+       done  expansions=37  r=0.100  r_letter=0.40  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h3. abate (medium)\nh4. rinse (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. taxon (high)\nh4. rinse (high)\nv1. larch (high)\nv3. trend (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. latin (high)\nh1. greek (medium)\nh4. rinse (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. penal (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. penal (high)\nh4. rinse (high)\nh4. scour (low)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. rinse (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'v1. larch (medium)\nv3. targo (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h2. taxer (medium)\nh1. tawny (medium)\nh2. taxon (medium)\nh3. niece (medium)\nh4. niece (medium)\nh5. comes (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. assess (high)\nh2. assess (medium)\nh3. reduce (high)\nh3. reduce\xa0(\xa0\xa0\xa0... (invalid)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. abate (high)\nh4. rinse (high)\nv1. ltaft (medium)\nv2. aacaa (low)\nv3. txcob (low)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h4. scour (high)\nv1. ltair (medium)\nv2. aabed (low)\nv4. iotan (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h3. abate (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. rinse (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. drier (high)\nh4. scour (high)\nv1. ltree (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. nixed (high)\nh4. rinse (high)\nh5. nipap (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. bathe (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. rinse (high)\nh5. egret (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. abase (high)\nh4. rinse (high)\nv1. ltero (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. taxer (high)\nh4. rinse (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. rinse (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. rinse (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. abate (high)\nh3. lower (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v1. lilys (medium)\nv2. aunct (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. abate (high)\nv1. lpsaw (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. lower (high)\nh4. rinse (high)\nh3. dimin (medium)\nh4. bathe (medium)\nh5. bhang (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. lower (high)\nh4. rinse (high)\nv1. larch (low)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. latin (high)\nh2. penal (medium)\nh3. nassa (medium)\nh4. nassa (medium)\nh5. nipas (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. latin (high)\nh5. sipon (high)\nv1. sapar (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. taxed (high)\nv2. unbii (low)\nv5. users (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. penal (high)\nh4. rinse (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. rinse (high)\nv1. spade (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. assess (high)\nh2. assess (certain)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. rinse (high)\nh4. bathe (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. assess (high)\nh2. fine\xa0(…)\nh5. rattan\xa0(\xa0...\nh5.\xa0...\nv1. palm\xa0...\nv1...'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. rinse (high)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. assess (high)\nh2. levy (low)\nh5. nipa (low)\nh5. r\\+\xa0\xa0\xa0--- (invalid\xa0—\xa0cannot\xa0output\xa0only\xa0-\xa0…\u200b)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h4. rinse (high)\nh4. bathe (medium)\nh1. iuser (medium)\nh2. iuser (medium)\nh3. iuser (medium)\nh5. iuser (medium)'
+[propose] parsed 7 proposals
+A R A B I
+X X X X X
+A B A T E
+R I N S E
+X X X X X
+[016/20] idx=75
+       done  expansions=30  r=0.100  r_letter=0.20  r_word=0.10  r_game=False
+       ----
+[propose] raw output: 'h1. reign (medium)\nh2. intro (medium)\nh3. shame (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. reich (high)\nh3. shame (high)\nh5. embed (medium)\nh1. khain (medium)\nh2. intro (medium)\nh3. khain (medium)\nh4. khain (medium)\nh5. khain (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h2. intro (high)\nh3. shame (high)\nh4. navel (high)\nh5. ember (high)\nv1. rinas (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. reich (high)\nh2. intro (high)\nh4. navel (high)\nh5. glint (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. intro (high)\nh3. shame (high)\nh5. vultu (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. reich (high)\nh2. intro (high)\nh3. shame (high)\nh4. navel (high)\nv1. prang (medium)\nv2. inter (medium)\nv3. stiss (medium)\nv4. armed (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. infam (high)\nh4. navel (medium)\nh5. ember (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. riich (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. navel (high)\nv1. rince (medium)\nv2. enlim (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. shame (high)\nh4. navel (medium)\nh5. ember (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. grace (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h3. scowl (high)\nh3. shame (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. ember (high)\nv1. rinds (medium)\nv2. enema (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. kauts (high)\nh1. souse (medium)\nh2. souse (medium)\nh3. souse (medium)\nh4. souse (medium)\nh5. souse (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. adler (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. navel (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. kauts (high)\nh4. navel (high)\nv5. given (medium)\nh1. match (medium)\nh2. intro (medium)\nh3. match (medium)\nh4. match (medium)\nh5. torch (medium)\nh3. shame (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. reich (medium)\nh5. torch (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. navel (high)\nh5. ember (high)\nv1. siser (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. kraut (high)\nh4. stude (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. umbil (medium)\nv1. iisti (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. umbil (medium)\nh5. carri (medium)\nv1. kisan (medium)\nv2. anhil (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h4. umbil (medium)\nv1. kisan (medium)\nv2. anhil (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. reich (high)\nh5. torch (high)\nv1. assis (medium)\nv1. kisss (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. reich (high)\nh4. navel (high)\nh5. wreng (medium)\nv3. stata (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. umbil (medium)\nv1. rikes (medium)\nv2. enhyp (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. Kaiser1 (high)\nh1. Kaiser2 (medium)\nh5. VESSEL\xa0(\u200b\u200b\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\u200b'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. kauts (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. reich (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. reich (high)\nh5. vultu (low)'
+[propose] parsed 3 proposals
+Y X X X X
+X X X X X
+X X X X X
+X X X X X
+X X X X X
+[017/20] idx=80
+       done  expansions=36  r=0.000  r_letter=0.16  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h2. ovile (medium)\nh3. grove (high)\nh4. inner (high)\nh5. realm (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. ovine (high)\nh4. inner (high)\nh5. realm (medium)\nv2. occur (medium)\nv3. loplo (low)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. ovine (high)\nh3. glade (high)\nh4. inter (medium)\nh5. realm (certain)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. glade (high)\nh4. inter (medium)\nh5. realm (high)\nv2. event (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. grove (high)\nh5. realm (medium)\nv2. event (high)\nv4. lelee (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. gomez (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h5. realm (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. riata (medium)\nh2. ovine (medium)\nh3. wrong (medium)\nh4. riata (medium)\nh5. riopa (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. realm (high)\nv2. verne (medium)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. cedar (high)\nh5. realz (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. overt (high)\nh3. grove (certain)\nh4. inner (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. ovine (high)\nv5. given (medium)\nh1. occur (medium)\nh3. occur (medium)\nh4. occur (medium)\nh5. occur (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. EDEN (high)\nh4. INTERNAL (low)\nh1. EDEN? (medium)\nh4\xa0\xa0\xa0\xa0... (...\xa0...\xa0...\xa0...\xa0...) (…\u200b\xa0\xa0…\xa0…\xa0...\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. xenon (high)\nh4. endog (low)\nv2. occur (medium)\nv3. loose (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. ovine (high)\nh5. realm (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. cedar (high)\nh5. realm (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. grove (high)\nh4. inner (high)\nv2. event (medium)\nv5. blend (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. grove (high)\nv1. axoir (medium)\nv1. sotot (medium)\nv2. event (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. inter (medium)\nv2. event (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. lemma (high)\nv5. given (medium)\nh1. nurse (medium)\nh2. nurse (medium)\nh3. naran (medium)\nh4. entra (medium)\nh5. nurse (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. ovine (high)\nh4. inner (high)\nv1. axger (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h2. xenon (high)\nh4. endor (medium)\nv2. ellen (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. ovine (high)\nv1. axgir (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. goaty (medium)\nh3. glass (medium)\nv2. scene (medium)\nv3. raven (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h1. ashem (high)\nh1. sable (medium)\nh2. schem (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h3. copse (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. grove (high)\nv1. slash (medium)\nv4. rehem (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. ovine (high)\nv1. axgir (medium)\nv1. sushi (medium)\nv2. allel (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. grove (high)\nv1. axoir (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. lamba (high)\nh3. grove (high)'
+[propose] parsed 0 proposals
+[propose] raw output: 'h1. sodom (high)\nh2. agape (high)\nh3. wilde (medium)\nv2. scene (medium)\nv4. pelic (low)\nv5. stirr (low)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. edoms (high)\nh2. sheee (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. grove (high)\nh4. inner (high)\nv1. eager (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. ovine (high)\nh1. edeny (medium)\nh2. occur (medium)\nh3. occur (medium)\nh4. occur (medium)\nh5. occur (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. ovine (medium)\nh3. grove (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h4. inner (high)\nv1. ewelr (medium)\nv2. douen (medium)'
+[propose] parsed 3 proposals
+S I N A I
+O C C U R
+O C C U R
+O C C U R
+O C C U R
+[018/20] idx=85
+       done  expansions=40  r=0.000  r_letter=0.04  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. deity (medium)\nh2. habit (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. spare (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h1. godly (high)\nh1. deity (medium)\nh3. chewg (medium)'
+[propose] parsed 12 proposals
+[propose] raw output: 'h3. munch (medium)\nh4. prypr (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. munch (medium)\nv1. dhark (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. chew1 (high)\nh3. gnaw? (medium)\nh4. pry? (high)\nh4. interrog…\xa0(…\xa0...\xa0…\xa0…\xa0?\xa0\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0\n\n\n\nh\xa0\xa0\n\n\n\nThe answer...'
+[propose] parsed 0 proposals
+[propose] raw output: 'h5. spare (high)\nv1. dhoby (low)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h2. habit (high)\nh5. spare (medium)\nv1. dross (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. chews (medium)\nh4. pryor (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. spare (medium)\nv5. given (medium)\nh1. aring (medium)\nh2. aring (medium)\nh3. aring (medium)\nh4. pries (medium)\nh5. aring (medium)\nh1. deity (medium)\nh2. usage (medium)\nh3. chews (medium)\nh5. first '
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. gnawt (high)\nh3. gnawp (medium)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h3. chew1 (high)\nh3. chew2 (medium)\nh4. pry\xa0\xa0(pr\xad\xa0\xa0\xa0\xa0\xa0\xa0\xa0…\xa0\xa0…\xa0\xa0…\xa0\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0…\xa0...\xa0…\xa0…\xa0??\xa0\xa0\xa0…\xa0…\xa0…\xa0…………\xa0…\xa0……\xa0…\xa0……………\xa0...\xa0...'
+[propose] parsed 5 proposals
+[propose] raw output: 'h5. spare (medium)\nv1. dunno (low)\nv2. esche (medium)\nv2. eject (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. pries (high)\nh5. spare (high)\nv1. dudge (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h4. probe (medium)\nv3. mania (medium)\nv4. tango (medium)\nh1. yeast (medium)\nh2. yeast (medium)\nh3. chomp (medium)\nh4. yeast (medium)\nh5. yeast (medium)\nh1. deity (medium)\nh2. usage (medium)\nh5. hment '
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. usage (high)\nh3. gnawn (medium)\nh3. chewg (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. oblig (low)\nh2. occas (low)\nh2. orgor (low)\nh3. dunne (low)\nh3. dreds (medium)\nh1. spare (medium)\nh4. opens (medium)\nh5. spare (medium)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h2. habit (high)\nv1. darks (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nh4. lever (high)\nv1. darts (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h2. habit (high)\nh3. gnawt (medium)\nh5. spare (high)\nh5. remit (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h5. spare (high)\nv1. dhoop (medium)\nv2. easel (medium)\nv3. ibiza (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nh1. lever (medium)\nh2. usage (medium)\nh3. chews (medium)\nh4. mania (medium)\nh5. mania (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. habit (high)\nh3. gnawt (medium)\nh3. munch (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h2. habit (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. extra (medium)\nh2. ritua (medium)\nh3. orate (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. usage (high)\nh5. extra (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. habit (high)\nh3. gnawt (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nh1. place (medium)\nh2. place (medium)\nh3. place (medium)\nh4. place (medium)\nh5. place (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h2. habit (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h3. gnarl (medium)\nh3. snack (medium)\nv5. given (medium)\nh1. deity (medium)\nh2. usage (medium)\nh5. remit (medium)\nh2. aring (medium)\nh3. chews (medium)\nh4. pries (medium)\nh5. aring (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h2. upper (high)\nh2. usage (medium)\nh3. munch (high)\nh3. maste (medium)\nh4. mansa (medium)\nh4. maatu (low)\nh5. yield (high)\nh5. young (low)\nv2. evict (high)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h2. habit (high)\nh3. gnaws (medium)\nh5. spare (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nh5. spare (medium)\nv1. dodge (medium)\nv2. enfra (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nv5. given (medium)\nh1. deity (medium)\nh3. gnawt (medium)\nh5. spare (medium)\nh2. usage (medium)\nh4. tawer (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. habit (high)\nh5. spare (medium)\nh5. remit (high)\nv1. dingo (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h2. obeys (high)\nh4. greed (medium)\nv2. expel (medium)'
+[propose] parsed 14 proposals
+[propose] raw output: 'h3. snack (medium)\nh4. probe (high)\nh5. spare (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h4. pries (high)\nv1. ghits (medium)\nv2. oapop (low)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. spare (high)\nv2. oarns (medium)\nv3. dbone (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. spare (high)'
+[propose] parsed 3 proposals
+G O D E T
+H A B I T
+G H O U L
+G H O U L
+G H O U L
+[019/20] idx=90
+       done  expansions=37  r=0.000  r_letter=0.08  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. larkl (low)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. larks (high)\nh3. chosn (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. korea (high)\nh4. sound (high)\nh5. unary (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. koria (medium)\nh3. gorye (medium)\nh4. sound (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. koria (high)\nh1. stola (medium)\nh2. stola (medium)\nh3. comes (medium)\nh4. penny (medium)\nh5. stola (medium)'
+[propose] parsed 8 proposals
+[propose] raw output: 'h3. crone (high)\nh4. sound (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. korea (high)\nv2. anepi (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h5. unary (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'v3. palla (medium)\nv4. idler (low)\nv5. sappy (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. larky (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. larkt (high)\nh1. pipit (medium)\nh2. senet (medium)\nh3. korea (medium)\nh4. felid (medium)\nh5. torra (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h5. unary (high)\nh4. comes (medium)\nh5. comes (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. ospre (high)\nh4. ebird (high)\nh5. dunct (high)\nv2. peope (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. larks (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. larks (high)\nh4. nutri (high)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h1. larky (high)\nh1. larkb (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. larks (high)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. skylb (medium)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h4. saler (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. ospre (high)\nh1. osmot (medium)\nh5. naran (low)\nh1. pupil (medium)\nh2. pupil (medium)\nh3. pupil (medium)\nh4. pupil (medium)\nh5. pupil (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'v1. lfcat (medium)\nv2. aehro (medium)\nv3. rrope (medium)\nv5. sinfa (medium)'
+[propose] parsed 7 proposals
+[propose] raw output: 'h1. skylb (high)'
+[propose] parsed 9 proposals
+[propose] raw output: 'h1. larks (high)\nv1. ofgsi (low)\nv2. kefir (low)\nv3. troma (low)\nv5. board (medium)\nh1. stola (medium)\nh2. fermi (medium)\nh3. gimha (medium)\nh4. stola (medium)\nh5. stola (medium)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h1. larks (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. larkt (high)'
+[propose] parsed 3 proposals
+[propose] raw output: 'h1. larks (high)\nv1. elfel (medium)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h1. larky (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h4. healthier (high)\nh5. soloist (high)\nv1. TFG?? (medium)\nv2. IEI?? (medium)\nv3. TRM?? (unknown)\nv4. AMH?? (unknown)\nv5. LIA… (unknown)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h4. saner (medium)'
+[propose] parsed 2 proposals
+[propose] raw output: 'h1. larky (high)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h3. goryg (high)'
+[propose] parsed 4 proposals
+[propose] raw output: 'h3. koria (high)'
+[propose] parsed 1 proposals
+[propose] raw output: 'h3. korea (high)\nh4. greed (high)\nh1. aesto (medium)\nh2. felid (medium)\nh4. korea (medium)\nh5. felid (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. larkt (medium)'
+[propose] parsed 5 proposals
+[propose] raw output: 'h1. skylb (medium)\nh1. larkl (low)\nh1. teary (medium)\nh2. given (medium)\nh3. teary (medium)\nh4. teary (medium)\nh5. teary (medium)'
+[propose] parsed 6 proposals
+[propose] raw output: 'h3. korea (high)\nh4. sound (high)\nh5. unary (high)'
+[propose] parsed 10 proposals
+[propose] raw output: 'h3. korea (high)\nh5. unary (high)\nv1. tfeld (medium)\nv2. ieoie (medium)\nv3. trulu (medium)'
+[propose] parsed 5 proposals
+T I T X X
+X X X X X
+X X X X X
+X X X X X
+X X X X X
+[020/20] idx=95
+       done  expansions=1  r=0.000  r_letter=0.00  r_word=0.00  r_game=False
+       ----
+[propose] raw output: 'h1. emboss\xa0(high)\nh2. caul\xa0??\xa0(low)\nh3\xa0\xa0\xa0\xa0?\xa0\xa0?'
+[propose] parsed 0 proposals
+P R I N T
+C Y M A R
+S L I C E
+S E N S E
+T R E A D
+
+[A*] crosswords  avg_letter=0.150  avg_word=0.040  r_game=0/20 (0.0%)
+Logs: logs/crosswords/astar_openai-gpt-oss-120b_0.7_gen3_exp50_start0_end100_step5.json

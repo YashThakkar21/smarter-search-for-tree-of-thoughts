@@ -1,0 +1,14 @@
+[
+  {
+    "idx": 0,
+    "solution": "T A S K W\nE N E E D\nF I L L X\nG R I D L\nE T S M A",
+    "best_y": "h1. tasks\nh2. motor\nh5. scoff\n",
+    "metrics": {
+      "r_letter": 0.24,
+      "r_word": 0.1,
+      "r_game": false,
+      "r": 0.1
+    },
+    "expansions_used": 0
+  }
+]

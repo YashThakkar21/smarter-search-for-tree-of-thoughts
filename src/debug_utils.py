@@ -38,8 +38,11 @@ def _select_solution(results) -> str:
 
 def explain_evaluation(task, idx: int, solution: str) -> None:
     from tot.tasks.crosswords import MiniCrosswordsTask
+    from tot.tasks.text import TextTask
     if isinstance(task, MiniCrosswordsTask):
         _explain_crosswords(task, idx, solution)
+    elif isinstance(task, TextTask):
+        _explain_text(task, idx, solution)
     else:
         _explain_game24(task, idx, solution)
 
@@ -84,6 +87,16 @@ def _explain_crosswords(task, idx: int, solution: str) -> None:
         print("Evaluation: correct (board solved)")
     else:
         print("Evaluation: incorrect")
+
+def _explain_text(task, idx: int, solution: str) -> None:
+    puzzle = task.get_input(idx).strip()
+    print(f"Puzzle {idx}: {puzzle[:100]}{'...' if len(puzzle) > 100 else ''}")
+    if not solution.strip():
+        print("Evaluation: empty solution")
+        return
+    preview = solution.strip()[:300]
+    print(f"Solution preview:\n{preview}{'...' if len(solution.strip()) > 300 else ''}")
+    print("(Coherency score requires a separate scored LLM call — skipped in debug mode)")
 
 def _explain_game24(task, idx: int, solution: str) -> None:
     import sympy
