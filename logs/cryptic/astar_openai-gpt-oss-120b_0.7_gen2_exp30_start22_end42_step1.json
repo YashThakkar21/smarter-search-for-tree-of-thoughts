@@ -1,0 +1,50 @@
+[
+  {
+    "idx": 22,
+    "solution": "Definition: Fig\nWordplay: fodder=\"Fig n ram\" | indicator=\"mixed up\"\n",
+    "best_y": "Definition: Fig\nWordplay: fodder=\"Fig n ram\" | indicator=\"mixed up\"\n",
+    "metrics": {
+      "r": 0,
+      "extracted": null,
+      "gold": "MIXED FARMING",
+      "parse_failed": true
+    },
+    "expansions_used": 30
+  },
+  {
+    "idx": 23,
+    "solution": "Definition: Right Hook!\nWordplay: fodder=\"Left Jab\" | indicator=\"counter\"\nAnswer: RHS\n",
+    "best_y": "Definition: Right Hook!\nWordplay: fodder=\"Left Jab\" | indicator=\"counter\"\nAnswer: RHS\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "RHS",
+      "gold": "BAR",
+      "enum_match": true
+    },
+    "expansions_used": 30
+  },
+  {
+    "idx": 24,
+    "solution": "Definition: Doctor\nWordplay: fodder=\"heart of one\" | indicator=\"transplants\"\n",
+    "best_y": "Definition: Doctor\nWordplay: fodder=\"heart of one\" | indicator=\"transplants\"\n",
+    "metrics": {
+      "r": 0,
+      "extracted": null,
+      "gold": "DONOR",
+      "parse_failed": true
+    },
+    "expansions_used": 30
+  },
+  {
+    "idx": 25,
+    "solution": "Definition: uncertainty, initially\nWordplay: fodder=\"with uncertainty\" | indicator=\"initially\"\n",
+    "best_y": "Definition: uncertainty, initially\nWordplay: fodder=\"with uncertainty\" | indicator=\"initially\"\n",
+    "metrics": {
+      "r": 0,
+      "extracted": null,
+      "gold": "DEVOUR",
+      "parse_failed": true
+    },
+    "expansions_used": 30
+  }
+]

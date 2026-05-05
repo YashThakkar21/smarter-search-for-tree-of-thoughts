@@ -13,6 +13,7 @@ from tot.methods.astar import solve as astar_solve
 from tot.tasks.game24 import Game24Task
 from tot.tasks.crosswords import MiniCrosswordsTask
 from tot.tasks.text import TextTask
+from tot.tasks.cryptic import CrypticTask
 
 
 def _eval_crosswords_direct(task, idx, best_y):
@@ -33,6 +34,8 @@ def run(args):
         task = MiniCrosswordsTask()
     elif args.task == 'text':
         task = TextTask()
+    elif args.task == 'cryptic':
+        task = CrypticTask()
     else:
         task = Game24Task()
 
@@ -62,6 +65,8 @@ def run(args):
         elif args.task == 'text':
             # Text scoring calls gpt-4 (5 calls/example) — skip by default; save passage only.
             metrics = {'r': 0}
+        elif args.task == 'cryptic':
+            metrics = task.test_output(i, solution) if solution else {'r': 0, 'parse_failed': True}
         else:
             metrics = task.test_output(i, solution) if solution else {'r': 0}
 
@@ -69,6 +74,8 @@ def run(args):
         extra = ''
         if args.task == 'crosswords':
             extra = f'  r_letter={metrics.get("r_letter",0):.2f}  r_word={metrics.get("r_word",0):.2f}  r_game={metrics.get("r_game",False)}'
+        elif args.task == 'cryptic':
+            extra = f'  extracted={metrics.get("extracted","?")}  gold={metrics.get("gold","?")}  parse_failed={metrics.get("parse_failed",False)}'
         print(f'       done  expansions={len(info.get("expansions", []))}  r={r:.3f}{extra}', file=sys.stderr, flush=True)
         print(f'       ----', file=sys.stderr, flush=True)
 
@@ -104,6 +111,10 @@ def run(args):
         )
     elif args.task == 'text':
         print(f'\n[A*] text  {n} passages saved (scoring skipped)', file=sys.stderr)
+    elif args.task == 'cryptic':
+        solved = sum(1 for l in logs if l['metrics'].get('r', 0) == 1)
+        parse_failed = sum(1 for l in logs if l['metrics'].get('parse_failed', False))
+        print(f'\n[A*] cryptic  solved={solved}/{n} ({solved/n:.1%})  parse_failed={parse_failed}/{n}', file=sys.stderr)
 
     print(f'Logs: {log_file}', file=sys.stderr)
 
@@ -112,7 +123,7 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument('--backend', type=str, default='openai/gpt-oss-120b')
     p.add_argument('--temperature', type=float, default=0.7)
-    p.add_argument('--task', type=str, required=True, choices=['game24', 'text', 'crosswords'])
+    p.add_argument('--task', type=str, required=True, choices=['game24', 'text', 'crosswords', 'cryptic'])
     p.add_argument('--task_start_index', type=int, default=0)
     p.add_argument('--task_end_index', type=int, default=1)
     p.add_argument('--task_step', type=int, default=1)

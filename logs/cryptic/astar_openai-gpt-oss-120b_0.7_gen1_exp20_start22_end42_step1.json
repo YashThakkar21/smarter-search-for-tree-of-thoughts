@@ -1,0 +1,238 @@
+[
+  {
+    "idx": 22,
+    "solution": "Definition: Fig 'n' ram!\nWordplay: fodder=\"FIG N RAM\" | indicator=\"mixed up\"\nAnswer: RURAL FARMING\n",
+    "best_y": "Definition: Fig 'n' ram!\nWordplay: fodder=\"FIG N RAM\" | indicator=\"mixed up\"\nAnswer: RURAL FARMING\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "RURAL FARMING",
+      "gold": "MIXED FARMING",
+      "enum_match": true
+    },
+    "expansions_used": 19
+  },
+  {
+    "idx": 23,
+    "solution": "Definition: Counter!\nWordplay: fodder=\"RAB\" | indicator=\"counter\"\nAnswer: BAR\n",
+    "best_y": "Definition: Counter!\nWordplay: fodder=\"RAB\" | indicator=\"counter\"\nAnswer: BAR\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "BAR",
+      "gold": "BAR",
+      "enum_match": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 24,
+    "solution": "Definition: transplants\nWordplay: fodder=\"Dr\" | indicator=\"with heart of one\"\nAnswer: DONOR\n",
+    "best_y": "Definition: transplants\nWordplay: fodder=\"Dr\" | indicator=\"with heart of one\"\nAnswer: DONOR\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "DONOR",
+      "gold": "DONOR",
+      "enum_match": true
+    },
+    "expansions_used": 17
+  },
+  {
+    "idx": 25,
+    "solution": "Definition: Wolf pack\nWordplay: fodder=\"roved with uncertainty\" | indicator=\"initially turning back\"\nAnswer: WILDER\n",
+    "best_y": "Definition: Wolf pack\nWordplay: fodder=\"roved with uncertainty\" | indicator=\"initially turning back\"\nAnswer: WILDER\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "WILDER",
+      "gold": "DEVOUR",
+      "enum_match": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 26,
+    "solution": "Definition: Son, I'm cut!\nWordplay: fodder=\"SONIMCUT\" | indicator=\"chopped a digit off\"\nAnswer: MISTONUC\n",
+    "best_y": "Definition: Son, I'm cut!\nWordplay: fodder=\"SONIMCUT\" | indicator=\"chopped a digit off\"\nAnswer: MISTONUC\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "MISTONUC",
+      "gold": "MISCOUNT",
+      "enum_match": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 27,
+    "solution": "Definition: Eva and Ruth\nWordplay: fodder=\"Miss World\" | indicator=\"runners up to\"\nAnswer: MISTY\n",
+    "best_y": "Definition: Eva and Ruth\nWordplay: fodder=\"Miss World\" | indicator=\"runners up to\"\nAnswer: MISTY\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "MISTY",
+      "gold": "EARTH",
+      "enum_match": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 28,
+    "solution": "Definition: Primate couples\nWordplay: fodder=\"priority\" | indicator=\"in\"\nAnswer: APEMEN\n",
+    "best_y": "Definition: Primate couples\nWordplay: fodder=\"priority\" | indicator=\"in\"\nAnswer: APEMEN\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "APEMEN",
+      "gold": "BONOBO",
+      "enum_match": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 29,
+    "solution": "Definition: _\nWordplay: fodder=\"score\" | indicator=\"under (<20?)\"\nAnswer: UNDERSCORE\n",
+    "best_y": "Definition: _\nWordplay: fodder=\"score\" | indicator=\"under (<20?)\"\nAnswer: UNDERSCORE\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "UNDERSCORE",
+      "gold": "UNDERSCORE",
+      "enum_match": true
+    },
+    "expansions_used": 17
+  },
+  {
+    "idx": 30,
+    "solution": "Definition: cut one pea\nWordplay: fodder=\"HONEY ONEPEA\" | indicator=\"spread liberally\"\nAnswer: ENOPHYONE\n",
+    "best_y": "Definition: cut one pea\nWordplay: fodder=\"HONEY ONEPEA\" | indicator=\"spread liberally\"\nAnswer: ENOPHYONE\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "ENOPHYONE",
+      "gold": "HYPHENATE",
+      "enum_match": true
+    },
+    "expansions_used": 18
+  },
+  {
+    "idx": 31,
+    "solution": "Definition: Box\n",
+    "best_y": "Definition: Box\n",
+    "metrics": {
+      "r": 0,
+      "extracted": null,
+      "gold": "CASKET",
+      "parse_failed": true
+    },
+    "expansions_used": 5
+  },
+  {
+    "idx": 32,
+    "solution": "Definition: Torpedo!\nWordplay: fodder=\"boat wreckage\" | indicator=\"swallowed by\"\n",
+    "best_y": "Definition: Torpedo!\nWordplay: fodder=\"boat wreckage\" | indicator=\"swallowed by\"\n",
+    "metrics": {
+      "r": 0,
+      "extracted": null,
+      "gold": "SABOTAGE",
+      "parse_failed": true
+    },
+    "expansions_used": 20
+  },
+  {
+    "idx": 33,
+    "solution": "Definition: to conceal\nWordplay: fodder=\"lie v\" | indicator=\"twist\"\nAnswer: VEIL\n",
+    "best_y": "Definition: to conceal\nWordplay: fodder=\"lie v\" | indicator=\"twist\"\nAnswer: VEIL\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "VEIL",
+      "gold": "VEIL",
+      "enum_match": true
+    },
+    "expansions_used": 11
+  },
+  {
+    "idx": 34,
+    "solution": "Definition: shouting \"TEA!\"\nWordplay: fodder=\"maids\" | indicator=\"frantic, surrounded by\"\nAnswer: AMIDST\n",
+    "best_y": "Definition: shouting \"TEA!\"\nWordplay: fodder=\"maids\" | indicator=\"frantic, surrounded by\"\nAnswer: AMIDST\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "AMIDST",
+      "gold": "AMIDST",
+      "enum_match": true
+    },
+    "expansions_used": 16
+  },
+  {
+    "idx": 35,
+    "solution": "Definition: Defending human rights\nWordplay: fodder=\"heart\" | indicator=\"grit\"\nAnswer: AVOID\n",
+    "best_y": "Definition: Defending human rights\nWordplay: fodder=\"heart\" | indicator=\"grit\"\nAnswer: AVOID\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "AVOID",
+      "gold": "GNASH",
+      "enum_match": true
+    },
+    "expansions_used": 18
+  },
+  {
+    "idx": 36,
+    "solution": "Definition: Display\nWordplay: fodder=\"bird has swallows\" | indicator=\"beginning to notice\"\nAnswer: BRANDISH\n",
+    "best_y": "Definition: Display\nWordplay: fodder=\"bird has swallows\" | indicator=\"beginning to notice\"\nAnswer: BRANDISH\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "BRANDISH",
+      "gold": "BRANDISH",
+      "enum_match": true
+    },
+    "expansions_used": 10
+  },
+  {
+    "idx": 37,
+    "solution": "Definition: Last lecture\nWordplay: fodder=\"of course to teach\" | indicator=\"overworked\"\nAnswer: THE CLOSER\n",
+    "best_y": "Definition: Last lecture\nWordplay: fodder=\"of course to teach\" | indicator=\"overworked\"\nAnswer: THE CLOSER\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "THE CLOSER",
+      "gold": "EYE STRAIN",
+      "enum_match": true
+    },
+    "expansions_used": 18
+  },
+  {
+    "idx": 38,
+    "solution": "",
+    "best_y": "",
+    "metrics": {
+      "r": 0,
+      "parse_failed": true
+    },
+    "expansions_used": 1
+  },
+  {
+    "idx": 39,
+    "solution": "",
+    "best_y": "",
+    "metrics": {
+      "r": 0,
+      "parse_failed": true
+    },
+    "expansions_used": 1
+  },
+  {
+    "idx": 40,
+    "solution": "Definition: among ugliest uniforms\nWordplay: fodder=\"7-Eleven\" | indicator=\"uniform\"\nAnswer: WORST GARB\n",
+    "best_y": "Definition: among ugliest uniforms\nWordplay: fodder=\"7-Eleven\" | indicator=\"uniform\"\nAnswer: WORST GARB\n",
+    "metrics": {
+      "r": 0,
+      "extracted": "WORST GARB",
+      "gold": "MINUS FOUR",
+      "enum_match": true
+    },
+    "expansions_used": 18
+  },
+  {
+    "idx": 41,
+    "solution": "Definition: is noble?\nWordplay: fodder=\"Oceanographer\" | indicator=\"9 to 5\"\nAnswer: ARGON\n",
+    "best_y": "Definition: is noble?\nWordplay: fodder=\"Oceanographer\" | indicator=\"9 to 5\"\nAnswer: ARGON\n",
+    "metrics": {
+      "r": 1,
+      "extracted": "ARGON",
+      "gold": "ARGON",
+      "enum_match": true
+    },
+    "expansions_used": 13
+  }
+]

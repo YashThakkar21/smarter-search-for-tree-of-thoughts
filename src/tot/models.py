@@ -531,16 +531,21 @@ def chatgpt(messages, model="openai/gpt-oss-120b", temperature=0.7, max_tokens=6
         if "<|im_end|>" not in effective_stop: effective_stop.append("<|im_end|>")
 
         if mode == "cryptic":
-            # Cryptic reasoning is verbose AND exploratory; gpt-oss-120b's
-            # analysis channel can burn 4000+ tokens evaluating-and-rejecting
-            # candidate answers before firing the final channel - especially
-            # on hard clues like "Fig 'n' ram! (5,7)" -> MIXED FARMING, where
-            # we've seen 12k+ tokens of analysis with patterns like
-            # "Could be MERE DAB? Not. Maybe BULLDOZER RAM? Not." 6000 isn't
-            # always enough either, but at T<=0.5 the wandering largely stops
-            # and 6000 is comfortable. Easy clues finish in 200-500 tokens
-            # regardless of budget.
-            effective_max_tokens = max(max_tokens, 6000) if max_tokens else 6000
+            # Propose steps (definition / wordplay / answer) ask for short
+            # structured output (3-6 lines or a small JSON object) and don't
+            # need the full analysis budget. 1500 is enough for the model's
+            # reasoning + output even on hard clues, and is ~4x faster.
+            # Value steps only need {"score": N}, so 512 suffices.
+            # The full 6000-token budget is reserved for solve_prompt (naive
+            # one-shot solve), which does deep chain-of-thought reasoning.
+            if ("possible definitions:" in lower_content
+                    or "possible wordplays:" in lower_content
+                    or "possible answers:" in lower_content):
+                effective_max_tokens = 1500
+            elif "scoring rule" in lower_content:
+                effective_max_tokens = 512
+            else:
+                effective_max_tokens = max(max_tokens, 6000) if max_tokens else 6000
         elif mode == "propose":
             effective_max_tokens = max(max_tokens, 512) if max_tokens else 512
             effective_stop = [t for t in effective_stop if t != "\n\n"]

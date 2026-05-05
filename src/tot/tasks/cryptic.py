@@ -468,36 +468,21 @@ class CrypticTask(Task):
         )
 
     @classmethod
-    def propose_outputs_unwrap(cls, x: str, y: str, raw_output: str) -> list:
+    def propose_outputs_unwrap(cls, x: str, y: str, outputs: list, n_max_propose: int = -1) -> list:
         """
-        Filter a raw LLM output into well-formed proposal lines for the
-        current decomposition step.
+        Filter raw LLM outputs into well-formed proposal lines for the
+        current decomposition step, matching the interface bfs.get_proposals
+        expects (same signature as MiniCrosswordsTask.propose_outputs_unwrap).
 
-        bfs.py's get_proposals naively splits raw output on newlines and
-        treats every non-empty line as a proposal. That's a disaster with
-        gpt-oss-120b's harmony format, which leaks analysis-channel text
-        ("...assistantanalysisWe need to parse...") into the visible output.
-        Every preamble line ends up being treated as a search candidate.
+        `outputs` is the list of raw model strings returned by gpt(..., n=N).
+        All outputs are concatenated for parsing so proposals from each
+        generation are captured.
 
-        This method finds a JSON object in the output (last balanced {...}
-        block, harmony-aware) and converts the structured proposals into
-        canonical one-per-line strings:
-          Step 1 -> 'Definition: <text>'
-          Step 2 -> 'Wordplay: fodder="<text>" | indicator="<text>"'
-          Step 3 -> 'Answer: <UPPERCASE>'
-
-        If JSON parsing fails entirely, falls back to per-field regex over
-        the whole output - so even a malformed/truncated response can yield
-        usable proposals as long as some "definition": "..." substring
-        survived.
-
-        Returns [] if nothing recognisable can be salvaged. bfs.py treats
-        an empty proposal list as the end of the search, which is the right
-        behaviour: better to halt than to descend into a tree of preamble.
-
-        Requires a small bfs.py patch (see docstring of CrypticTask) to be
-        called by the BFS solver. Falls back gracefully if uncalled.
+        Returns full child y-strings (parent y prepended, newline appended),
+        capped to n_max_propose if != -1. bfs.py returns these directly to
+        the caller without further wrapping.
         """
+        raw_output = '\n'.join(outputs) if outputs else ''
         n_existing = len(cls._y_lines(y))
 
         # -- Strategy 1: find a JSON object somewhere in the output --
@@ -625,7 +610,7 @@ class CrypticTask(Task):
                 salvaged = _salvage_answer_from_analysis(x, raw_output)
                 if salvaged:
                     deduped.append(f"Answer: {salvaged}")
-                    return deduped
+                    return [y + p + '\n' for p in deduped]
 
             # Make the silent-failure case loud. Without this, bfs.py just
             # breaks out of its loop with an empty new_ys and returns ['']
@@ -685,7 +670,9 @@ class CrypticTask(Task):
                     )
             sys.stderr.flush()
 
-        return deduped
+        if n_max_propose != -1:
+            deduped = deduped[:n_max_propose]
+        return [y + p + '\n' for p in deduped]
 
     # ------------------------------------------------------------------------
     # Value evaluation

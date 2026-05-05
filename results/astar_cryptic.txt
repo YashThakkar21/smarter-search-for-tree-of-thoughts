@@ -1,0 +1,1105 @@
+[001/20] idx=22
+       done  expansions=30  r=0.000  extracted=None  gold=MIXED FARMING  parse_failed=True
+       ----
+[propose] raw output: "Definition: Fig\nDefinition: ram!\nDefinition: Fig 'n' ram\nDefinition: 'n' ram"
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="Fig n" | indicator="ram!"  \nWordplay: fodder="Fig ram" | indicator="\'n\' (inside)"  \nWordplay: fodder="Fig n ram" | indicator="mixed up"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="Fig n" | indicator="ram!"  \nWordplay: fodder="Fig \'n\' ram" | indicator="in"  \nWordplay: fodder="ram" | indicator="inside Fig n"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="FIGNRAM" | indicator="ram!"  \nWordplay: fodder="Fig \'n\' ram!" | indicator="in"  \nWordplay: fodder="ram" | indicator="around fig"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="Fig ram" | indicator="\'n\'"  \nWordplay: fodder="Fig n ram" | indicator="!"  \nWordplay: fodder="Fig" | indicator="ram!"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="Fig \'n\' ram" | indicator="mixed up"\nWordplay: fodder="Fig \'n\' ram" | indicator="inside"\nWordplay: fodder="Fig" | indicator="initially"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="Fig n ram" | indicator="mixed up"  \nWordplay: fodder="Fig n" | indicator="inside ram"  \nWordplay: fodder="ram" | indicator="after fig n"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: IMAGE FRAMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: RURAL FARMING'
+[propose] parsed 3 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Fig \'n\' ram! (5, 7)". Definition: Fig \'n\' ram! Wordplay: fodder="Fig n ram the" | indicator="mixed up". So an anagram of "Fig n ram the" = letters: let\'s list l'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: URBAN FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: SHEEP FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: SHEEP FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'analysisWe need to parse clue: "Fig \'n\' ram! (5, 7)". Definition: ram! (maybe "ewe something"? Actually ram as verb meaning "butt". Could be "ram!" as exclamation maybe "Charge ahead"? Not sure. Wordp'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: SHEEP FARMING\nAnswer: URBAN FARMING\nAnswer: GRASS FARMING'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: RURAL FARMING'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: RURAL FARMING\nAnswer: RANCH FARMING\nAnswer: AGRIC FARMING'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: RURAL FARMING\nAnswer: GREEN FARMING\nAnswer: URBAN FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: FARMING\nAnswer: FRAMING\nAnswer: RANFIG'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: FRUIT FARMING\nAnswer: MIXED FARMING\nAnswer: RURAL FARMING'
+[propose] parsed 3 proposals
+[propose] raw output: 'analysisWe need to parse clue: "Fig \'n\' ram! (5, 7)". Definition: Fig \'n\' ram. Wordplay: fodder="Fig" | indicator="inside ram". So we need to insert "Fig" inside "ram" maybe? The fodder "Fig" placed i'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: RURAL FARMING'
+[propose] parsed 2 proposals
+[propose] raw output: 'Answer: ANAGRAM\nAnswer: FRAMING\nAnswer: MARGINAL FIG'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: MIXED LETTERS'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: URBAN FARMING\nAnswer: RURAL FARMING\nAnswer: FICUS FARMING'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: MIXED LETTERS'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: MIXED ANAGRAM'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: INNER FRAMING'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: FIGHT ANAGRAM\nAnswer: FABLE ANAGRAM\nAnswer: FLOUR ANAGRAM'
+[propose] parsed 5 proposals
+Definition: Fig
+Wordplay: fodder="Fig n ram" | indicator="mixed up"
+
+[002/20] idx=23
+       done  expansions=30  r=0.000  extracted=RHS  gold=BAR  parse_failed=False
+       ----
+[propose] raw output: 'Definition: Right Hook!\nDefinition: Left Jab!\nDefinition: Counter!\nDefinition: Counter! Counter!'
+[propose] parsed 4 proposals
+[propose] raw output: 'Wordplay: fodder="Left Jab" | indicator="counter"  \nWordplay: fodder="Right Hook" | indicator="left"  \nWordplay: fodder="Counter! Counter!" | indicator="right"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="Right Hook! Left Jab!" | indicator="counter"\nWordplay: fodder="Hook! Left" | indicator="right"\nWordplay: fodder="Right" | indicator="counter"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="RIGHT HOOK LEFT JAB" | indicator="counter"  \nWordplay: fodder="HOOK LEFT JAB" | indicator="right"  \nWordplay: fodder="JAB" | indicator="left"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="hook" | indicator="right"\nWordplay: fodder="jab" | indicator="left"\nWordplay: fodder="counter" | indicator="reversal"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: RHS\nAnswer: JAB\nAnswer: BOX'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: HIT\nAnswer: PUN'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: BOX\nAnswer: JAB\nAnswer: POW'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: JAB'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: HIT\nAnswer: RIG\nAnswer: THO'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: HIT\nAnswer: BOX'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: JAB'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: BOX\nAnswer: JAB\nAnswer: HIT'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: JAB'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: JAB'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: BAR\nAnswer: VIE\nAnswer: JAB'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR\nAnswer: BOX'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: JAB'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: BAR\nAnswer: RAB'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR\nAnswer: RET'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: OOK'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: BAR\nAnswer: TOP\nAnswer: NAY'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: BAR\nAnswer: RET\nAnswer: ANT'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR\nAnswer: TOP'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: BAR\nAnswer: TOP\nAnswer: JAB'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: JAB\nAnswer: BAR\nAnswer: OPP'
+[propose] parsed 4 proposals
+Definition: Right Hook!
+Wordplay: fodder="Left Jab" | indicator="counter"
+Answer: RHS
+
+[003/20] idx=24
+       done  expansions=30  r=0.000  extracted=None  gold=DONOR  parse_failed=True
+       ----
+[propose] raw output: 'Definition: Doctor\nDefinition: transplants\nDefinition: heart\nDefinition: heart of one!'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="HEART" | indicator="transplants heart of ONE"\nWordplay: fodder="ONE" | indicator="heart with transplants"\nWordplay: fodder="TRANSPLANTS" | indicator="heart of ONE"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="heart" | indicator="transplants"\nWordplay: fodder="Doctor" | indicator="with"\nWordplay: fodder="one" | indicator="heart of"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="Doctor" | indicator="transplants heart of one"\nWordplay: fodder="heart of one" | indicator="transplants Doctor"\nWordplay: fodder="Doctor transplants" | indicator="with heart of one"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="doctor" | indicator="transplants"\nWordplay: fodder="heart" | indicator="with"\nWordplay: fodder="doctor" | indicator="with"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="HEART" | indicator="Doctor"\nWordplay: fodder="DR+ONE" | indicator="transplants"\nWordplay: fodder="ONE" | indicator="heart"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="DOCTOR" | indicator="transplants heart with heart of ONE"\nWordplay: fodder="DR" | indicator="transplants ONE"\nWordplay: fodder="ALONE" | indicator="heart with heart of ONE"'
+[propose] parsed 6 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Doctor transplants heart with heart of one! (5)". Definition: Doctor. Wordplay: fodder="heart of one" | indicator="transplants". So we need to take "heart of on'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: DONOR'
+[propose] parsed 1 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Doctor transplants heart with heart of one! (5)". Definition: heart. Wordplay: fodder="heart of one" | indicator="transplants Doctor". So we need to take "heart'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: DONOR'
+[propose] parsed 3 proposals
+[propose] raw output: 'analysisWe need to parse clue: "Doctor transplants heart with heart of one! (5)". Definition: heart. Wordplay: fodod="DR" (abbrev for doctor). Indicator: "transplants heart of one". So we need to inse'
+[propose] parsed 1 proposals
+[propose] raw output: 'analysisWe need to parse clue: "Doctor transplants heart with heart of one! (5)". Definition: heart. Wordplay: fodod="ONE" | indicator="heart of". Hmm "heart of one" could be the middle letter of ONE '
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: CORED\nAnswer: CORER\nAnswer: MIDST'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: DONOR'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: EARTH\nAnswer: HEART'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: DONOR'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: DONOR'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: HEART\nAnswer: EARTH'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: DONOR\nAnswer: INNER'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: HEART\nAnswer: EARTH\nAnswer: HATER'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: DONOR\nAnswer: DONER\nAnswer: RONDE'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: DRONE\nAnswer: DONOR\nAnswer: INNER'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: DRONE'
+[propose] parsed 2 proposals
+[propose] raw output: 'Answer: CRONE\nAnswer: CONER\nAnswer: CORNE'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: NORTH\nAnswer: HEART\nAnswer: HENRY'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: DONOR\nAnswer: ALONE'
+[propose] parsed 2 proposals
+[propose] raw output: 'Answer: DRONE\nAnswer: DONER\nAnswer: ALONE'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: ALONE'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: ALONE\nAnswer: UNITY\nAnswer: FIRST'
+[propose] parsed 4 proposals
+Definition: Doctor
+Wordplay: fodder="heart of one" | indicator="transplants"
+
+[004/20] idx=25
+       done  expansions=30  r=0.000  extracted=None  gold=DEVOUR  parse_failed=True
+       ----
+[propose] raw output: 'Definition: Wolf pack\nDefinition: turning back\nDefinition: uncertainty\nDefinition: with uncertainty'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="roved" | indicator="turning back"\nWordplay: fodder="uncertainty" | indicator="initially"\nWordplay: fodder="roved with uncertainty" | indicator="initially turning back"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="ROVEDU" | indicator="with uncertainty, initially (anagram)"  \nWordplay: fodder="WOLF PACK" | indicator="roved (reversal)"  \nWordplay: fodder="UNCERTAINTY" | indicator="initially (sel'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="wolf pack" | indicator="roved"\nWordplay: fodder="uncertainty initially" | indicator="turning back"\nWordplay: fodder="wolf pack roved" | indicator="with"'
+[propose] parsed 4 proposals
+[propose] raw output: 'Wordplay: fodder="wolf" | indicator="roved"  \nWordplay: fodder="pack" | indicator="turning back"  \nWordplay: fodder="with uncertainty" | indicator="initially"'
+[propose] parsed 4 proposals
+[propose] raw output: 'Wordplay: fodder="wolf pack" | indicator="roved"\nWordplay: fodder="wolf pack" | indicator="turning back"\nWordplay: fodder="with uncertainty" | indicator="initially"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Wordplay: fodder="wolf" | indicator="turning back"\nWordplay: fodder="uncertainty, initially" | indicator="with"\nWordplay: fodder="wolf pack" | indicator="initially turning back"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: UNWOLF\nAnswer: UPWOLF\nAnswer: UFLOW'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: DITHER\nAnswer: DUBIUM'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: UNSURE\nAnswer: WAGGLE\nAnswer: HESITY'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: UNSURE\nAnswer: CHANCE\nAnswer: DUBITY'
+[propose] parsed 5 proposals
+[propose] raw output: 'analysisWe need to parse clue: "Wolf pack roved with uncertainty, initially turning back (6)". Definition: "uncertainty, initially". So definition likely "uncertainty, initially" meaning the initial l'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: FLOWER'
+[propose] parsed 2 proposals
+[propose] raw output: 'Answer: WANDER\nAnswer: ROAMED\nAnswer: RAMBLE'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: WANDER\nAnswer: RAMBLE\nAnswer: STROLL'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: WANDER\nAnswer: FLOWER\nAnswer: ROAMER'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: ROAMED\nAnswer: DEVOUR\nAnswer: WANDER'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: WANDER'
+[propose] parsed 1 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Wolf pack roved with uncertainty, initially turning back (6)". Definition: uncertainty. Wordplay: fodder="wolf pack" | indicator="roved". So we have fodder "wol'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: UNSURE\nAnswer: DITHER\nAnswer: HESITN'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: FALTER'
+[propose] parsed 1 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Wolf pack roved with uncertainty, initially turning back (6)". Definition: uncertainty. Wordplay: fodder="pack roved" | indicator="with". So we have to take "pa'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: DEVOUR'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: DEVOUR'
+[propose] parsed 1 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue. Clue: "Wolf pack roved with uncertainty, initially turning back (6)". Definition: Wolf pack. Wordplay: fodder="roved with uncertainty" | indicator="initially tur'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: WOLVES\nAnswer: LUPINE'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: LUPINE\nAnswer: FLOWER'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: WOLVES\nAnswer: LUPINE\nAnswer: PACKER'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: DEVOUR'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: UTURNS\nAnswer: U TURN\nAnswer: UTURN'
+[propose] parsed 4 proposals
+Definition: uncertainty, initially
+Wordplay: fodder="with uncertainty" | indicator="initially"
+
+[005/20] idx=26
+Request failed with non-retryable error: ValueError: Error retrieving result: Error code: 401 - {'detail': 'Invalid JWT'} with status code e.status_code=401 for self.request_id='fe701636-620c-55c2-8c7b-548cd00bcc78:sample:0:310' and expected type self.model_cls=<class 'tinker.SampleResponse'>
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Request failed with non-retryable error: AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+Failed to send telemetry batch
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 133, in _send_batch_with_retry
+    return await self._send_batch(batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 142, in _send_batch
+    return await client.telemetry.send(request=request, timeout=HTTP_TIMEOUT_SECONDS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/telemetry.py", line 68, in send
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+[propose] raw output: "Definition: Son, I'm cut!\nDefinition: Chopped a digit off, maybe?\nDefinition: a digit off\nDefinition: digit off"
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="SONIMCUT" | indicator="chopped"\nWordplay: fodder="A DIGIT" | indicator="off"\nWordplay: fodder="DIGIT" | indicator="maybe?"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="SONIMCUT" | indicator="cut!"  \nWordplay: fodder="SONIM" | indicator="cut" (deletion of a digit – remove I (Roman\u202f1) from SONIM)  \nWordplay: fodder="IMCUT" | indicator="son" (containe'
+[propose] parsed 4 proposals
+[propose] raw output: 'Wordplay: fodder="SON IM CUT" | indicator="chopped"\nWordplay: fodder="SON IM CUT" | indicator="cut!"\nWordplay: fodder="SONIMCUT" | indicator="maybe?"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="SON IM CUT" | indicator="chopped"\nWordplay: fodder="SON, IM" | indicator="cut"\nWordplay: fodder="SONIMCUT" | indicator="maybe"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="SONIMCUT" | indicator="maybe"\nWordplay: fodder="SONIM" | indicator="chopped"\nWordplay: fodder="SON" | indicator="cut!"'
+[propose] parsed 6 proposals
+[propose] raw output: 'Wordplay: fodder="SONIMCUT" | indicator="chopped"\nWordplay: fodder="SONIMCUTCHOPPEDADIGIT" | indicator="cut"\nWordplay: fodder="SONIMCUT" | indicator="off a digit"'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: SCION\nAnswer: OFFSHOOT\nAnswer: MUTONICS'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: AMPUTATE\nAnswer: AGITATED\nAnswer: AMPUTE\u200b'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: DISOWNED\nAnswer: DIGITORS\nAnswer: DISJOINT'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: SCISSORS\nAnswer: SINCIDED\nAnswer: SINCED'
+[propose] parsed 6 proposals
+[propose] raw output: 'Answer: DIGITOFF\nAnswer: FIDGETOF\nAnswer: OFFDIGIT'
+[propose] parsed 5 proposals
+[propose] raw output: 'Answer: MANSIONS\nAnswer: AMPUTATE\nAnswer: SCIONAGE'
+[propose] parsed 3 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 1 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: MINUSONE\nAnswer: DIGITATE\nAnswer: AMPUTATE'
+[propose] parsed 4 proposals
+[propose] raw output: 'Answer: MISCOUNT'
+[propose] parsed 4 proposals
+[propose] raw output: 'analysisWe need to solve cryptic clue: "Son, I\'m cut! Chopped a digit off, maybe? (8)". Definition: "digit off". Wordplay: fodder="SON, IM" | indicator="cut". So we have letters SONIM, and we need to '
+[propose] parsed 3 proposals
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/models.py", line 566, in chatgpt
+    num_samples=batch_size,
+             ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/telemetry.py", line 384, in _awrapper
+    return await cast(Callable[..., Awaitable[R]], func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/public_interfaces/sampling_client.py", line 335, in _sample_async_with_retries
+    return await self.retry_handler.execute(_sample_async)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/retry_handler.py", line 155, in execute
+    result = await self._execute_with_retry(func, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/retry_handler.py", line 207, in _execute_with_retry
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/public_interfaces/sampling_client.py", line 325, in _sample_async
+    return await self._sample_async_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/public_interfaces/sampling_client.py", line 258, in _sample_async_impl
+    untyped_future = await self.holder.execute_with_retries(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/internal_client_holder.py", line 550, in execute_with_retries
+    raise e
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/internal_client_holder.py", line 511, in execute_with_retries
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/public_interfaces/sampling_client.py", line 238, in _send_asample_request
+    raise e
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/lib/public_interfaces/sampling_client.py", line 230, in _send_asample_request
+    return await client.sampling.asample(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/resources/sampling.py", line 57, in asample
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/.venv/lib/python3.13/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.AuthenticationError: Error code: 401 - {'detail': 'Invalid JWT'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/astar_run.py", line 139, in <module>
+    run(args)
+    ~~~^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/astar_run.py", line 58, in run
+    results, info = astar_solve(args, task, i, to_print=False)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/methods/astar.py", line 162, in solve
+    true_h = _heuristic(node, task, args, x)
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/methods/astar.py", line 59, in _heuristic
+    raw = bfs.get_value(task, x, node.y, n_eval)
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/methods/bfs.py", line 14, in get_value
+    value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/models.py", line 440, in gpt
+    return chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)
+  File "/Users/yash_thakkar_m2_mac/Desktop/princeton/spring26/cos484/tree-of-thought-llm/src/tot/models.py", line 578, in chatgpt
+    if assistant_prefill:
+RuntimeError: Tinker Sampling Call Failed: Error code: 401 - {'detail': 'Invalid JWT'}
