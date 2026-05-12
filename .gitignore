@@ -9,3 +9,5 @@ nlp331/
 nlp311
 scripts
 eval_logs/
+run_minimal.slurm
+results

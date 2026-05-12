@@ -152,9 +152,32 @@ else:
     for i in range(args.task_start_index, args.task_end_index):
         results, info = solve(args, task, i, to_print=debug)
 
-        if debug:
-            solution = print_selected_solution(results)
-            explain_evaluation(task, i, solution)
-            print()
-        else:
-            print_plain_solution(results)
+    for i in indices_to_run:
+        reset_gpt_usage()
+        results, info = solve(args, task, i, to_print=False)
+        solution = _select_solution(results)
+        usage = gpt_usage()
+
+        metrics.append({
+            'idx': i,
+            'llm_calls': usage['llm_calls'],
+            'prompt_tokens': usage['prompt_tokens'],
+            'completion_tokens': usage['completion_tokens'],
+            'total_tokens': usage['prompt_tokens'] + usage['completion_tokens'],
+        })
+
+        print(f"Puzzle {i}: {solution}")
+
+    # Print summary
+    n = len(metrics)
+    if n > 0:
+        avg_calls = sum(m['llm_calls'] for m in metrics) / n
+        avg_prompt_tokens = sum(m['prompt_tokens'] for m in metrics) / n
+        avg_completion_tokens = sum(m['completion_tokens'] for m in metrics) / n
+        avg_total_tokens = sum(m['total_tokens'] for m in metrics) / n
+
+        print(f"\nSummary ({n} puzzles):")
+        print(f"Avg. LLM calls / puzzle: {avg_calls:.1f}")
+        print(f"Avg. prompt tokens / puzzle: {avg_prompt_tokens:.1f}")
+        print(f"Avg. completion tokens / puzzle: {avg_completion_tokens:.1f}")
+        print(f"Avg. total tokens / puzzle: {avg_total_tokens:.1f}")

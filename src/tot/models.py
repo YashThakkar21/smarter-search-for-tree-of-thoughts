@@ -273,7 +273,8 @@ load_dotenv()
 
 completion_tokens = 0
 prompt_tokens = 0
-REQUEST_TIMEOUT_SECS = 300
+llm_calls = 0
+REQUEST_TIMEOUT_SECS = int(os.getenv("TOT_REQUEST_TIMEOUT_SECS", "900"))
 
 TINKER_API_KEY = os.getenv("TINKER_API_KEY", "")
 if not TINKER_API_KEY:
